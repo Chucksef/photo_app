@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>PhotoApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+	<head>
+		<title>PhotoApp</title>
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
 
-  <body>
-    <%= yield %>
-  </body>
+	<body>
+		<header>
+			<div class="container">
+				<%= link_to "Photo Studio App", root_path, id: "logo" %>
+				<nav>
+					<ul>
+						<li><%= link_to "Home", root_path %></li>
+						<li><%= link_to "About", about_path %></li>
+						<li><%= link_to "Contact", contact_path %></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<%= yield %>
+
+		<footer class="footer">
+			<div class="container">
+				<small>
+					<p>Built and Maintained by Chuck Crouse | <a href='http://www.chucksef.com'>chucksef.com</a></p>
+				</small>
+			</div>
+		</footer>
+	</body>
 </html>
