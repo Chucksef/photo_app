@@ -10,27 +10,9 @@
 	</head>
 
 	<body>
-		<header>
-			<div class="container">
-				<%= link_to "Photo Studio App", root_path, id: "logo" %>
-				<nav>
-					<ul>
-						<li><%= link_to "Home", root_path %></li>
-						<li><%= link_to "About", about_path %></li>
-						<li><%= link_to "Contact", contact_path %></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-
+		<%= render 'layouts/header' %>
 		<%= yield %>
+		<%= render 'layouts/footer' %>
 
-		<footer class="footer">
-			<div class="container">
-				<small>
-					<p>Built and Maintained by Chuck Crouse | <a href='http://www.chucksef.com'>chucksef.com</a></p>
-				</small>
-			</div>
-		</footer>
 	</body>
 </html>
