@@ -1,6 +1,6 @@
 module ApplicationHelper
     def get_page_title(page_title = '')
-        base_title = "Photo DB"
+        base_title = "StudioDB"
         if page_title.empty?
           base_title
         else
