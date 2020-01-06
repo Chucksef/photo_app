@@ -38,6 +38,10 @@ class GalleriesController < ApplicationController
         end
     end
 
+    def destroy
+        Gallery.find(params[:id]).destroy
+    end
+
     private def gallery_params
         params.require(:gallery).permit(:name, :description, :visible, :order)
     end
