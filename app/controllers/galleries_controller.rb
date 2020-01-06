@@ -16,6 +16,17 @@ class GalleriesController < ApplicationController
         @gallery = Gallery.find(params[:id])
     end
 
+    def update
+        @gallery = Gallery.find(params[:id])
+
+        if @gallery.update(gallery_params)
+            flash[:success] = "Updated #{@gallery.name}!"
+            redirect_to @gallery
+        else
+            render :edit
+        end
+    end
+
     def create
         @gallery = Gallery.new(gallery_params)
 
