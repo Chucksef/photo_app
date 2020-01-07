@@ -3,6 +3,9 @@
     <%= link_to "<< Back to Index", galleries_path, class: "btn btn-defaul" %>
 </div>
 <%= form_for @gallery do |f| %>
+
+    <%= render 'shared/error_messages' %>
+
     <div class="form-group">
         <%= f.label "Name: "%>
         <%= f.text_field :name, class: "form-control" %>

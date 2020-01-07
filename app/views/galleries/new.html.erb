@@ -3,16 +3,19 @@
     <%= link_to "<< Back to Index", galleries_path, class: "btn btn-default" %>
 </div>
 <%= form_for @gallery do |f| %>
+    
+    <%= render 'shared/error_messages' %>
+
     <div class="form-group">
-        <%= f.label "Name: "%>
+        <%= f.label "Name (20 character max)"%>
         <%= f.text_field :name, class: "form-control" %>
     </div>
     <div class="form-group">
-        <%= f.label "Description: " %>
+        <%= f.label "Description (200 character max)" %>
         <%= f.text_area :description, class: "form-control" %>
     </div>
     <div class="form-group">
-        <%= f.label "Order: " %>
+        <%= f.label "Order" %>
         <%= f.number_field :order, class: "form-control"%>
     </div>
     <div class="checkbox">
