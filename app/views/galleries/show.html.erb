@@ -1,16 +1,98 @@
-<div class="page-header">
-    <h2><%= @gallery.name %></h2>
-    <%= link_to "<< Back to Index", galleries_path, class: "btn btn-default" %>
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1><%= @gallery.name %></h1>
+        <p class="lead text-muted"><%= @gallery.description%></p>
+        <%= link_to "<< Back to Index", galleries_path, class: "btn btn-default" %>
+        <hr/>
+    </div>
+</section>
+<div class="album py-5 bg-light">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <%= image_tag("Fashion/fash4.jpg", class: "img-responsive img-thumbnail", alt: "Rails logo") %>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <%= image_tag("Fashion/fash5.jpg", class: "img-responsive img-thumbnail", alt: "Rails logo") %>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <%= image_tag("Fashion/fash6.jpg", class: "img-responsive img-thumbnail", alt: "Rails logo") %>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <%= image_tag("Fashion/fash1.jpg", class: "img-responsive img-thumbnail", alt: "Rails logo") %>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <%= image_tag("Fashion/fash2.jpg", class: "img-responsive img-thumbnail", alt: "Rails logo") %>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <%= image_tag("Fashion/fash3.jpg", class: "img-responsive img-thumbnail", alt: "Rails logo") %>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <%= image_tag("Fashion/fash7.jpg", class: "img-responsive img-thumbnail", alt: "Rails logo") %>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <%= image_tag("Fashion/fash8.jpg", class: "img-responsive img-thumbnail", alt: "Rails logo") %>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <%= image_tag("Fashion/fash9.jpg", class: "img-responsive img-thumbnail", alt: "Rails logo") %>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <%= image_tag("Fashion/fash10.jpg", class: "img-responsive img-thumbnail", alt: "Rails logo") %>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <%= image_tag("Fashion/fash11.jpg", class: "img-responsive img-thumbnail", alt: "Rails logo") %>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <%= image_tag("Fashion/fash12.jpg", class: "img-responsive img-thumbnail", alt: "Rails logo") %>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 </div>
-<div class="container">
-    <h4>Name</h4>
-    <p>&nbsp&nbsp&nbsp&nbsp<%= @gallery.name %></p>
-    <h4>Description</h4>
-    <p>&nbsp&nbsp&nbsp&nbsp<%= @gallery.description %>
-    <hr/>
-    <h4>Details</h4>
-    <p>&nbsp&nbsp&nbsp&nbspVisible: <%= @gallery.visible %></p>
-    <p>&nbsp&nbsp&nbsp&nbspOrder: <%= @gallery.order %></p>
-</div>
-<hr/>
 <%= link_to 'Edit Gallery', edit_gallery_path, class: "btn btn-primary" %>

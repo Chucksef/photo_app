@@ -3,6 +3,14 @@
 
 
 
+/* BODY */
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+
+
 /* FOOTER */
 
 .footer {
@@ -28,7 +36,7 @@
 
 
 
-/* About Page */
+/* TABLES */
     
 #hours_table {
     width: 40%;
@@ -36,7 +44,7 @@
 
 
 
-/* Flash */
+/* FLASH */
 
 #flash {
     float: none;
@@ -45,7 +53,7 @@
 
 
 
-/* Forms */
+/* FORMS */
 
 #error_explanation {
     color: red;
@@ -60,4 +68,14 @@
   .form-control {
     color: $state-danger-text;
   }
+}
+
+
+
+/* Galleries */
+
+img.img-thumbnail {
+  width: 100%;
+  object-fit: cover;
+  height: 360px;
 }
