@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_06_181538) do
+ActiveRecord::Schema.define(version: 2020_01_07_235357) do
 
   create_table "galleries", force: :cascade do |t|
     t.string "name"
@@ -18,8 +18,6 @@ ActiveRecord::Schema.define(version: 2020_01_06_181538) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "visible"
-    t.integer "order"
-    t.index ["order"], name: "index_galleries_on_order", unique: true
   end
 
 end
