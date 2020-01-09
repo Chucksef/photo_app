@@ -13,5 +13,5 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require direct_uploads
+//= require_direct_uploads
 //= require_tree .
