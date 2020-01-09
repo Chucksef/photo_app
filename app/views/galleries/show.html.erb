@@ -7,7 +7,7 @@
     </div>
 </section>
 <div class="container">
-    <%= @gallery.images.each do |image| %>
+    <% @gallery.images.each do |image| %>
         <p><%= link_to(image.name, image) %></p>
     <% end %>
 </div>
