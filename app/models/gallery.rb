@@ -1,5 +1,5 @@
 class Gallery < ApplicationRecord
-    #has_many :images
+    has_many_attached :images
 
     validates :name, presence: true
     validates :name, length: { maximum: 20 }
