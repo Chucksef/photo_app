@@ -14,6 +14,10 @@
         <%= f.label "Description (200 character max)" %>
         <%= f.text_area :description, class: "form-control" %>
     </div>
+    <div class="form-group">
+        <%= f.label :images %>
+        <%= f.file_field :images, multiple: true, class: "form-control" %>
+    </div>
     <div class="checkbox">
         <label>
             <%= f.check_box :visible %> Visible?
