@@ -8,7 +8,7 @@
 </section>
 <div class="container">
     <% @gallery.images.each do |image| %>
-        <p><%= link_to(image.name, image) %></p>
+        <p><%= link_to(image.filename, image) %></p>
     <% end %>
 </div>
 <%= link_to 'Edit Gallery', edit_gallery_path, class: "btn btn-primary" %>
