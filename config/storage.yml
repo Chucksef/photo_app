@@ -10,14 +10,14 @@ amazon_prod:
   service: S3
   access_key_id: <%= Rails.application.credentials.dig(:AWS_ACCESS_KEY_ID) %>
   secret_access_key: <%= Rails.application.credentials.dig(:AWS_SECRET_ACCESS_KEY) %>
-  region: us-east-1
+  region: us-east-2
   bucket: studiodb-photos-production
 
 amazon_dev:
   service: S3
   access_key_id: <%= Rails.application.credentials.dig(:AWS_ACCESS_KEY_ID) %>
   secret_access_key: <%= Rails.application.credentials.dig(:AWS_SECRET_ACCESS_KEY) %>
-  region: us-east-1
+  region: us-east-2
   bucket: studiodb-photos
 
 # Remember not to checkin your GCS keyfile to a repository
