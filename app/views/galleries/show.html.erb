@@ -1,14 +1,17 @@
-<section class="jumbotron text-center">
+<section class="gallery-header col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="container">
         <h1><%= @gallery.name %></h1>
         <p class="lead text-muted"><%= @gallery.description%></p>
         <%= link_to "<< Back to Index", galleries_path, class: "btn btn-default" %>
-        <hr/>
+        <%= link_to 'Edit Gallery', edit_gallery_path, class: "btn btn-primary" %>
     </div>
 </section>
-<div class="container">
-    <% @gallery.images.each do |image| %>
-        <p><%= link_to(image.filename, image) %></p>
-    <% end %>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+        <% @gallery.images.each do |image| %>
+            <div class="gallery-frame col-lg-3 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <%= image_tag(image, alt: image.filename, class: "img-gallery") %>
+            </div>
+        <% end %>
+    </div>
 </div>
-<%= link_to 'Edit Gallery', edit_gallery_path, class: "btn btn-primary" %>
