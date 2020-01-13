@@ -17,9 +17,10 @@
                 <li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galleries <span class="caret"></span></a>
 					<ul class="dropdown-menu">
+                        
 						<% Gallery.find_each do |gal| %>
 							<li><%= link_to gal.name, gal %></li>
-						<% end %>
+						<% end unless Gallery.nil? %>
                 	</ul>
 				</li>
             </ul>
