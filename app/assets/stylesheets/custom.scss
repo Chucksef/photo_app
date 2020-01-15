@@ -42,6 +42,11 @@ body {
     width: 40%;
 }
 
+img.img-table {
+  height: 40px;
+  object-fit: cover;
+}
+
 
 
 /* FLASH */
@@ -130,6 +135,7 @@ section.gallery-header {
  
 .direct-upload--error {
   border-color: red;
+  background: #f7d2d2;
 }
  
 input[type=file][data-direct-upload-url][disabled] {

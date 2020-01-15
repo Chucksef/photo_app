@@ -14,6 +14,24 @@
         <%= f.label "Description: " %>
         <%= f.text_area :description, class: "form-control" %>
     </div>
+    <table class="table table-condensed table-bordered table-striped">
+        <tr>
+            <th><strong>Thumbnail</strong></th>
+            <th><strong>Filename</strong></th>
+            <th><strong>Added</strong></th>
+            <th><strong>Move Image</strong></th>
+            <th class="text-center"><strong>Delete</strong></th>
+        </tr>
+        <% @gallery.images.each do |image| %>
+            <tr>
+                <td><%= image_tag(image, alt: image.filename, class: "img-table") %></td>
+                <td><%= image.filename %></td>
+                <td><%= image.created_at %></td>
+                <td><select name="Galleries"><option value="default">Default</option></select></td>
+                <td><%= link_to "DELETE #{image.name}", "#", class: "btn btn-block btn-xs btn-danger" %></td>
+            </tr>
+        <% end %>
+    </table>
     <div class="form-group">
         <%= f.label :images %>
         <%= f.file_field :images, multiple: true, direct_upload: true, class: "form-control" %>
