@@ -38,6 +38,13 @@ class GalleriesController < ApplicationController
         end
     end
 
+    def delete_image_attachment
+        @image = ActiveStorage::Blob.find_signed(params[:id])
+        @image.attachments.first.purge
+
+        redirect_to edit_gallery_path(params[:format])
+    end
+
     def destroy
         Gallery.find(params[:id]).destroy
         redirect_to galleries_path
