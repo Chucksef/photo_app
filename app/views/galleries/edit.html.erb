@@ -24,7 +24,7 @@
         </tr>
         <% @gallery.images.each do |image| %>
             <tr>
-                <td><%= image_tag(image, alt: image.filename, class: "img-table") %></td>
+                <td class="text-center"><%= image_tag(image, alt: image.filename, class: "img-table") %></td>
                 <td><%= image.filename %></td>
                 <td><%= image.created_at %></td>
                 <td><select name="Galleries"><option value="default">Default</option></select></td>
