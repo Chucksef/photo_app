@@ -28,9 +28,7 @@
                 <td><%= image.filename %></td>
                 <td><%= image.created_at %></td>
                 <td>
-                    <select class="form-control" name="Galleries">
-                        <option value="default">Default</option>
-                    </select>
+                    <%= f.collection_select("id", Gallery.all, :id, :name, {prompt: true}, {class: "form-control"} ) %>
                 </td>
                 <td><%= link_to "DELETE", delete_image_attachment_gallery_path(image.signed_id, @gallery.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-block btn-sml btn-danger" %></td>
             </tr>
