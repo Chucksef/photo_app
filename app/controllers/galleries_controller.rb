@@ -48,7 +48,6 @@ class GalleriesController < ApplicationController
     def destroy
         Gallery.find(params[:id]).destroy
         # Clears out SQLite3 db usage
-        ActiveRecord::Base.connection.execute("BEGIN TRANSACTION; END;")
         redirect_to galleries_path
     end
 
