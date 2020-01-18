@@ -12,7 +12,7 @@
 
 	<body>
 		<%= render 'layouts/header' %>
-		<div class="container" id="page_container">
+		<div class="container-fluid" id="page_container">
 			<% flash.each do |message_type, message| %>
 				<%= content_tag(:div, message, id: "flash", class: "alert alert-#{message_type}") %>
 			<% end %>

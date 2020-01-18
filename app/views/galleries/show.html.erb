@@ -2,7 +2,7 @@
     <div class="container">
         <h1><%= @gallery.name %></h1>
         <p class="lead text-muted"><%= @gallery.description%></p>
-        <%= link_to "<< Back to Index", galleries_path, class: "btn btn-default" %>
+        <%= link_to "<< Index", galleries_path, class: "btn btn-default" %>
         <%= link_to 'Edit Gallery', edit_gallery_path, class: "btn btn-primary" %>
     </div>
 </section>

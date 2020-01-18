@@ -1,49 +1,61 @@
-<div class="page-header">
-    <h1>Edit <%= @gallery.name %></h1>
-    <%= link_to "<< Back to Index", galleries_path, class: "btn btn-default" %>
-</div>
-<%= form_for @gallery do |f| %>
+<div class="row">
 
-    <%= render 'shared/error_messages' %>
+    <div class="sidebar-sticky">
+        <div class="page-header">
+            <h2>Edit Gallery</h2>
+            <h4> - <%= @gallery.name %></h4>
+                <div class="row">
+                    <%= link_to "<< Index", galleries_path, class: "col-xs-6 btn btn-default" %>
+                    <%= link_to "<< Gallery", gallery_path(params[:id]), class: "col-xs-6 btn btn-default" %>
+                </div>
+        </div>
+        <div class="row">
+            <label class="col-xs-12 btn-block btn btn-success" for="submit-form" tabindex="0">Submit</label>
+            <%= link_to 'Delete Gallery', @gallery, method: :delete, data: { confirm: 'Are you sure?' }, class: "col-xs-12 btn-block btn btn-danger" %>
+        </div>
+    </div>
 
-    <div class="form-group">
-        <%= f.label "Name: "%>
-        <%= f.text_field :name, class: "form-control" %>
-    </div>
-    <div class="form-group">
-        <%= f.label "Description: " %>
-        <%= f.text_area :description, class: "form-control" %>
-    </div>
-    <table class="table table-condensed table-bordered table-striped">
-        <tr>
-            <th><strong>Thumbnail</strong></th>
-            <th><strong>Filename</strong></th>
-            <th><strong>Added</strong></th>
-            <th><strong>Move Image</strong></th>
-            <th class="text-center"><strong>Delete</strong></th>
-        </tr>
-        <% @gallery.images.each do |image| %>
-            <tr>
-                <td class="text-center"><%= link_to( image_tag(image, alt: image.filename, class: "img-table"), image, target: "_blank") %></td>
-                <td><%= image.filename %></td>
-                <td><%= image.created_at %></td>
-                <td>
-                    <%= f.collection_select("id", Gallery.all, :id, :name, {prompt: true}, {class: "form-control"} ) %>
-                </td>
-                <td><%= link_to "DELETE", delete_image_attachment_gallery_path(image.signed_id, @gallery.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-block btn-sml btn-danger" %></td>
-            </tr>
+    <div class="col-md-9 col-md-offset-3 main-content">
+        <%= form_for @gallery do |f| %>
+            <%= render 'shared/error_messages' %>
+            <div class="form-group">
+                <%= f.label "Name: "%>
+                <%= f.text_field :name, class: "form-control" %>
+            </div>
+            <div class="form-group">
+                <%= f.label "Description: " %>
+                <%= f.text_area :description, class: "form-control" %>
+            </div>
+            <table class="table table-condensed table-bordered table-striped">
+                <tr>
+                    <th><strong>Thumbnail</strong></th>
+                    <th><strong>Filename</strong></th>
+                    <th><strong>Added</strong></th>
+                    <th><strong>Move Image</strong></th>
+                    <th class="text-center"><strong>Delete</strong></th>
+                </tr>
+                <% @gallery.images.each do |image| %>
+                    <tr>
+                        <td class="text-center"><%= link_to( image_tag(image, alt: image.filename, class: "img-table"), image, target: "_blank") %></td>
+                        <td><%= image.filename %></td>
+                        <td><%= image.created_at %></td>
+                        <td>
+                            <%= f.collection_select("id", Gallery.all, :id, :name, {prompt: true}, {class: "form-control"} ) %>
+                        </td>
+                        <td><%= link_to "Delete", delete_image_attachment_gallery_path(image.signed_id, @gallery.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-block btn-sml btn-danger" %></td>
+                    </tr>
+                <% end %>
+            </table>
+            <div class="form-group">
+                <%= f.label :add_images %>
+                <%= f.file_field :images, multiple: true, direct_upload: true, class: "form-control" %>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <%= f.check_box :visible %> Visible?
+                    <%= button_tag "Submit", id: "submit-form", type: "submit", class: "hidden", data: { disable_with: "Update Gallery"} %>
+                </label>
+            </div>
         <% end %>
-    </table>
-    <div class="form-group">
-        <%= f.label :images %>
-        <%= f.file_field :images, multiple: true, direct_upload: true, class: "form-control" %>
     </div>
-    <div class="checkbox">
-        <label>
-            <%= f.check_box :visible %> Visible?
-        </label>
-    </div>
-    <hr/>
-    <%= f.submit "Update Gallery", class: "btn btn-primary" %>
-    <%= link_to 'Delete Gallery', @gallery, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger pull-right" %>
-<% end %>
+</div>
