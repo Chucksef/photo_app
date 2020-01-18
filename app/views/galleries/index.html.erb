@@ -20,7 +20,7 @@
             <td><%= gallery.created_at %></td>
             <td><%= gallery.updated_at %></td>
             <td><%= link_to "View #{gallery.name}", gallery, class: "btn btn-block btn-xs btn-primary" %></td>
-            <td><%= link_to "DELETE #{gallery.name}", "", class: "btn btn-block btn-xs btn-danger" %></td>
+            <td><%= link_to "Delete", gallery, method: :delete, class: "btn btn-block btn-xs btn-danger", data: { confirm: "Delete #{gallery.name}?\nThis cannot be undone!" } %></td>
         </tr>
     <% end %>
     </table>
