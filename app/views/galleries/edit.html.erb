@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <div class="col-md-9 col-md-offset-3 main-content">
+    <div class="col-sm-9 col-sm-offset-3 main-content">
         <%= form_for @gallery do |f| %>
             <%= render 'shared/error_messages' %>
             <div class="form-group">
@@ -40,14 +40,15 @@
                         <td><%= image.filename %></td>
                         <td><%= image.created_at %></td>
                         <td>
-                            <%= f.collection_select("id", Gallery.all, :id, :name, {prompt: true}, {class: "form-control"} ) %>
+                            <div class="form-group">
+                                <%= f.collection_select("id", Gallery.all, :id, :name, {prompt: true}, {class: "form-control"} ) %>
+                            </div>
                         </td>
                         <td><%= link_to "Delete", delete_image_attachment_gallery_path(image.signed_id, @gallery.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-block btn-sml btn-danger" %></td>
                     </tr>
                 <% end %>
             </table>
             <div class="form-group">
-                <%= f.label :add_images %>
                 <%= f.file_field :images, multiple: true, direct_upload: true, class: "form-control" %>
             </div>
             <div class="checkbox">

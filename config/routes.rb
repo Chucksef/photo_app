@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :galleries do
     member do
       delete :delete_image_attachment
+      get :move_image_attachment
     end
   end
 

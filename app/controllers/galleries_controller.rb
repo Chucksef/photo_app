@@ -14,11 +14,22 @@ class GalleriesController < ApplicationController
         
     def edit
         @gallery = Gallery.find(params[:id])
+        
     end
-
+    
     def update
-        @gallery = Gallery.find(params[:id])
+        10.times {puts}
+        puts "params:"
+        puts params
+        10.times {puts}
 
+        @gallery = Gallery.find(params[:id])
+        @attached_images = @gallery.images.all
+    
+        @attached_images.each_with_index do |img, idx|
+            puts "filename #{idx}: #{img.filename}"
+        end
+        
         if @gallery.update(gallery_params)
             flash[:success] = "Updated #{@gallery.name}!"
             redirect_to @gallery
@@ -44,6 +55,11 @@ class GalleriesController < ApplicationController
 
         redirect_to edit_gallery_path(params[:format])
     end
+
+    def move_image_attachment
+        @image = ActiveStorage::Blob.find_signed(parmas[:id]).attachments.first
+    end
+        
 
     def destroy
         Gallery.find(params[:id]).destroy
