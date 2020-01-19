@@ -4,23 +4,25 @@
 <div class="container">
     <table class="table table-condensed table-bordered table-striped">
         <tr>
-            <th>Gallery Name</th>
-            <th>Images</th>
-            <th>Visible</th>
-            <th>Date Created</th>
-            <th>Date Edited</th>
+            <th class="text-center">Gallery Name</th>
+            <th class="text-center">Images</th>
+            <th class="text-center">Visible</th>
+            <th class="text-center">Date Created</th>
+            <th class="text-center">Date Edited</th>
             <th class="text-center">View Gallery</th>
             <th class="text-center">Delete Gallery</th>
         </tr>
     <% @galleries.each do |gallery|%>
         <tr>
-            <td><%= gallery.name %></td>
-            <td><%= gallery.images.count %></td>
-            <td><%= gallery.visible %></td>
-            <td><%= gallery.created_at %></td>
-            <td><%= gallery.updated_at %></td>
-            <td><%= link_to "View #{gallery.name}", gallery, class: "btn btn-block btn-xs btn-primary" %></td>
-            <td><%= link_to "Delete", gallery, method: :delete, class: "btn btn-block btn-xs btn-danger", data: { confirm: "Delete #{gallery.name}?\nThis cannot be undone!" } %></td>
+            <td class="text-center"><%= gallery.name %></td>
+            <td class="text-center"><%= gallery.images.count %></td>
+            <td class="text-center">
+                <%= check_box_tag("Visible", gallery.visible, gallery.visible, :disabled => true) %>
+            </td>
+            <td class="text-center"><%= gallery.created_at %></td>
+            <td class="text-center"><%= gallery.updated_at %></td>
+            <td class="text-center"><%= link_to "View #{gallery.name}", gallery, class: "btn btn-block btn-xs btn-primary" %></td>
+            <td class="text-center"><%= link_to "Delete", gallery, method: :delete, class: "btn btn-block btn-xs btn-danger", data: { confirm: "Delete #{gallery.name}?\nThis cannot be undone!" } %></td>
         </tr>
     <% end %>
     </table>
