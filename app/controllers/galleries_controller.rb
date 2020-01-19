@@ -18,10 +18,7 @@ class GalleriesController < ApplicationController
     end
     
     def update
-        10.times {puts}
-        puts "params:"
-        puts params
-        10.times {puts}
+        puts "params ^^^"
 
         @gallery = Gallery.find(params[:id])
         @attached_images = @gallery.images.all
