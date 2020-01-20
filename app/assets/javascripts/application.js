@@ -13,9 +13,11 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require jquery
+//= requrire bootstrap.min
+//= require_self
 //= require_tree .
 
-//= require self
  
 
 addEventListener("direct-upload:initialize", event => {
