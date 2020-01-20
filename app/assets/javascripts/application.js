@@ -14,9 +14,8 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-
-// direct_uploads.js
  
+
 addEventListener("direct-upload:initialize", event => {
     const { target, detail } = event
     const { id, file } = detail
