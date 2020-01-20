@@ -19,7 +19,7 @@
 					<ul class="dropdown-menu">
                         
 						<% Gallery.find_each do |gal| %>
-							<li><%= link_to gal.name, gal %></li>
+							<li><%= link_to(gal.name, gal) if gal.visible %></li>
 						<% end unless Gallery.nil? %>
                 	</ul>
 				</li>
