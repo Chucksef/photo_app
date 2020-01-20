@@ -20,14 +20,24 @@ hr {
 /* SIDEBAR */
 
 .sidebar-sticky {
-  position: fixed;
-  height: 100%;
-  width: 25%;
-  padding: 10px 40px;
-  margin-top: -16px;
-  left: 0px;
+  padding: 5px 40px 15px;
+  margin-top: -20px;
+  margin-bottom: 15px;
   background: #f4f4f4;
 }
+
+@media only screen and (min-width: 992px) {
+  .sidebar-sticky {
+    padding: 10px 40px;
+    position: fixed;
+    height: 100%;
+    width: 25%;
+    margin-top: -16px;
+    left: 0px;
+    background: #f4f4f4;
+  }
+}
+
 
 
 
