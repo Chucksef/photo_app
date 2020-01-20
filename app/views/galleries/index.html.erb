@@ -10,6 +10,7 @@
             <th class="text-center">Date Created</th>
             <th class="text-center">Date Edited</th>
             <th class="text-center">View Gallery</th>
+            <th class="text-center">Edit Gallery</th>
             <th class="text-center">Delete Gallery</th>
         </tr>
     <% @galleries.each do |gallery|%>
@@ -21,7 +22,8 @@
             </td>
             <td class="text-center"><%= gallery.created_at %></td>
             <td class="text-center"><%= gallery.updated_at %></td>
-            <td class="text-center"><%= link_to "View #{gallery.name}", gallery, class: "btn btn-block btn-xs btn-primary" %></td>
+            <td class="text-center"><%= link_to "View", gallery, class: "btn btn-block btn-xs btn-primary" %></td>
+            <td class="text-center"><%= link_to "Edit", edit_gallery_path(gallery.id), class: "btn btn-block btn-xs btn-warning" %></td>
             <td class="text-center"><%= link_to "Delete", gallery, method: :delete, class: "btn btn-block btn-xs btn-danger", data: { confirm: "Delete #{gallery.name}?\nThis cannot be undone!" } %></td>
         </tr>
     <% end %>
