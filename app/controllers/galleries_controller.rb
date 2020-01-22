@@ -20,11 +20,6 @@ class GalleriesController < ApplicationController
     
     def update
         @gallery = Gallery.find(params[:id])
-        @attached_images = @gallery.images.all
-        
-        @attached_images.each_with_index do |img, idx|
-            puts "filename #{idx}: #{img.filename}"
-        end
         
         if @gallery.update(gallery_params)
             flash[:success] = "Updated #{@gallery.name}!"

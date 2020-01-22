@@ -1,2 +1,15 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="secondary-background col-md-3 col-sm-12">
+    <h2>
+        <%= @user.name %>
+        <% if @user.admin %>
+            <small><small>(Admin)</small></small>
+        <% end %>
+    </h2>
+    <h4><%= @user.email %></h4>
+    
+    <%= link_to "Edit User", edit_user_path(params[:id]), class: "btn btn-block btn-primary" %>
+    <hr>
+</div>
+<div class="col-md-9 col-sm-12">
+    <h4>User Content Will Go here Eventually</h4>
+</div>
