@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+	before_save { self.email = email.downcase}
+
 	validates                   :name, 
 									presence: true,
 									length: { maximum: 50 }
@@ -11,6 +13,5 @@ class User < ApplicationRecord
 	validates                   :password, presence: true, length: { minimum: 8 }
 	validates					:password_confirmation, presence: true
 	validates_confirmation_of	:password
-
 
 end
