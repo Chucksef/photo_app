@@ -23,8 +23,8 @@
             <%= f.password_field :password_confirmation, class: "form-control" %>
         </div>
         <hr/>
-        <%= f.submit "Create User", class: "btn btn-primary" %>
-        <h6>Already a User?</h6>
-        <%= link_to "Log In", login_path, class:"btn btn-default" %>
+        <%= f.submit "Create User", class: "btn btn-block btn-primary" %>
+        <p>Already a User? <%= link_to "Log In", login_path%></p>
+        
     <% end %>
 </div>

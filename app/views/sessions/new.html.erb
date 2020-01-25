@@ -15,8 +15,8 @@
             <%= f.password_field :password, class: "form-control" %>
         </div>
         <hr/>
-        <%= f.submit "Log In", class: "btn btn-primary" %>
-        <h6>New User?</h6>
-        <%= link_to "Sign up", signup_path, class: "btn btn-default"%>
+        <%= f.submit "Log In", class: "btn btn-block btn-primary" %>
+        <p>New User? <%= link_to "Sign up now!", signup_path%></p>
+        
     <% end %>
 </div>
