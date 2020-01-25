@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+
+  #Root
   root 'static_pages#home'
 
+
+  #Static Pages
   get '/contact', to: "static_pages#contact"
   get '/about', to: "static_pages#about"
   get '/home', to: "static_pages#home"
-  get '/login', to: "users#login"
 
+
+  #Galleries
   resources :galleries do
     member do
       delete :delete_image_attachment
@@ -14,7 +19,15 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users
+
+  #Users
+  resources :users, except: :new 
   get '/signup', to: "users#new"
+
+  
+  #Sessions
+  get '/login', to: "sessions#new"
+  post '/login', to: "sessions#create"
+  delete '/logout', to: "sessions#destroy"
 
 end

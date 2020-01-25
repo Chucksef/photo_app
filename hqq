@@ -1,0 +1,111 @@
+[33m752067d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32msign-up[m[33m)[m set up production environment to use PUMA according to Heroku's documentation
+[33m0b09405[m set up production environment to force SSL
+[33m8fcde0e[m set up production environment to use AWS S3 production bucket
+[33m47a3b8e[m set up routes and links to sign-up and log-in pages on the header
+[33m903e0f9[m remapped user#new to /signup, edited form for clarity, and streamlined page appearance
+[33m3b58de1[m removed 'admin' from strong password parameters
+[33ma46c900[m added debug footer
+[33m6136e26[m added validation to password
+[33m9de6361[m removed password/confirmation fields from User model, but added password_digest to work with the bcrypt gem
+[33mdc270c7[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m added a callback to downcase all email addresses before saving
+[33m3032ed3[m removed all data from users.yml
+[33md715c1b[m added index and uniqueness to users email in db
+[33m3dadc6d[m Edited Static Pages to look tidier
+[33m7b9107a[m Basic user validation complete
+[33mf9b2f29[m Changed @gallery -> @user in _error_messages partial
+[33m36f378e[m Added users#destroy
+[33m85eb170[m Added users#index
+[33m37c6a92[m Added users#edit
+[33ma86fec6[m Added Users#show
+[33mfd656af[m users#create function complete
+[33mf8d3ef0[m users#new view complete
+[33m9ae997a[m Added basic User model, controller, routes, and views
+[33m31419aa[m app now loads directupload.js on all pages
+[33mb2a9452[m moved directupload javascript to discrete file and included in production compiler
+[33maba7d2d[m Switched back to included js files. Also switched production.rb to config.assets.compile = true in order to use in production
+[33mcc698b1[m removed lines from application.js
+[33m82f1bff[m updated gemfile to remove jquery-rails
+[33m83ddcc6[m reverted to referenced js files
+[33m1c34930[m updated assets.rb and removed js files from precompiler
+[33m6fe1bfc[m installed jquery-rails gem
+[33mbf6174b[m mobile formats below 992px now. Not perfect but good enough
+[33mda39b9b[m Removed image bloat from app
+[33mb4024b0[m Hidden galleries are hidden from nav
+[33m85ed888[m added 'edit gallery' column to galleries#index
+[33m9b037b2[m App now uses embedded, precompiled js instead of links
+[33m289e961[m Deleting a gallery now deletes all associated images from bucket
+[33mc7b3e71[m removed 'count' column from Galleries model
+[33mb4a1bbc[m updated css breakpoints to format better on skinny windows
+[33m9ef1289[m added checkboxes to index
+[33mb2e74e8[m Edited database.yml to increase development sqlite3 timeout to minimize busy errors
+[33m1d2c8d6[m Fixed many spacing issues, most of which related to header and flash
+[33m04573fe[m Can now delete galleries from Galleries#index
+[33md68b659[m Galleries#index now displays image count
+[33m813bd1f[m Gallery#edit now has admin sidebar!
+[33m69598e6[m Dropboxes now format correctly and auto-populate all Galleries names
+[33m74378cc[m Fixed dropboxes in table formatting incorrectly
+[33m7edf458[m Fixed images not linking to full size
+[33m7772239[m Fixed images not centering correctly in table on Gallery#edit
+[33m1712d49[m Fixed improper formatting of back button on Gallery#edit view
+[33m93834eb[m Can now delete images directly from Gallery#edit
+[33mecc52a8[m Images now clickable, open in new window
+[33m0f85b65[m Added table to the Gallery#edit page
+[33mddb5bb8[m Redo Gallery#show to display full image gallery
+[33m0ab6468[m check for empty Galleries
+[33m42343b1[m updated production to give output
+[33mb29ce98[m Changed s3 bucket to 'amazon_dev' bucket
+[33mf3f52db[m Changed back to production s3 bucket
+[33mfb4955e[m Changed s3 bucket to 'working' development bucket
+[33me4aa3be[m updated direct_upload css & production.rb
+[33m2cc781c[m changed aws server to us-east-2
+[33mdd733e6[m converted js  notation to contats
+[33m9f2602d[m upgraded uglifier to hopefully deploy
+[33m959e0f1[m Turned off server uglifier
+[33m6577775[m fixed bug upload elements not displaying css or using js correctly.
+[33mfab12da[m Fixed credentials bug
+[33m50d2741[m Added direct-upload JS
+[33m58606b7[m Added active storage CSS
+[33m66d17ac[m Updated to use amazon even locally
+[33m00b3a8a[m Galleries controller now can accept :images[] paramater to save/update galleries with images
+[33m88b35e6[m Galleries#show loops through and displays names of files attached
+[33m6851df2[m Galleries#edit form now has field for upload
+[33mc10d7dc[m Galleries#new form now has field for upload
+[33m7936ab6[m Galleries model now has reference to :images
+[33m2b61bc1[m installed active storage
+[33m53b9824[m Installed AWS-SDK-S3
+[33ma8dac11[m Set up production.rb and developmnet.rb to access the correct storage methods
+[33m8b42d29[m set up aws keys & bucket for S3
+[33m3592a26[m moved navbar galleries loading to within the _header.html.erb partial itself
+[33m6932df6[m Rewrote Galleries#Index to format as a table
+[33mefd02c5[m added 'Count' column to Galleries model
+[33m44dba19[m removed order from DB
+[33m49e8d2c[m Added generic content to album pages
+[33me4a5114[m Added content to app/images/ folder
+[33m083093c[m Galleries in Nav populates and works
+[33m227ccba[m Website communicates form submission errors to user
+[33mdca05f2[m Invalid Galleries cannot be added to DB
+[33m02d3865[m Added flash messages
+[33m1546ff2[m Added new Gallery button to Index. Also fixed bugs
+[33m7121098[m #Delete removes Gallery from DB
+[33mc12e765[m Galleries#Update updates the DB
+[33m5b77653[m Galleries#Edit Displays
+[33m981d195[m Submitting new Gallery adds to DB
+[33mff4ab75[m Galleries#New displays
+[33m71e68ca[m Galleries#Show displays
+[33mb267af0[m Galleries#Index displays
+[33m537d145[m 2 dummy galleries created in console
+[33m6845ff2[m Routed galleries as a resource
+[33m92dd7d6[m Added galleries model and controller
+[33mc743ad8[m finished bootstrap styling all basic elements
+[33mf84b6db[m Footer bootstrap & styles complete
+[33m0cf4e40[m Header bootstrap complete
+[33m0db9e20[m Bootstrap integrated
+[33mcce6c1b[m Added content to home, about, contact pages
+[33m79bfcdc[m Added dynamic page titles
+[33mb36b6d9[m Converted Header and Footer to partials
+[33me6d293e[m Built layout for displaying all static pages
+[33md84c432[m Added about and contact pages
+[33ma76354d[m Added home page
+[33m8fe8d0b[m Added static_pages controller
+[33m706cb5f[m Switched database to postgres for production only
+[33mae995b8[m Initial Commit
