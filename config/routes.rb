@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-
   #Root
   root 'static_pages#home'
 
@@ -24,7 +22,7 @@ Rails.application.routes.draw do
   resources :users, except: :new 
   get '/signup', to: "users#new"
 
-  
+
   #Sessions
   get '/login', to: "sessions#new"
   post '/login', to: "sessions#create"
