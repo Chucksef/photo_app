@@ -17,16 +17,42 @@
                 <li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galleries <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-                        
 						<% Gallery.find_each do |gal| %>
 							<li><%= link_to(gal.name, gal) if gal.visible %></li>
 						<% end unless Gallery.nil? %>
                 	</ul>
 				</li>
             </ul>
-            <ul class="nav navbar-nav pull-right">
-                <li><%= link_to "Sign-Up", signup_path %></li>
-                <li><%= link_to "Log-In", login_path %></li>
+            <ul class="nav navbar-nav navbar-right">
+                <% if user_admin? %>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Admin <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><%= link_to "Users", users_path %></li>
+                            <li><%= link_to "Galleries", galleries_path %></li>
+                        </ul>
+                    </li>
+                <% end %>
+                <% if logged_in? %>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Account <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><%= link_to "Profile", current_user %></li>
+                            <li><%= link_to "Settings", '#' %></li>
+                            <li class="divider"></li>
+                            <li>
+                                <%= link_to "Log out", logout_path, method: :delete %>
+                            </li>
+                        </ul>
+                    </li>
+                <% else %>
+                    <li><%= link_to "Sign-Up", signup_path %></li>
+                    <li><%= link_to "Log-In", login_path %></li>
+                <% end %>
             </ul>
         </nav>
     </div>
