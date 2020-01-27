@@ -25,6 +25,15 @@ $gray-medium-light: #f4f4f4;
   @include box_sizing;
 }
 
+.dropdown-menu > li > p {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #aaa;
+  white-space: nowrap;
+}
 
 
 
