@@ -22,10 +22,12 @@ module SessionsHelper
         cookies.delete(:remember_token)
     end
 
+    #returns true if the the requested page's owner matches the logged in user.
     def current_user?(user)
         user == current_user
     end
 
+    #returns the current logged in user
     def current_user
         if (user_id = session[:user_id])
             @current_user ||= User.find_by(id: user_id)
@@ -38,11 +40,25 @@ module SessionsHelper
         end
     end
 
+    #returns true if a user is currently logged in
     def logged_in?
         !current_user.nil?
     end
-            
+    
+    #returns true if the current user is an admin
     def user_admin?
         current_user.admin unless current_user.nil?
     end
+
+    # Redirects to stored location (or to the default).
+    def redirect_back_or(default)
+        redirect_to(session[:forwarding_url] || default)
+        session.delete(:forwarding_url)
+    end
+
+    # Stores the URL trying to be accessed.
+    def store_location
+        session[:forwarding_url] = request.original_url if request.get?
+    end
+
 end
