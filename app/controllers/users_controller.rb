@@ -13,13 +13,13 @@ class UsersController < ApplicationController
 	def create
 	@user = User.new(user_params)
 
-	if @user.save
-		log_in(@user)
-		flash[:success] = "Successfully signed up. Welcome #{@user.name}!"
-		redirect_to @user
-	else
-		render :new
-	end
+		if @user.save
+			log_in(@user)
+			flash[:success] = "Successfully signed up. Welcome #{@user.name}!"
+			redirect_to @user
+		else
+			render :new
+		end
 	end
 
 	def show
@@ -31,21 +31,21 @@ class UsersController < ApplicationController
 	end
 
 	def update
-	@user = User.find(params[:id])
+		@user = User.find(params[:id])
 
-	if @user.update(user_params)
-		flash[:success] = "Updated #{@user.name}!"
-		redirect_to @user
-	else
-		render :edit
-	end
+		if @user.update(user_params)
+			flash[:success] = "Updated #{@user.name}!"
+			redirect_to @user
+		else
+			render :edit
+		end
 	end
 
 	def destroy
-	@user = User.find(params[:id])
+		@user = User.find(params[:id])
 
-	@user.destroy
-	redirect_to users_path
+		@user.destroy
+		redirect_to users_path
 	end
 
 	private 

@@ -24,7 +24,7 @@ gem 'uglifier'
 gem 'faker'
 
 # Use Will Paginate gem to paginate
-gem 'will_paginate', '3.1.6'
+gem 'will_paginate', '3.1.7'
 # Use Boostrap-Will Paginate to integrate with Bootstrap
 gem 'bootstrap-will_paginate', '1.0.0'
 

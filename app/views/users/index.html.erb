@@ -4,6 +4,7 @@
     <h1>All Users</h1>
 </div>
 <div class="col-md-12">
+    <%= will_paginate @users %>
     <table class="table table-condensed table-bordered table-striped">
         <tr>
             <th class="text-center">User Name</th>
@@ -17,6 +18,7 @@
         </tr>
     <%= render @users %>
     </table>
+    <%= will_paginate @users %>
 </div>
 <hr/>
 <%= link_to "New User", signup_path, class: "btn btn-primary" %>
