@@ -1,0 +1,12 @@
+<tr>
+    <td class="text-center"><%= user.name %></td>
+    <td class="text-center"><%= user.email %></td>
+    <td class="text-center">
+        <%= check_box_tag("Admin", user.admin, user.admin, :disabled => true) %>
+    </td>
+    <td class="text-center"><%= user.created_at %></td>
+    <td class="text-center"><%= user.updated_at %></td>
+    <td class="text-center"><%= link_to "View", user, class: "btn btn-block btn-xs btn-primary" %></td>
+    <td class="text-center"><%= link_to "Edit", edit_user_path(user.id), class: "btn btn-block btn-xs btn-warning" %></td>
+    <td class="text-center"><%= link_to "Delete", user, method: :delete, class: "btn btn-block btn-xs btn-danger", data: { confirm: "Delete #{user.name}?\nThis cannot be undone!" } %></td>
+</tr>
