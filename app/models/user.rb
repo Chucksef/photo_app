@@ -46,15 +46,17 @@ class User < ApplicationRecord
 		BCrypt::Password.new(remember_digest).is_password?(remember_token)
 	end
 	
-	# Creates and assigns the activation token and digest.
-	def create_activation_digest
-		self.activation_token = User.new_token
-		self.activation_digest = User.digest(activation_token)
-	end
+	private
 
-	# Converts an email address to all lowercase
-	def downcase_email
-		self.email = email.downcase
-	end
+		# Creates and assigns the activation token and digest.
+		def create_activation_digest
+			self.activation_token = User.new_token
+			self.activation_digest = User.digest(activation_token)
+		end
+
+		# Converts an email address to all lowercase
+		def downcase_email
+			self.email = email.downcase
+		end
 
 end
