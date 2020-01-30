@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 	@user = User.new(user_params)
 
 		if @user.save
-			UserMailer.account_activation(@user).deliver_now
+			@user.send_activation_email
 			flash[:success] = "Successfully Sent Activation Email to #{@user.email}"
 			redirect_to root_url
 		else
@@ -24,6 +24,18 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+		if !logged_in?
+			flash[:warning] = "You Must Log In"
+			redirect_to login_path
+		elsif user_admin?
+			#does nothing but exit the if-tree and continue
+		elsif @user != current_user
+			flash[:warning] = "Please Log In as that User to View Their Profile."
+			redirect_to root_url
+		elsif !@user.activated
+			flash[:warning] = "User Not Activated. Please Activate Via Email First."
+			redirect_to root_url
+		end
 	end
 
 	def edit
