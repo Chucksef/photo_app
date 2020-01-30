@@ -6,10 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Set pw
+pw = ""
+Rails.environment == 'production' ? pw = ENV['ADMIN_PASSWORD'] : pw = Rails.application.credentials.dig(:PASSWORD)
+
 User.create!(	name:  "Chuck Crouse",
 				email: "chucksef@gmail.com",
-				password:              Rails.application.credentials.dig(:PASSWORD),
-				password_confirmation: Rails.application.credentials.dig(:PASSWORD),
+				password:              pw,
+				password_confirmation: pw,
 				admin: true,
 				activated: true,
 				activated_at: Time.zone.now)
