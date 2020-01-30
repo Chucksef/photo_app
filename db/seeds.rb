@@ -8,8 +8,8 @@
 
 User.create!(	name:  "Chuck Crouse",
 				email: "chucksef@gmail.com",
-				password:              "password",
-				password_confirmation: "password",
+				password:              Rails.application.credentials.dig(:PASSWORD),
+				password_confirmation: Rails.application.credentials.dig(:PASSWORD),
 				admin: true,
 				activated: true,
 				activated_at: Time.zone.now)
