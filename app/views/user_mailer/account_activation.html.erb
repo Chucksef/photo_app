@@ -1,5 +1,10 @@
-<h1>User#account_activation</h1>
+<h1>StudioDB Account Activation</h1>
 
+<h4><%= @user.name %>,</h4>
+  
 <p>
-  <%= @greeting %>, find me in app/views/user_mailer/account_activation.html.erb
+Thank you for registering with StudioDB. Please click the link below to activate your account.
 </p>
+
+<%= link_to "Activate Account", edit_account_activation_url(@user.activation_token, email: @user.email)%>
+
