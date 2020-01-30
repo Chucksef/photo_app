@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Set pw
-Rails.env == 'production' ? pw = ENV['ADMIN_PASSWORD'] : pw = Rails.application.credentials.dig(:PASSWORD)
+Rails.env.production? ? pw = ENV['ADMIN_PASSWORD'] : pw = Rails.application.credentials.dig(:PASSWORD)
 pw ||= "password"
 
 User.create!(	name:  "Chuck Crouse",
