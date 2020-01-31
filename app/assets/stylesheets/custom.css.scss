@@ -22,6 +22,7 @@ $gray-medium-light: #f4f4f4;
 .debug_dump {
   margin: 45px;
   background-color: $gray-medium-light;
+  color: #aaa;
   @include box_sizing;
 }
 
