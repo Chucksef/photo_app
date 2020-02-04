@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'site_items/index'
+  get 'site_items/new'
+  get 'site_items/show'
+  get 'site_items/edit'
   get 'password_resets/new'
   get 'password_resets/edit'
   #Root
