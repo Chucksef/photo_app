@@ -1,9 +1,8 @@
 class SiteItem < ApplicationRecord
+    belongs_to :site
     scope :groups, -> { where(type: "Group") }
     scope :pages, -> { where(type: "Page") }
 
-    validates :name,        presence: true,
-                            length: { maximum: 20 }
     validates :title,       presence: true,
                             length: { maximum: 20 }
     validates :order,       presence: true, 
