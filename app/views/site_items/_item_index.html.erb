@@ -1,6 +1,10 @@
 <tr>
-    <td class="text-center"><%= item.title %></td>
+    <td class="text-center"><%= item.name %></td>
     <td class="text-center"><%= item.order %></td>
+    <td><%= item.description %></td>
+    <td class="text-center">
+        <%= item.tmp_group.name if item.tmp_group_id %>
+    </td>
     <td class="text-center">
         <%= check_box_tag("Admin", item.visible, item.visible , :disabled => true) %>
     </td>

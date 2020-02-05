@@ -1,10 +1,11 @@
 class SiteItem < ApplicationRecord
     belongs_to :site
-    scope :groups, -> { where(type: "Group") }
+    
+    scope :tmp_groups, -> { where(type: "TmpGroup") }
     scope :pages, -> { where(type: "Page") }
 
-    validates :title,       presence: true,
-                            length: { maximum: 20 }
+    validates :name,       presence: true,
+                            length: { maximum: 25 }
     validates :order,       presence: true, 
                             uniqueness: true
     validates :description, presence: true,

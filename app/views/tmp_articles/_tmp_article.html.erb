@@ -1,9 +1,1 @@
-<tr>
-    <td class="text-center"><%= tmp_article.title %></td>
-    <td class="text-center"><%= tmp_article.order %></td>
-    <td class="text-center">
-        <%= check_box_tag("Admin", tmp_article.visible, tmp_article.visible , :disabled => true) %>
-    </td>
-    <td class="text-center"><%= tmp_article.created_at %></td>
-    <td class="text-center"><%= tmp_article.updated_at %></td>
-</tr>
+<%= render partial: '/site_items/item_index', locals: {item: tmp_article }%>

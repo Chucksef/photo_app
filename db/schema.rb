@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_05_015925) do
+ActiveRecord::Schema.define(version: 2020_02_05_175252) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -42,9 +42,7 @@ ActiveRecord::Schema.define(version: 2020_02_05_015925) do
   end
 
   create_table "site_items", force: :cascade do |t|
-    t.integer "group_id"
     t.string "name"
-    t.string "title"
     t.string "subtitle"
     t.text "description"
     t.string "type"
@@ -65,7 +63,9 @@ ActiveRecord::Schema.define(version: 2020_02_05_015925) do
     t.string "heading_5"
     t.string "heading_6"
     t.integer "site_id"
-    t.index ["type", "group_id"], name: "index_site_items_on_type_and_group_id"
+    t.integer "tmp_group_id"
+    t.index ["tmp_group_id"], name: "index_site_items_on_tmp_group_id"
+    t.index ["type"], name: "index_site_items_on_type_and_group_id"
   end
 
   create_table "sites", force: :cascade do |t|

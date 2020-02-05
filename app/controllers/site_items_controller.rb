@@ -25,8 +25,8 @@ class SiteItemsController < ApplicationController
 
 		def set_type
 			case params[:type]
-			when "Group"
-				"Group"
+			when "TmpGroup"
+				"TmpGroup"
 			when "TmpArticle"
 				"TmpArticle"
 			when "TmpGallery"

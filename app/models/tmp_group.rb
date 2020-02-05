@@ -1,0 +1,2 @@
+class TmpGroup < SiteItem
+end
