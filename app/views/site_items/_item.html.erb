@@ -1,0 +1,9 @@
+<tr>
+    <td class="text-center"><%= item.title %></td>
+    <td class="text-center"><%= item.order %></td>
+    <td class="text-center">
+        <%= check_box_tag("Admin", item.visible, item.visible , :disabled => true) %>
+    </td>
+    <td class="text-center"><%= item.created_at %></td>
+    <td class="text-center"><%= item.updated_at %></td>
+</tr>

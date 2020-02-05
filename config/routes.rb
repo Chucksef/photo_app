@@ -45,7 +45,9 @@ Rails.application.routes.draw do
 	#SiteItems
 	resources :site_items do
 		resources :groups, controller: :site_items, type: "Group"
-		resources :pages , controller: :site_items, type: "Page"
+		resources :tmp_articles, controller: :site_items, type: "TmpArticle"
+		resources :tmp_galleries, controller: :site_items, type: "TmpGallery"
+		resources :tmp_items, controller: :site_items, type: "TmpItem"
 	end
 
 end
