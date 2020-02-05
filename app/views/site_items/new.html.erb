@@ -1,0 +1,22 @@
+<% item_type = @item.class.to_s[3..-1] %>
+
+<% provide(:title, "New #{item_type}") %>
+<% provide(:button_text, "Create #{item_type} Page") %>
+
+
+<div class="col-md-8 col-md-offset-2 col-sm-12">
+    <div class="page-header">
+        <h1>New Page: <%= item_type %></h1>
+    </div>
+
+    <% case @item.type%>
+        <% when "TmpGroup" %>
+            <%= render partial: '/tmp_groups/new', locals: { item: @item } %>
+        <% when "TmpArticle" %>
+            <%= render partial: '/tmp_articles/new', locals: { item: @item } %>
+        <% when "TmpGallery" %>
+            <%= render partial: '/tmp_galleries/new', locals: { item: @item } %>
+        <% when "TmpCard" %>
+            <%= render partial: '/tmp_cards/new', locals: { item: @item } %>
+    <% end %>
+</div>

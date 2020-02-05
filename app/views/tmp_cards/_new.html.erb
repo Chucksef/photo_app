@@ -1,0 +1,54 @@
+<% # NEW Card Page %>
+
+<div class="col-md-8 col-md-offset-2 col-sm-12">
+    <%= form_for(:tmp_card, url: new_site_item_tmp_card_url) do |f| %>
+        
+        <%= render 'shared/error_messages' %>
+
+        <div class="form-group">
+            <%= f.label "Name"%>
+            <%= f.text_field :name, class: "form-control" %>
+        </div>
+        <div class="form-group">
+            <%= f.label "Subtitle"%>
+            <%= f.text_field :subtitle, class: "form-control" %>
+        </div>
+        <div class="form-group">
+            <%= f.label "Description" %>
+            <%= f.text_area :description, class: "form-control" %>
+        </div>
+        <hr/>
+        <h3>Card 1</h3>
+        <div class="form-group">
+            <%= f.label "Heading_1"%>
+            <%= f.text_field :heading_1, class: "form-control"%>
+        </div>
+        <div class="form-group">
+            <%= f.label "Article_1" %>
+            <%= f.text_area :card_1, class: "form-control"%>
+        </div>
+        <hr/>
+        <h3>Card 2</h3>
+         <div class="form-group">
+            <%= f.label "Heading_2"%>
+            <%= f.text_field :heading_1, class: "form-control"%>
+        </div>
+        <div class="form-group">
+            <%= f.label "Article_2" %>
+            <%= f.text_area :card_1, class: "form-control"%>
+        </div>
+        <hr/>
+        <h3>Card 3</h3>
+         <div class="form-group">
+            <%= f.label "Heading_3"%>
+            <%= f.text_field :heading_1, class: "form-control"%>
+        </div>
+        <div class="form-group">
+            <%= f.label "Article_3" %>
+            <%= f.text_area :card_1, class: "form-control"%>
+        </div>
+        <hr/>
+        <%= f.submit yield(:button_text), class: "btn btn-block btn-primary" %>
+
+    <% end %>
+</div>

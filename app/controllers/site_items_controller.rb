@@ -26,13 +26,13 @@ class SiteItemsController < ApplicationController
 		def set_type
 			case params[:type]
 			when "TmpGroup"
-				"TmpGroup"
+				"tmp_group"
 			when "TmpArticle"
-				"TmpArticle"
+				"tmp_article"
 			when "TmpGallery"
-				"TmpGallery"
+				"tmp_gallery"
 			when "TmpCard"
-				"TmpCard"
+				"tmp_card"
 			end
 		end
 end
