@@ -47,7 +47,7 @@ Rails.application.routes.draw do
 		resources :groups, controller: :site_items, type: "Group"
 		resources :tmp_articles, controller: :site_items, type: "TmpArticle"
 		resources :tmp_galleries, controller: :site_items, type: "TmpGallery"
-		resources :tmp_items, controller: :site_items, type: "TmpItem"
+		resources :tmp_cards, controller: :site_items, type: "TmpCard"
 	end
 
 end

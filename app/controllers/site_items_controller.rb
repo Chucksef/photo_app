@@ -10,7 +10,6 @@ class SiteItemsController < ApplicationController
 	end
 
 	def new
-		puts "THIS IS THE SITE: #{@site}"
 		@item = @site.send(set_type.pluralize).new
 	end
 
@@ -32,8 +31,8 @@ class SiteItemsController < ApplicationController
 				"TmpArticle"
 			when "TmpGallery"
 				"TmpGallery"
-			when "TmpItem"
-				"TmpItem"
+			when "TmpCard"
+				"TmpCard"
 			end
 		end
 end
