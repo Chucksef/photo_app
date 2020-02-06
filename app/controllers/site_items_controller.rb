@@ -36,6 +36,21 @@ class SiteItemsController < ApplicationController
 		@item = SiteItem.find(params[:id])
 	end
 
+	def update
+		@item = SiteItem.find(params[:id])
+
+		# 10.times { puts }
+		# puts "#{@item.class}:\n\nName: #{@item.name}\n\nDescription: #{@item.description}\n\nOrder: #{@item.order}\n\nSite_ID: #{@item.site_id}."
+		# 10.times { puts }
+
+		if @item.update(item_params)
+			flash[:success] = "#{params[:type].to_s[3..-1]} Successfully Updated"
+			redirect_to site_items_path
+		else
+			render :edit
+		end
+	end
+
 	private
 
 		def get_site
