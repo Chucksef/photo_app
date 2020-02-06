@@ -10,6 +10,9 @@
     </div>
     <nav id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
+            <% SiteItem.order(order: :asc).all.each do |item| %>
+                <%= render partial: 'layouts/nav_item', locals: { item: item }%>
+            <% end %>
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "About", about_path %></li>
             <li><%= link_to "Contact", contact_path %></li>
