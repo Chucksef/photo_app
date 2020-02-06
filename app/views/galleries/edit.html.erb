@@ -14,7 +14,7 @@
         </div>
         <div class="row">
             <label class="col-xs-12 btn-block btn btn-success" for="submit-form" tabindex="0">Submit</label>
-            <%= link_to 'Delete Gallery', @gallery, method: :delete, data: { confirm: "Delete #{@gallery.name}?\nThis cannot be undone!" }, class: "col-xs-12 btn-block btn btn-danger" %>
+            <%= link_to 'Delete Gallery', @gallery, method: :delete, data: { confirm: "Are you sure you want to delete #{@gallery.name}?\n\nTHIS CANNOT BE UNDONE!" }, class: "col-xs-12 btn-block btn btn-danger" %>
         </div>
     </div>
 

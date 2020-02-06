@@ -51,6 +51,14 @@ class SiteItemsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@item = SiteItem.find(params[:id])
+
+		flash[:success] = "Deleted #{@item.name} Successfully"
+		@item.destroy
+		redirect_to site_items_path
+	end
+
 	private
 
 		def get_site

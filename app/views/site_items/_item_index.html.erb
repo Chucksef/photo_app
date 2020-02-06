@@ -12,5 +12,5 @@
         <%= check_box_tag("Admin", item.visible, item.visible , :disabled => true) %>
     </td>
     <td class="text-center"><%= link_to "Edit", edit_site_item_path(item), class: "btn btn-block btn-xs btn-warning" %></td>
-    <td class="text-center"><%= link_to "Delete", item, method: :delete, class: "btn btn-block btn-xs btn-danger", data: { confirm: "Delete #{item.name}?\nThis cannot be undone!" } %></td>
+    <td class="text-center"><%= link_to "Delete", item, method: :delete, class: "btn btn-block btn-xs btn-danger", data: { confirm: "Are you sure you want to delete #{item.name}?\n\nTHIS CANNOT BE UNDONE!" } %></td>
 </tr>
