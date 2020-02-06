@@ -43,11 +43,10 @@ Rails.application.routes.draw do
 	resources :password_resets, only: [:new, :create, :edit, :update]
 
 	#SiteItems
-	resources :site_items do
-		resources :tmp_groups, controller: :site_items, type: "TmpGroup"
-		resources :tmp_articles, controller: :site_items, type: "TmpArticle"
-		resources :tmp_galleries, controller: :site_items, type: "TmpGallery"
-		resources :tmp_cards, controller: :site_items, type: "TmpCard"
-	end
+	resources :site_items, only: [:index, :show, :edit]
+	resources :tmp_groups, controller: :site_items, type: "TmpGroup", except: [:index, :show, :edit]
+	resources :tmp_articles, controller: :site_items, type: "TmpArticle", except: [:index, :show, :edit]
+	resources :tmp_galleries, controller: :site_items, type: "TmpGallery", except: [:index, :show, :edit]
+	resources :tmp_cards, controller: :site_items, type: "TmpCard", except: [:index, :show, :edit]
 
 end

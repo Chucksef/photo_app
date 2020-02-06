@@ -25,11 +25,15 @@ class SiteItemsController < ApplicationController
 		# 10.times { puts }
 
 		if @item.save
-			redirect_to site_item_tmp_groups_path
+			redirect_to site_items_path
 			flash[:success] = "#{params[:type].to_s[3..-1]} Successfully Created"
 		else
 			render :new
 		end
+	end
+
+	def edit
+		@item = SiteItem.find(params[:id])
 	end
 
 	private

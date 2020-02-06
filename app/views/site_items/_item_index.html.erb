@@ -1,6 +1,7 @@
 <tr>
-    <% item.name = " — #{item.name}" if item.tmp_group_id %>
-    <td><%= item.name %></td>
+    <td>
+        <%= raw("&nbsp;&nbsp;&nbsp;") if item.tmp_group_id %>
+        <%= link_to item.name, site_item_path(item) %></td>
     <td class="text-center"><%= item.type[3..-1] %></td>
     <td class="text-center"><%= item.order %></td>
     <td><%= item.description %></td>
@@ -10,6 +11,6 @@
     <td class="text-center">
         <%= check_box_tag("Admin", item.visible, item.visible , :disabled => true) %>
     </td>
-    <td class="text-center"><%= item.created_at %></td>
-    <td class="text-center"><%= item.updated_at %></td>
+    <td class="text-center"><%= link_to "Edit", edit_site_item_path(item), class: "btn btn-block btn-xs btn-warning" %></td>
+    <td class="text-center"><%= link_to "Delete", item, method: :delete, class: "btn btn-block btn-xs btn-danger", data: { confirm: "Delete #{item.name}?\nThis cannot be undone!" } %></td>
 </tr>
