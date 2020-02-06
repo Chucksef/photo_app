@@ -54,6 +54,15 @@ body {
   padding: 68px 0px 45px;
 }
 
+.title {
+  margin-bottom: 0px;
+}
+
+.subtitle {
+  margin-top: 0px;
+  color: gray;
+}
+
 hr {
   margin-top: 0px;
   margin-bottom: 15px;
@@ -258,7 +267,7 @@ section.gallery-header {
 }
  
 .direct-upload--complete .direct-upload__progress {
-  background: #dff0d8;
+  background: #c4dabc;
   opacity: 0.4;
 }
  

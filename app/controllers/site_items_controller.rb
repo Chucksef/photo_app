@@ -1,5 +1,5 @@
 class SiteItemsController < ApplicationController
-	before_action :check_admin
+	before_action :check_admin, except: [:show]
 	before_action :get_site
 	# before_action :complete_new_item only: [:new]
 

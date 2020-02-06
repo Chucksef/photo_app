@@ -6,26 +6,20 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         </button>
-        <%= link_to "Photo Studio App", root_path, class: "navbar-brand", id: "logo" %>
+        <%= link_to "#{Site.first.name}", root_path, class: "navbar-brand", id: "logo" %>
     </div>
+
+    <% # SITE NAV SECTION OF NAVBAR %>
     <nav id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
             <% SiteItem.order(order: :asc).all.each do |item| %>
                 <%= render partial: 'layouts/nav_item', locals: { item: item }%>
             <% end %>
-            <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "About", about_path %></li>
-            <li><%= link_to "Contact", contact_path %></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galleries <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <% Gallery.find_each do |gal| %>
-                        <li><%= link_to(gal.name, gal) if gal.visible %></li>
-                    <% end unless Gallery.nil? %>
-                </ul>
-            </li>
         </ul>
+
         <ul class="nav navbar-nav navbar-right">
+            
+            <% # ADMIN SECTION OF NAVBAR %>    
             <% if user_admin? %>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -39,6 +33,8 @@
                     </ul>
                 </li>
             <% end %>
+
+            <% # USER LOGIN SECTION OF NAVBAR%>
             <% if logged_in? %>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
