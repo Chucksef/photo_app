@@ -1,5 +1,7 @@
 <tr>
-    <td class="text-center"><%= item.name %></td>
+    <% item.name = " — #{item.name}" if item.tmp_group_id %>
+    <td><%= item.name %></td>
+    <td class="text-center"><%= item.type[3..-1] %></td>
     <td class="text-center"><%= item.order %></td>
     <td><%= item.description %></td>
     <td class="text-center">
