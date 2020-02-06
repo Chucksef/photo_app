@@ -1,4 +1,5 @@
 class SiteItemsController < ApplicationController
+	before_action :check_admin
 	before_action :get_site
 	# before_action :complete_new_item only: [:new]
 
@@ -60,6 +61,13 @@ class SiteItemsController < ApplicationController
 	end
 
 	private
+
+		def check_admin
+			unless user_admin?
+				flash[:danger] = "Only Admins may make changes to the website"
+				redirect_to root_url
+			end
+		end
 
 		def get_site
 			@site = Site.first
