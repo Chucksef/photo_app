@@ -4,6 +4,9 @@
     <div class="page-header">
         <%= @item.subtitle? ? content_tag(:h1, @item.name, class: "title") : content_tag(:h1, Site.first.name, class: "title") %>
         <%= @item.subtitle? ? content_tag(:h3, @item.subtitle, class: "subtitle") : content_tag(:h3, @item.name, class: "subtitle") %>
+        <% if user_admin? %>
+            <%= link_to "Edit Page", edit_site_item_path(@item), class: "btn-md btn btn-warning" %>
+        <% end %>
     </div>
 
     <% case @item.type%>
