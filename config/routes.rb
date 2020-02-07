@@ -5,14 +5,10 @@ Rails.application.routes.draw do
 	get 'site_items/edit'
 	get 'password_resets/new'
 	get 'password_resets/edit'
+
+
 	#Root
-	root 'static_pages#home'
-
-
-	#Static Pages
-	get '/contact', to: "static_pages#contact"
-	get '/about', to: "static_pages#about"
-	get '/home', to: "static_pages#home"
+	root 'routes#root'
 
 
 	#Users
