@@ -5,6 +5,7 @@
         
         <%= render 'shared/error_messages' %>
 
+        <h3>Basic</h3>
         <div class="form-group">
             <%= f.label "Name"%>
             <%= f.text_field :name, class: "form-control" %>
@@ -17,7 +18,12 @@
             <%= f.label "Description" %>
             <%= f.text_area :description, class: "form-control" %>
         </div>
-        <hr/>
+        <div class="checkbox">
+            <label>
+                <%= f.check_box :visible %> Visible?
+            </label>
+        </div>
+        <hr>
 
         <% (1..6).to_a.each do |num| %>
             <%= content_tag(:h3, "Card #{num}")%>

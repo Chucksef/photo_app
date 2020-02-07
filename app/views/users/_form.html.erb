@@ -19,7 +19,7 @@
             <%= f.label "Confirm Password" %>
             <%= f.password_field :password_confirmation, class: "form-control" %>
         </div>
-        <hr/>
+        <hr>
         <%= f.submit yield(:button_text), class: "btn btn-block btn-primary" %>
 
         <% if !logged_in? %>

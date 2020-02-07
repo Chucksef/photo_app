@@ -5,6 +5,7 @@
         
         <%= render 'shared/error_messages' %>
 
+        <h3>Basic</h3>
         <div class="form-group">
             <%= f.label "Name"%>
             <%= f.text_field :name, class: "form-control" %>
@@ -17,7 +18,12 @@
             <%= f.label "Description" %>
             <%= f.text_area :description, class: "form-control" %>
         </div>
-        <hr/>
+        <div class="checkbox">
+            <label>
+                <%= f.check_box :visible %> Visible?
+            </label>
+        </div>
+        <hr>
         <h3>Article</h3>
         <div class="form-group">
             <%= f.label "Heading_1"%>
@@ -27,7 +33,7 @@
             <%= f.label "Article_1" %>
             <%= f.text_area :article_1, class: "form-control"%>
         </div>
-        <hr/>
+        <hr>
         <%= f.submit yield(:button_text), class: "btn btn-block btn-primary" %>
 
     <% end %>

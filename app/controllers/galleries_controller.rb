@@ -15,7 +15,6 @@ class GalleriesController < ApplicationController
     def edit
         @gallery = Gallery.find(params[:id])
         @attached_images = @gallery.images.all
-
     end
     
     def update
@@ -57,7 +56,6 @@ class GalleriesController < ApplicationController
         @attached_images = @gallery.images.all
 
         @attached_images.each do |image|
-            puts "purging #{image.name}"
             image.purge
         end
 
