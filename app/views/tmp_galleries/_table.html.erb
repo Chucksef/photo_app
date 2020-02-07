@@ -1,0 +1,14 @@
+<h3>Images</h3>
+<table class="table table-condensed table-bordered table-striped">
+    <tr>
+        <th><strong>Thumbnail</strong></th>
+        <th class="text-center"><strong>Delete</strong></th>
+    </tr>
+    <% item.images.each do |image| %>
+        <tr>
+            <td class="text-center"><%= link_to( image_tag(image, alt: image.filename, class: "img-table"), image, target: "_blank") %></td>
+            <td><%= link_to "Delete", delete_image_attachment_site_item_path(image.signed_id, item.id), method: :delete, data: { confirm: 'Are you sure? THIS CANNOT BE UNDONE!' }, class: "btn btn-block btn-sml btn-danger" %></td>
+        </tr>
+    <% end %>
+</table>
+<hr>

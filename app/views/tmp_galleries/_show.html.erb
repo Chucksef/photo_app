@@ -1,7 +1,7 @@
 <% # GALLERY TEMPLATE %>
 
-<div class="col-md-12">
-    <div class="row">
+<div>
+    <div>
         <% item.images.each do |image| %>
             <div class="gallery-frame col-lg-3 col-md-4 col-sm-6 col-xs-12 filter hdpe">
                 <%= link_to( image_tag(image, alt: image.filename, class: "img-gallery"), image, target: "_blank") %>

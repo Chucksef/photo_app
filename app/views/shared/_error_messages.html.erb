@@ -1,15 +1,15 @@
-<% if @gallery.errors.any? %>
+<% if @item.errors.any? %>
 	<div id="error_explanation">
 		<div class="alert alert-danger">
-			The form contains <%= pluralize(@gallery.errors.count, "error") %>.
+			The form contains <%= pluralize(@item.errors.count, "error") %>.
 		</div>
 		<ul>
-			<% @gallery.errors.full_messages.each do |msg| %>
+			<% @item.errors.full_messages.each do |msg| %>
 			<li><%= msg %></li>
 			<% end %>
 		</ul>
 	</div>
-<% end if @gallery%>
+<% end if @item%>
 <% if @user.errors.any? %>
 	<div id="error_explanation">
 		<div class="alert alert-danger">

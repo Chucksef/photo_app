@@ -15,15 +15,6 @@ Rails.application.routes.draw do
 	get '/home', to: "static_pages#home"
 
 
-	#Galleries
-	resources :galleries do
-		member do
-			delete :delete_image_attachment
-			get :move_image_attachment
-		end
-	end
-
-
 	#Users
 	resources :users, except: :new 
 	get '/signup', to: "users#new"
@@ -43,7 +34,12 @@ Rails.application.routes.draw do
 	resources :password_resets, only: [:new, :create, :edit, :update]
 
 	#SiteItems
-	resources :site_items, only: [:index, :show, :edit]
+	resources :site_items, only: [:index, :show, :edit] do
+		member do
+			delete :delete_image_attachment
+			get :move_image_attachment
+		end
+	end
 	resources :tmp_groups, controller: :site_items, type: "TmpGroup", except: [:index, :show, :edit]
 	resources :tmp_articles, controller: :site_items, type: "TmpArticle", except: [:index, :show, :edit]
 	resources :tmp_galleries, controller: :site_items, type: "TmpGallery", except: [:index, :show, :edit]
