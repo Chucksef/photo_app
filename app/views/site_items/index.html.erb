@@ -3,8 +3,22 @@
 <div class="page-header">
     <h1>All Site Items</h1>
 </div>
-<div class="col-md-12">
 
+<div class="dropdown">
+    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Add Page
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenu1">
+        <li><a><%= link_to "Article", new_tmp_article_path %> </a></li>
+        <li><a><%= link_to "Cards", new_tmp_card_path %></a></li>
+        <li><a><%= link_to "Gallery", new_tmp_gallery_path %></a></li>
+        <li role="separator" class="divider"></li>
+        <li><a><%= link_to "Group", new_tmp_group_path %></a></li>
+    </ul>
+</div>
+
+<div class="col-md-12">
     <table class="table table-condensed table-bordered table-striped">
         <tr>
             <th class="text-center">Item Title</th>
