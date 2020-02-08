@@ -46,22 +46,27 @@ class SiteItemsController < ApplicationController
 
 	def destroy
 		@item = SiteItem.find(params[:id])
-		@attached_images = @item.images.all
+		
+		if SiteItem.all.count > 1
+			@attached_images = @item.images.all
+			@attached_images.each do |image|
+				image.purge
+			end
+			
+			flash[:success] = "Deleted #{@item.name} Successfully"
+			@item.destroy
+			redirect_to site_items_path
+		else
+			flash[:danger] = "Website must always have at least 1 page. Add a new page before trying again."
+			redirect_to site_items_path
+		end
 
-		@attached_images.each do |image|
-            image.purge
-        end if @attached_images.count > 0
-
-		flash[:success] = "Deleted #{@item.name} Successfully"
-		@item.destroy
-		redirect_to site_items_path
 	end
 
 	def delete_image_attachment
-        @image = ActiveStorage::Blob.find_signed(params[:id])
+		@image = ActiveStorage::Blob.find_signed(params[:id])
         @image.attachments.first.purge
-        
-        redirect_to edit_site_item_path(params[:format])
+		redirect_to edit_site_item_path(params[:format])
 	end
 	
 	def move_image_attachment
