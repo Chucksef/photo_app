@@ -1,4 +1,5 @@
 class SiteItem < ApplicationRecord
+
     belongs_to :site
     
     scope :tmp_groups, -> { where(type: "TmpGroup") }

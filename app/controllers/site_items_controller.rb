@@ -13,6 +13,7 @@ class SiteItemsController < ApplicationController
 
 	def new
 		@item = @site.send(set_type.pluralize).new
+		@groups = TmpGroup.order(order: :asc).all
 	end
 
 	def create
@@ -31,6 +32,7 @@ class SiteItemsController < ApplicationController
 
 	def edit
 		@item = SiteItem.find(params[:id])
+		@groups = TmpGroup.order(order: :asc).all
 	end
 
 	def update
@@ -48,11 +50,8 @@ class SiteItemsController < ApplicationController
 		@item = SiteItem.find(params[:id])
 		
 		if SiteItem.all.count > 1
-			@attached_images = @item.images.all
-			@attached_images.each do |image|
-				image.purge
-			end
-			
+
+			destroy_all_images(@item)
 			flash[:success] = "Deleted #{@item.name} Successfully"
 			@item.destroy
 			redirect_to site_items_path
@@ -84,6 +83,19 @@ class SiteItemsController < ApplicationController
 
 		def get_site
 			@site = Site.first
+		end
+
+		def destroy_all_images(item)
+			case item.type
+			when "TmpGroup"
+			when "TmpArticle"
+				item.image.purge
+			when "TmpCard", "TmpGallery"
+				@attached_images = item.images.all
+				@attached_images.each do |image|
+					image.purge
+				end
+			end
 		end
 
 		def set_type

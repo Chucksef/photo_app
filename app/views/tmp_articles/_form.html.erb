@@ -23,6 +23,10 @@
                 <%= f.check_box :visible %> Visible?
             </label>
         </div>
+        <div class="form-group custom-select">
+            <label>Group</label>
+            <%= collection_select(:tmp_article, :tmp_group_id, TmpGroup.all, :id, :name, include_blank: " - NONE", class: "form-control", selected: item.tmp_group_id) %>
+        </div>
         <hr>
         <h3>Article</h3>
         <div class="form-group">
