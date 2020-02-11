@@ -84,10 +84,33 @@ hr {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0px;
+}
+
 div.page-header {
   margin-top: 0px;
   margin-bottom: 15px;
   text-align: center;
+}
+
+.container {
+  display:table;
+  width: 100%;
+  margin-top: -50px;
+  padding: 50px 0 0 0; /*set left/right padding according to needs*/
+  box-sizing: border-box;
+}
+
+.row {
+  height: 100%;
+  display: table-row;
+}
+
+.row .no-float {
+  display: table-cell;
+  float: none;
+  vertical-align: top;
 }
 
 
@@ -175,12 +198,6 @@ td > a.btn {
     
 #photoDB_table {
     width: 40%;
-}
-
-img.img-table {
-  height: 40px;
-  object-fit: cover;
-  margin: 0 auto;
 }
 
 table.table {
@@ -279,16 +296,44 @@ textarea.form-control {
   height: 120px;
 }
 
+h3.section-heading {
+  margin-top: 30px;
+}
 
 
+/* IMAGES */
 
-/* Galleries */
+img.img-article {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  padding-right: 20px;
+}
 
 img.img-gallery {
   width: 100%;
   object-fit: cover;
   height: 360px;
 }
+
+img.img-thumb {
+  width: 3em;
+  height: 3em;
+  object-fit: cover;
+}
+
+img.img-table {
+  height: 2.5em;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+
+
+
+/* GALLERIES */
+
 
 div.gallery-frame {
   padding: 0px;
@@ -305,7 +350,7 @@ section.gallery-header {
 
 
 
-/* direct_uploads.css */
+/* DIRECT UPLOADS.css */
  
 .direct-upload {
   display: inline-block;

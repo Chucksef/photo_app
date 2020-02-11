@@ -112,6 +112,6 @@ class SiteItemsController < ApplicationController
 		end
 
 		def item_params
-			params.require(set_type.to_sym).permit(:type, :name, :subtitle, :visible, :description, :order, :site_id, :tmp_group_id, :article_1, :article_2, :article_3, :article_4, :article_5, :article_6, :heading_1, :heading_2, :heading_3, :heading_4, :heading_5, :heading_6, images: [])
+			params.require(set_type.to_sym).permit(:type, :name, :subtitle, :visible, :description, :order, :site_id, :tmp_group_id, :article_1, :article_2, :article_3, :article_4, :article_5, :article_6, :heading_1, :heading_2, :heading_3, :heading_4, :heading_5, :heading_6, :image, images: [])
 		end
 end

@@ -6,7 +6,7 @@
         <%= render 'shared/error_messages' %>
         
 
-        <h3>Basic</h3>
+        <h3 class="section-heading">Basic</h3>
         <div class="form-group">
             <%= f.label "Name"%>
             <%= f.text_field :name, class: "form-control" %>
@@ -38,7 +38,7 @@
             <%= render partial: '/tmp_galleries/table', locals: { item: item } %>
         <% end %>
 
-        <h3>Add Image(s)</h3>
+        <h3 class="section-heading">Add Image(s)</h3>
         <div class="form-group">
             <%= f.label :images %>
             <%= f.file_field :images, multiple: true, direct_upload: true, class: "form-control" %>

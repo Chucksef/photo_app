@@ -5,7 +5,7 @@
         
         <%= render 'shared/error_messages' %>
 
-        <h3>Basic</h3>
+        <h3 class="section-heading">Basic</h3>
         <div class="form-group">
             <%= f.label "Name"%>
             <%= f.text_field :name, class: "form-control" %>
@@ -28,7 +28,15 @@
             <%= collection_select(:tmp_article, :tmp_group_id, TmpGroup.all, :id, :name, include_blank: " - NONE", class: "form-control", selected: item.tmp_group_id) %>
         </div>
         <hr>
-        <h3>Article</h3>
+
+        <h3 class="section-heading">Main Page Image</h3>
+        <%= image_tag(item.image, alt: item.image.filename, class: "img-thumb") %>
+        <div class="form-group">
+            <%= f.label :image %>
+            <%= f.file_field :image, direct_upload: true, class: "form-control" %>
+        </div>
+
+        <h3 class="section-heading">Article</h3>
         <div class="form-group">
             <%= f.label "Heading_1"%>
             <%= f.text_field :heading_1, class: "form-control"%>

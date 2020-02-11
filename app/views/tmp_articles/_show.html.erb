@@ -1,9 +1,14 @@
 <%# ARTICLE TEMPLATE%>
 
-<div class="col-md-6 col-sm-12">
-    <%= content_tag(:h3, item.heading_1, class: "heading text-center") %>
-    <% paragraphs = item.article_1.split("\n") %>
-    <% paragraphs.each do |paragraph| %>
-        <%= content_tag(:p, paragraph, class: "article" ) %>
-    <% end %>
+<div class="row">
+    <div class="col-md-6 col-sm-12 no-float">
+        <%= image_tag(item.image, alt: item.image.filename, class: "img-article") %>
+    </div>
+    <div class="col-md-6 col-sm-12 no-float">
+        <%= content_tag(:h3, item.heading_1, class: "heading text-center") %>
+        <% paragraphs = item.article_1.split("\n") %>
+        <% paragraphs.each do |paragraph| %>
+            <%= content_tag(:p, paragraph, class: "article" ) %>
+        <% end %>
+    </div>
 </div>
