@@ -6,7 +6,8 @@
 
 /* mixins, variables, etc. */
 
-$gray-medium-light: #f4f4f4;
+$light-gray: #f4f4f4;
+$primary-color: rgb(100, 172, 255);
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -21,7 +22,7 @@ $gray-medium-light: #f4f4f4;
 
 .debug_dump {
   margin: 45px;
-  background-color: $gray-medium-light;
+  background-color: $light-gray;
   color: #aaa;
   @include box_sizing;
 }
@@ -38,10 +39,11 @@ $gray-medium-light: #f4f4f4;
 
 
 
+
 /* COLORS */
 
 .secondary-background {
-  background-color: $gray-medium-light;
+  background-color: $light-gray;
 }
 
 
@@ -50,9 +52,15 @@ $gray-medium-light: #f4f4f4;
 /* BODY */
 
 body {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   padding: 68px 0px 45px;
 }
+
+a.btn, button.btn {
+  font-weight: 500;
+}
+
 
 .title {
   margin-bottom: 0px;
@@ -68,24 +76,10 @@ hr {
   margin-bottom: 15px;
 }
 
-.dyk {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  background-color: $gray-medium-light;
-  padding: 20px 100px;
-  border-radius: 10px;
-  text-align: center;
-
-  h1 {
-    font-size: 20px;
-    text-align: center;
-    margin-top: 0px;
-    font-style: italic;
-  }
-}
-
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 
 div.page-header {
@@ -124,7 +118,7 @@ div.card_container {
 }
 
 div.card {
-  background-color: $gray-medium-light;
+  background-color: $light-gray;
   border-radius: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -152,27 +146,14 @@ td > a.btn {
 
 
 
-/* SIDEBAR */
+/* HEADER */
 
-.sidebar-sticky {
-  padding: 5px 40px 15px;
-  margin-top: -20px;
-  margin-bottom: 15px;
-  background: #f4f4f4;
+#logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  font-weight: 200;
+  color: $primary-color;
 }
-
-@media only screen and (min-width: 992px) {
-  .sidebar-sticky {
-    padding: 10px 40px;
-    position: fixed;
-    height: 100%;
-    width: 25%;
-    margin-top: -16px;
-    left: 0px;
-    background: #f4f4f4;
-  }
-}
-
 
 
 
@@ -264,7 +245,7 @@ select {
   box-sizing: border-box;
   padding-left: 10px;
   margin: 0;
-  background-color: $gray-medium-light;
+  background-color: $light-gray;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
