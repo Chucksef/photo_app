@@ -2,10 +2,9 @@
 
 <div class="col-md-8 col-md-offset-2 col-sm-12">
     <%= form_for(item) do |f| %>
-        
         <%= render 'shared/error_messages' %>
+        <%= f.submit yield(:button_text), class: "btn btn-block btn-primary" %>
         
-
         <h3 class="section-heading">Basic</h3>
         <div class="form-group">
             <%= f.label "Name"%>
