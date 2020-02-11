@@ -30,7 +30,7 @@
         <hr>
 
         <h3 class="section-heading">Main Page Image</h3>
-        <%= image_tag(item.image, alt: item.image.filename, class: "img-thumb") %>
+        <%= image_tag(item.image, alt: item.image.filename, class: "img-thumb") if item.image.attached? %>
         <div class="form-group">
             <%= f.label :image %>
             <%= f.file_field :image, direct_upload: true, class: "form-control" %>
