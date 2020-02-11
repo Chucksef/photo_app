@@ -37,17 +37,18 @@ User.create!(	name:  "Charlee Crouse",
 					activated_at: Time.zone.now)
 end
 
-Site.create!(	name: "Pacifica Portraits"
+Site.create!(	name: "Pacifica Portraiture"
 )
 
 TmpArticle.create!(	name: "Home",
+					subtitle: "Truth in Photography",
 					description: "Example Home Page",
 					order: 1,
 					site_id: 1,
 					visible: true,
 					subtitle: "Truth in Photography",
-					heading_1: "Guaranteed Beauty",
-					article_1: "At Pacifica Portraits, we'll capture you on the outside the way you feel on the inside!"
+					heading_1: "Guaranteed Truth",
+					article_1: "At Pacifica Portraiture, our guarantee of Truth means that we'll spend the time we need to work with you—not against you!—to capture you on the outside the way you feel on the inside! For some people, Truth means a warm, joyful smile. For others, Truth is stark relief and a steely glance. No matter what you're going for, we'll take our time in capturing the perfect images that present to the world the look and style that you inhabit.\r\nThat's our promise and your guarantee.\r\n- Pacifica"
 )
 
 TmpCard.create!(	name: "Our Services",
