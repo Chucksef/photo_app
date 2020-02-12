@@ -9,7 +9,7 @@ class SiteItem < ApplicationRecord
 
     #scope :pages, -> { where(type: "Page") }
 
-    validates :name,       presence: true,
+    validates :name,        presence: true,
                             length: { maximum: 25 }
     validates :order,       presence: true, 
                             uniqueness: true
