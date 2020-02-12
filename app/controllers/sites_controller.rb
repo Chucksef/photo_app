@@ -1,4 +1,6 @@
 class SitesController < ApplicationController
+	before_action :allow_user
+
 	def edit
 		@site = Site.first
 	end
@@ -18,4 +20,12 @@ class SitesController < ApplicationController
 		def site_params
 			params.require(:site).permit(:name)
 		end
+
+		def allow_user
+			unless user_admin?
+				flash[:danger] = "Must be logged in as an Admin to edit Site Options"
+				redirect_to(root_url)
+			end
+		end
+
 end
