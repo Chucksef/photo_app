@@ -48,28 +48,44 @@ TmpArticle.create!(	name: "Home",
 					visible: true
 )
 
+
+TmpCard.create!(	name: "Our Services",
+	description: "Example Services Page",
+	order: 2,
+	site_id: 1,
+	visible: true
+)
+
+TmpGroup.create!(	name: "Galleries",
+	order: 3,
+	site_id: 1,
+	visible: true,
+	description: "Example Group"
+)
+
+TmpGallery.create!(	name: "Food",
+	order: 4,
+	site_id: 1,
+	visible: true,
+	description: "Example Gallery Page"
+)
+
 Article.create!(	title: "Truth in Photography",
 					body: "At Pacifica Portraiture, our guarantee of Truth means that we'll spend the time we need to work with you—not against you!—to capture you on the outside the way you feel on the inside! For some people, Truth means a warm, joyful smile. For others, Truth is stark relief and a steely glance. No matter what you're going for, we'll take our time in capturing the perfect images that present to the world the look and style that you inhabit.\r\nThat's our promise and your guarantee.\r\n- Pacifica",
 					site_item_id: 1
 )
 
-TmpCard.create!(	name: "Our Services",
-					description: "Example Services Page",
-					order: 2,
-					site_id: 1,
-					visible: true
+Article.create!(	title: "Studio Portraits",
+					body: "Whether you want to look great for your company's website, or just in your next Facebook profile pic, nothing makes us happier than showing the world who you really are through beautiful portraiture.",
+					site_item_id: 2
 )
 
-TmpGroup.create!(	name: "Galleries",
-					order: 3,
-					site_id: 1,
-					visible: true,
-					description: "Example Group"
+Article.create!(	title: "Wedding Photography",
+					body: "Love is in the air, so let us capture forever the beauty, elegance, and importance of your big day. Special rates and packages are available now!"
+					site_item_id: 2	
 )
 
-TmpGallery.create!(	name: "Food",
-					order: 4,
-					site_id: 1,
-					visible: true,
-					description: "Example Gallery Page"
+Article.create!(	title: "Product Photography",
+					body: "Our talented photographers will take your business to the next level. With shots like these, your orders are bound to go through the roof!"
+					site_item_id: 2
 )
