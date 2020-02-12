@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sites/edit'
+  get 'sites/update'
 	get 'site_items/index'
 	get 'site_items/new'
 	get 'site_items/show'
@@ -41,4 +43,9 @@ Rails.application.routes.draw do
 	resources :tmp_galleries, controller: :site_items, type: "TmpGallery", except: [:index, :show, :edit]
 	resources :tmp_cards, controller: :site_items, type: "TmpCard", except: [:index, :show, :edit]
 
+
+
+	#Site
+	get '/options', to: "sites#edit"
+	patch '/options', to: "sites#update"
 end
