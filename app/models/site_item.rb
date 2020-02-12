@@ -1,6 +1,7 @@
 class SiteItem < ApplicationRecord
 
     belongs_to :site
+    has_many :articles
     
     scope :tmp_groups, -> { where(type: "TmpGroup") }
     scope :tmp_articles, -> { where(type: "TmpArticle") }
