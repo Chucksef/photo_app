@@ -2,18 +2,14 @@
 
 <div class="card_container" >
 
-    <% headings = [item.heading_1, item.heading_2, item.heading_3, item.heading_4, item.heading_5, item.heading_6] %>
-    <% articles = [item.article_1, item.article_2, item.article_3, item.article_4, item.article_5, item.article_6] %>
-    <% headings.each_with_index do |h, idx| %>
-        <% unless h.blank? %>
-            <div class="card col-md-4 col-sm-12">
-                <%= content_tag(:h4, h, class: "heading text-center") %>
-                <hr>
-                <% paragraphs = articles[idx].split("\n") %>
-                <% paragraphs.each do |paragraph| %>
-                    <%= content_tag(:p, paragraph, class: "article" ) %>
-                <% end %>
-            </div>
-        <% end %>
+    <% item.articles.all.each do |article| %>
+        <div class="card col-md-4 col-sm-12">
+            <%= content_tag(:h4, article.title, class: "heading text-center") %>
+            <hr>
+            <% paragraphs = article.body.split("\n") %>
+            <% paragraphs.each do |paragraph| %>
+                <%= content_tag(:p, paragraph, class: "article" ) %>
+            <% end %>
+        </div>
     <% end %>
 </div>
