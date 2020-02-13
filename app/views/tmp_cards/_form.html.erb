@@ -29,18 +29,22 @@
         </div>
         <hr>
 
-        <% (1..6).to_a.each do |num| %>
-            <%= content_tag(:h3, "Card #{num}")%>
-            <div class="form-group">
-                <%= f.label "Heading_#{num}" %>
-                <%= f.text_field "heading_#{num}", class: "form-control" %>
-            </div>
-            <div class="form-group">
-                <%= f.label "Article_#{num}" %>
-                <%= f.text_area "article_#{num}", class: "form-control"%>
-            </div>
-            <hr>
-        <% end %>
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                <tr>
+            </thead>
+            <tbody class="fields">
+                <%= f.fields_for :articles do |builder| %>
+                    <%= render 'article', f: builder %>
+                <% end %>
+            </tbody>
+
+        </table>
         <%= f.submit yield(:button_text), class: "btn btn-block btn-primary" %>
 
     <% end %>

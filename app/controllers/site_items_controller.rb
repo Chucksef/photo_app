@@ -13,6 +13,7 @@ class SiteItemsController < ApplicationController
 
 	def new
 		@item = @site.send(set_type.pluralize).new
+		@item.articles.build
 		@groups = TmpGroup.order(order: :asc).all
 	end
 
@@ -111,10 +112,6 @@ class SiteItemsController < ApplicationController
 		end
 
 		def item_params
-			params.require(set_type.to_sym).permit(:type, :name, :subtitle, :visible, :description, :order, :site_id, :tmp_group_id, :article_1, :article_2, :article_3, :article_4, :article_5, :article_6, :heading_1, :heading_2, :heading_3, :heading_4, :heading_5, :heading_6, :image, images: [])
-		end
-
-		def article_params
-			params.require(:article).permit(:title, :body)
+			params.require(set_type.to_sym).permit(:type, :name, :subtitle, :visible, :description, :order, :site_id, :tmp_group_id, :image, images: [], articles_attribues: Article.attribute_names.map(&:to_sym).push(:_destroy))
 		end
 end

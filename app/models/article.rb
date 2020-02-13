@@ -1,7 +1,7 @@
 class Article < ApplicationRecord
 	has_one_attached :image
 	
-	belongs_to :site_item
+	belongs_to :site_item, optional: true
 
 	validates :title,			presence: true,
 								length: {maximum: 50}
