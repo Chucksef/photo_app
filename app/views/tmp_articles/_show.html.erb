@@ -1,11 +1,11 @@
 <%# ARTICLE TEMPLATE%>
 
 <div class="row">
-    <div class="col-md-6 col-sm-12 no-float">
+    <div class="col-md-8 col-sm-12 no-float">
         <% art = item.articles.first %>
         <%= image_tag(art.image, alt: art.image.filename, class: "img-article") %>
     </div>
-    <div class="col-md-6 col-sm-12 no-float">
+    <div class="col-md-4 col-sm-12 no-float">
         <%= content_tag(:h4, art.title, class: "heading text-center") %>
         <hr>
         <% paragraphs = art.body.split("\n") %>
