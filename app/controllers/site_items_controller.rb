@@ -108,6 +108,6 @@ class SiteItemsController < ApplicationController
 		end
 
 		def item_params
-			params.require(set_type.to_sym).permit(:type, :name, :subtitle, :visible, :description, :order, :site_id, :tmp_group_id, :image, images: [], articles_attributes: Article.attribute_names.map(&:to_sym).push(:_destroy))
+			params.require(set_type.to_sym).permit(	:type, :name, :subtitle, :visible, :description, :order, :site_id, :tmp_group_id, articles_attributes: [:id, :title, :body, :site_item_id, :created_at, :updated_at, :_destroy, :image])
 		end
 end
