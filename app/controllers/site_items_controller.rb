@@ -72,15 +72,15 @@ class SiteItemsController < ApplicationController
 
 	def increment
 		@item = SiteItem.find(params[:id])
-		SiteItem.find_by(order: @item.order+1).update_attribute(:order, @item.order) # set order to @item.order
+		SiteItem.find_by(order: @item.order+1).update_attribute(:order, @item.order) # set order of swapped site_item to @item.order
 		@item.update_attribute(:order, @item.order+1) #increment item's order value
 		redirect_to site_items_path
 	end
 
 	def decrement
 		@item = SiteItem.find(params[:id])
-		SiteItem.find_by(order: @item.order-1).update_attribute(:order, @item.order) # set order to @item.order
-		@item.update_attribute(:order, @item.order-1) #increment item's order value
+		SiteItem.find_by(order: @item.order-1).update_attribute(:order, @item.order) # set order of swapped site-item to @item.order
+		@item.update_attribute(:order, @item.order-1) #decrements item's order value
 		redirect_to site_items_path
 	end
 
