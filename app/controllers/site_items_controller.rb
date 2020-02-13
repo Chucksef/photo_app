@@ -53,7 +53,6 @@ class SiteItemsController < ApplicationController
 		
 		if SiteItem.all.count > 1
 
-			destroy_all_articles(@item)
 			destroy_all_images(@item)
 			flash[:success] = "Deleted #{@item.name} Successfully"
 			@item.destroy
@@ -87,10 +86,7 @@ class SiteItemsController < ApplicationController
 
 		def destroy_all_images(item)
 			case item.type
-			when "TmpGroup"
-			when "TmpArticle"
-				item.image.purge
-			when "TmpCard", "TmpGallery"
+			when "TmpGallery"
 				@attached_images = item.images.all
 				@attached_images.each do |image|
 					image.purge
