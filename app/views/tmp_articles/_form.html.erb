@@ -36,7 +36,7 @@
             <% end %>
         </div>
 
-        <hr>
+        <%= content_tag(:hr) unless item.type == "TmpArticle"%>
         <%= f.submit yield(:button_text), class: "btn btn-block btn-primary" %>
 
     <% end %>

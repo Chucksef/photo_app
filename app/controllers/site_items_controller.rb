@@ -20,7 +20,6 @@ class SiteItemsController < ApplicationController
 	def create
 		@item = @site.send(set_type.pluralize).new(item_params)
 
-
 		@item.order = SiteItem.order(order: :asc).last.order + 1
 		@item.site_id = 1
 
