@@ -35,7 +35,6 @@ Rails.application.routes.draw do
 	resources :site_items, only: [:index, :show, :edit] do
 		member do
 			delete :delete_image_attachment
-			get :move_image_attachment
 		end
 	end
 	resources :tmp_groups, controller: :site_items, type: "TmpGroup", except: [:index, :show, :edit]

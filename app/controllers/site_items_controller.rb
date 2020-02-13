@@ -13,12 +13,12 @@ class SiteItemsController < ApplicationController
 
 	def new
 		@item = @site.send(set_type.pluralize).new
-		@articles = @item.articles
 		@groups = TmpGroup.order(order: :asc).all
 	end
 
 	def create
 		@item = @site.send(set_type.pluralize).new(item_params)
+
 
 		@item.order = SiteItem.order(order: :asc).last.order + 1
 		@item.site_id = 1
@@ -52,6 +52,7 @@ class SiteItemsController < ApplicationController
 		
 		if SiteItem.all.count > 1
 
+			destroy_all_articles(@item)
 			destroy_all_images(@item)
 			flash[:success] = "Deleted #{@item.name} Successfully"
 			@item.destroy
@@ -68,10 +69,7 @@ class SiteItemsController < ApplicationController
         @image.attachments.first.purge
 		redirect_to edit_site_item_path(params[:format])
 	end
-	
-	def move_image_attachment
-        @image = ActiveStorage::Blob.find_signed(parmas[:id]).attachments.first
-    end
+
 
 	private
 
@@ -114,5 +112,9 @@ class SiteItemsController < ApplicationController
 
 		def item_params
 			params.require(set_type.to_sym).permit(:type, :name, :subtitle, :visible, :description, :order, :site_id, :tmp_group_id, :article_1, :article_2, :article_3, :article_4, :article_5, :article_6, :heading_1, :heading_2, :heading_3, :heading_4, :heading_5, :heading_6, :image, images: [])
+		end
+
+		def article_params
+			params.require(:article).permit(:title, :body)
 		end
 end

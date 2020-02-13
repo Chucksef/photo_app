@@ -1,7 +1,8 @@
 class SiteItem < ApplicationRecord
 
     belongs_to :site
-    has_many :articles
+    has_many :articles, dependent: :destroy
+    accepts_nested_attributes_for :tasks
     
     scope :tmp_groups, -> { where(type: "TmpGroup") }
     scope :tmp_articles, -> { where(type: "TmpArticle") }
