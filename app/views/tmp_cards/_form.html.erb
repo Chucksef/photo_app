@@ -29,22 +29,14 @@
         </div>
         <hr>
 
-        <table class='table'>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Image</th>
-                    <th>Title</th>
-                    <th>Body</th>
-                <tr>
-            </thead>
-            <tbody class="fields">
-                <%= f.fields_for :articles do |builder| %>
-                    <%= render 'article', f: builder %>
-                <% end %>
-            </tbody>
+        <h3>Cards</h3>
+        <div class="fields">
+            <%= f.simple_fields_for :articles do |builder| %>
+                <%= render 'article', f: builder %>
+            <% end %>
+        </div>
 
-        </table>
+        <%= link_to_add_article('Add Article', f, :articles, class: 'btn btn-block btn-success') %>
         <%= f.submit yield(:button_text), class: "btn btn-block btn-primary" %>
 
     <% end %>

@@ -1,8 +1,13 @@
-<tr>
-    <td>
-        <%= f.input_field :destroy, as: :hidden %>
-        <%= link_to 'Delete', '#', class: 'remove_record' %>
-    </td>
-    <td><%= f.text_field :title, label: false %></td>
-    <td><%= f.text_area :body, label: false %></td>
-</tr>
+<section class="article_form"> 
+    <div class="form-group">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= f.label :body %>
+        <%= f.text_area :body, class: "form-control" %>
+    </div>
+        <%= f.input_field :_destroy, as: :hidden %>
+        <%= link_to 'Delete', '#', class: 'remove_record btn btn-sm btn-block btn-danger' %>
+    <hr>
+</section>

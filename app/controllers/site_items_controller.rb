@@ -13,7 +13,7 @@ class SiteItemsController < ApplicationController
 
 	def new
 		@item = @site.send(set_type.pluralize).new
-		@item.articles.build
+		
 		@groups = TmpGroup.order(order: :asc).all
 	end
 
