@@ -1,6 +1,6 @@
 module ApplicationHelper
 	def get_page_title(page_title = '')
-		base_title = "StudioDB"
+		base_title = Site.first.name
 		if page_title.empty?
 			base_title
 		else

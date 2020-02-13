@@ -5,5 +5,6 @@ class Site < ApplicationRecord
     has_many :tmp_cards, class_name: "TmpCard"
     has_many :tmp_groups, class_name: "TmpGroup"
 
-    validates :name,    presence: true
+    validates :name,    presence: true,
+                        length: {maximum: 50}
 end
