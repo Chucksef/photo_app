@@ -16,5 +16,5 @@ class SiteItem < ApplicationRecord
     validates :order,       presence: true, 
                             uniqueness: true
     validates :description, presence: true,
-                            length: { maximum: 200 }
+                            length: { maximum: 50 }
 end

@@ -70,6 +70,20 @@ class SiteItemsController < ApplicationController
 		redirect_to edit_site_item_path(params[:format])
 	end
 
+	def increment
+		@item = SiteItem.find(params[:id])
+		SiteItem.find_by(order: @item.order+1).update_attribute(:order, @item.order) # set order to @item.order
+		@item.update_attribute(:order, @item.order+1) #increment item's order value
+		redirect_to site_items_path
+	end
+
+	def decrement
+		@item = SiteItem.find(params[:id])
+		SiteItem.find_by(order: @item.order-1).update_attribute(:order, @item.order) # set order to @item.order
+		@item.update_attribute(:order, @item.order-1) #increment item's order value
+		redirect_to site_items_path
+	end
+
 
 	private
 

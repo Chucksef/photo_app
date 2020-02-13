@@ -3,6 +3,12 @@
         <%= link_to item.name, site_item_path(item) %></td>
     <td class="text-center"><%= item.type[3..-1] %></td>
     <td class="text-center"><%= item.order %></td>
+    <td>
+    <div class="table text-center">
+        <%= link_to raw("<span class='glyphicon glyphicon-arrow-up' aria-hidden='true'></span>"), decrement_site_items_path(item), method: :patch, class: "col-xs-6 btn btn-table btn-default" unless item.order <= 1%>
+        <%= link_to raw("<span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span>"), increment_site_items_path(item), method: :patch, class: "col-xs-6 btn btn-table btn-default" unless item.order == SiteItem.count %>
+    </div>
+    </td>
     <td><%= item.description %></td>
     <td class="text-center">
         <%= item.tmp_group.name if item.tmp_group_id %>

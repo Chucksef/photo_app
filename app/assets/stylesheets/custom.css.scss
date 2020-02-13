@@ -6,7 +6,11 @@
 
 /* mixins, variables, etc. */
 
-$light-gray: #f4f4f4;
+$very-light-gray:   #f4f4f4;
+$light-gray:        #ddd;
+$medium-gray:       #aaa;
+$dark-gray:         #686868;
+$very-dark-gray:    #333;
 $primary-color: rgb(100, 172, 255);
 
 @mixin box_sizing {
@@ -22,7 +26,7 @@ $primary-color: rgb(100, 172, 255);
 
 .debug_dump {
   margin: 45px;
-  background-color: $light-gray;
+  background-color: $very-light-gray;
   color: #aaa;
   @include box_sizing;
 }
@@ -43,7 +47,7 @@ $primary-color: rgb(100, 172, 255);
 /* COLORS */
 
 .secondary-background {
-  background-color: $light-gray;
+  background-color: $very-light-gray;
 }
 
 
@@ -114,7 +118,7 @@ div.card_container {
 }
 
 div.card {
-  background-color: $light-gray;
+  background-color: $very-light-gray;
   border-radius: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -143,6 +147,16 @@ td > a.btn {
 .btn {
   font-weight: 500;
 }
+
+.btn-table {
+  margin-bottom: 0px;
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  color: $dark-gray;
+}
+
 
 
 
@@ -183,6 +197,11 @@ td > a.btn {
 
 table.table {
   margin-bottom: 15px;
+}
+
+div.table {
+  display: table;
+  margin-bottom: 0px;
 }
 
 
@@ -245,7 +264,7 @@ select {
   box-sizing: border-box;
   padding-left: 10px;
   margin: 0;
-  background-color: $light-gray;
+  background-color: $very-light-gray;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
