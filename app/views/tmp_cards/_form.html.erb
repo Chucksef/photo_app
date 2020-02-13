@@ -32,7 +32,7 @@
         <h3>Cards</h3>
         <div class="fields">
             <%= f.simple_fields_for :articles do |builder| %>
-                <%= render 'article', f: builder %>
+                <%= render partial: 'article', locals: {f: builder} %>
             <% end %>
         </div>
 

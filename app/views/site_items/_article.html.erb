@@ -7,7 +7,9 @@
         <%= f.label :body %>
         <%= f.text_area :body, class: "form-control" %>
     </div>
-        <%= f.input_field :_destroy, as: :hidden %>
-        <%= link_to 'Delete', '#', class: 'remove_record btn btn-sm btn-block btn-danger' %>
+        <% puts "\n\n\n\n\n\n\n\n\n#{f}"%>
+        
+        <%= f.input_field :_destroy, as: :hidden if @item.type == "TmpCard" %>
+        <%= link_to 'Delete', '#', class: 'remove_record btn btn-sm btn-block btn-danger' if @item.type == "TmpCard"%>
     <hr>
 </section>
