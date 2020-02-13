@@ -29,22 +29,13 @@
         </div>
         <hr>
 
-        <h3 class="section-heading">Main Page Image</h3>
-        <%= image_tag(item.image, alt: item.image.filename, class: "img-thumb") if item.image.attached? %>
-        <div class="form-group">
-            <%= f.label :image %>
-            <%= f.file_field :image, direct_upload: true, class: "form-control" %>
+        <h3>Article</h3>
+        <div class="fields">
+            <%= f.simple_fields_for :articles do |builder| %>
+                <%= render partial: 'article', locals: {f: builder} %>
+            <% end %>
         </div>
 
-        <h3 class="section-heading">Article</h3>
-        <div class="form-group">
-            <%= f.label "Heading_1"%>
-            <%= f.text_field :heading_1, class: "form-control"%>
-        </div>
-        <div class="form-group">
-            <%= f.label "Article_1" %>
-            <%= f.text_area :article_1, class: "form-control"%>
-        </div>
         <hr>
         <%= f.submit yield(:button_text), class: "btn btn-block btn-primary" %>
 
