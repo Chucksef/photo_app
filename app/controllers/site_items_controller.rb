@@ -13,7 +13,6 @@ class SiteItemsController < ApplicationController
 
 	def new
 		@item = @site.send(set_type.pluralize).new
-		
 		@groups = TmpGroup.order(order: :asc).all
 	end
 
@@ -34,6 +33,7 @@ class SiteItemsController < ApplicationController
 
 	def edit
 		@item = SiteItem.find(params[:id])
+		
 		@groups = TmpGroup.order(order: :asc).all
 	end
 
@@ -108,6 +108,6 @@ class SiteItemsController < ApplicationController
 		end
 
 		def item_params
-			params.require(set_type.to_sym).permit(:type, :name, :subtitle, :visible, :description, :order, :site_id, :tmp_group_id, :image, images: [], articles_attribues: Article.attribute_names.map(&:to_sym).push(:_destroy))
+			params.require(set_type.to_sym).permit(:type, :name, :subtitle, :visible, :description, :order, :site_id, :tmp_group_id, :image, images: [], articles_attributes: Article.attribute_names.map(&:to_sym).push(:_destroy))
 		end
 end
