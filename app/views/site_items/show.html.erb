@@ -1,6 +1,6 @@
 <% provide(:title, "#{@item.name}") unless @item.name == "Home" %>
 
-<div class="col-md-8 col-md-offset-2 col-sm-12">
+<div class="col-sm-8 col-sm-offset-2 col-xs-12">
     <div class="page-header">
         <% if @item.order == 1 %>
             <%= content_tag(:h1, Site.first.name, class: "title") %>

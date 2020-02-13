@@ -1,6 +1,6 @@
 <% provide(:title, @user.name) %>
 
-<div class="secondary-background col-md-3 col-sm-12">
+<div class="secondary-background col-sm-3 col-xs-12">
     <h2>
         <%= @user.name %>
         <% if @user.admin %>
@@ -12,6 +12,6 @@
     <%= link_to "Edit User", edit_user_path(params[:id]), class: "btn btn-block btn-primary" %>
     <hr>
 </div>
-<div class="col-md-9 col-sm-12">
+<div class="col-md-9 col-xs-12">
     <h4>User Content Will Go here Eventually</h4>
 </div>
