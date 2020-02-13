@@ -2,7 +2,15 @@
 
 <div class="row">
     <div class="col-md-6 col-sm-12 no-float">
+        <% # IMAGE GOES HERE %>
     </div>
     <div class="col-md-6 col-sm-12 no-float">
+        <% art = item.articles.first %>
+        <%= content_tag(:h4, art.title, class: "heading text-center") %>
+        <hr>
+        <% paragraphs = art.body.split("\n") %>
+        <% paragraphs.each do |paragraph| %>
+            <%= content_tag(:p, paragraph, class: "article" ) %>
+        <% end %>
     </div>
 </div>
