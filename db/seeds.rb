@@ -40,13 +40,13 @@ end
 Site.create!(	name: "Pacifica Portraiture"
 )
 
-TmpArticle.create!(	name: "Home",
-					subtitle: "Truth in Photography",
-					description: "Example Home Page",
-					order: 1,
-					site_id: 1,
-					visible: true
-)
+TmpArticle.new(	name: "Home",
+				subtitle: "Truth in Photography",
+				description: "Example Home Page",
+				order: 1,
+				site_id: 1,
+				visible: true
+).save(validate: false)
 
 
 TmpCard.create!(	name: "Our Services",
@@ -66,6 +66,7 @@ TmpGroup.create!(	name: "Galleries",
 TmpGallery.create!(	name: "Food",
 	order: 4,
 	site_id: 1,
+	tmp_group_id: 3,
 	visible: true,
 	description: "Example Gallery Page"
 )
@@ -81,11 +82,11 @@ Article.create!(	title: "Studio Portraits",
 )
 
 Article.create!(	title: "Wedding Photography",
-					body: "Love is in the air, so let us capture forever the beauty, elegance, and importance of your big day. Special rates and packages are available now!"
-					site_item_id: 2	
+					body: "Love is in the air, so let us capture forever the beauty, elegance, and importance of your big day. Special rates and packages are available now!",
+					site_item_id: 2
 )
 
 Article.create!(	title: "Product Photography",
-					body: "Our talented photographers will take your business to the next level. With shots like these, your orders are bound to go through the roof!"
+					body: "Our talented photographers will take your business to the next level. With shots like these, your orders are bound to go through the roof!",
 					site_item_id: 2
 )
