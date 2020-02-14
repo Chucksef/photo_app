@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
 
 	#Users
-	resources :users, except: :new 
+	resources :users, except: [:new, :show ]
 	get '/signup', to: "users#new"
 
 
