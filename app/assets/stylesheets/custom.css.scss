@@ -91,6 +91,11 @@ div.page-header {
 
 
 @media only screen and (min-width: 768px){
+  .article-row {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
   .row .no-float {
     display: table-cell;
     float: none;

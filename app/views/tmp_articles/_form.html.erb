@@ -36,7 +36,7 @@
             <% end %>
         </div>
 
-        <%= content_tag(:hr) unless item.type == "TmpArticle"%>
+        <%= link_to_add_article('Add Article', f, :articles, class: 'btn btn-block btn-success') %>
         <%= f.submit yield(:button_text), class: "btn btn-block btn-primary" %>
 
     <% end %>

@@ -1,16 +1,32 @@
 <%# ARTICLE TEMPLATE%>
 
-<div class="row">
-    <div class="col-sm-8 col-xs-12 no-float">
-        <% art = item.articles.first %>
-        <%= image_tag(art.image, alt: art.image.filename, class: "img-article") %>
-    </div>
-    <div class="col-sm-4 col-xs-12 no-float">
-        <%= content_tag(:h4, art.title, class: "heading text-center") %>
-        <hr>
-        <% paragraphs = art.body.split("\n") %>
-        <% paragraphs.each do |paragraph| %>
-            <%= content_tag(:p, paragraph, class: "article" ) %>
+<% item.articles.all.each_with_index do |art, idx| %>
+    <div class="article-row">
+        <% if idx.even? %>
+            <div class="col-sm-8 col-xs-12 no-float">
+                <%= image_tag(art.image, alt: art.image.filename, class: "img-article") if art.image.attached? %>
+            </div>
+            <div class="col-sm-4 col-xs-12 no-float">
+                <%= content_tag(:h4, art.title, class: "heading text-center") %>
+                <hr>
+                <% paragraphs = art.body.split("\n") %>
+                <% paragraphs.each do |paragraph| %>
+                    <%= content_tag(:p, paragraph, class: "article" ) %>
+                <% end %>
+            </div>
+        <% else %>
+            <div class="col-sm-4 col-xs-12 no-float">
+                <%= content_tag(:h4, art.title, class: "heading text-center") %>
+                <hr>
+                <% paragraphs = art.body.split("\n") %>
+                <% paragraphs.each do |paragraph| %>
+                    <%= content_tag(:p, paragraph, class: "article" ) %>
+                <% end %>
+            </div>
+            <div class="col-sm-8 col-xs-12 no-float">
+                <%= image_tag(art.image, alt: art.image.filename, class: "img-article") if art.image.attached? %>
+            </div>
         <% end %>
     </div>
-</div>
+    <hr>
+<% end %>
