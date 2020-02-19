@@ -42,7 +42,7 @@ class SiteItemsController < ApplicationController
 
 		if @item.update(item_params)
 			flash[:success] = "#{params[:type].to_s[3..-1]} Successfully Updated"
-			redirect_to site_items_path
+			redirect_to site_item_path(params[:id])
 		else
 			render :edit
 		end
