@@ -22,6 +22,9 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
+  
+  # Fix for failing uglifier line below
+  config.assets.initialize_on_precompile = false
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier # CANNOT DEPLOY WITH UGLIFIE ENABLED
   # config.assets.css_compressor = :sass
