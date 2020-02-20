@@ -1,0 +1,3 @@
+class TmpSplash < Page
+
+end

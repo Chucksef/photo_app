@@ -13,7 +13,7 @@ class SiteItemsController < ApplicationController
 
 	def new
 		@item = @site.send(set_type.pluralize).new
-		@item.articles.build if @item.type == "TmpArticle"
+		@item.articles.build unless @item.type == "TmpCard"
 		@groups = TmpGroup.order(order: :asc).all
 	end
 
@@ -118,6 +118,8 @@ class SiteItemsController < ApplicationController
 				"tmp_gallery"
 			when "TmpCard"
 				"tmp_card"
+			when "TmpSplash"
+				"tmp_splash"
 			end
 		end
 

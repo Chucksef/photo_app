@@ -8,6 +8,7 @@ class SiteItem < ApplicationRecord
     scope :tmp_articles, -> { where(type: "TmpArticle") }
     scope :tmp_galleries, -> { where(type: "TmpGallery") }
     scope :tmp_cards, -> { where(type: "TmpCard") }
+    scope :tmp_splashes, -> { where(type: "TmpSplash") }
 
     #scope :pages, -> { where(type: "Page") }
 

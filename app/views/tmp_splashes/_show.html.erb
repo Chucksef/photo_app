@@ -1,0 +1,12 @@
+<%# SPLASH TEMPLATE%>
+
+<% art = item.articles.first %>
+<div class="gradient-overlay"></div>
+<%= image_tag(art.image, alt: art.image.filename, class: "img-splash") if art.image.attached? %>
+<div class="article-splash col-sm-4 col-sm-offset-7">
+    <%= content_tag(:h2, art.title, class: "heading text-center") %>
+    <% paragraphs = art.body.split("\n") %>
+    <% paragraphs.each do |paragraph| %>
+        <%= content_tag(:p, paragraph, class: "" ) %>
+    <% end %>
+</div>

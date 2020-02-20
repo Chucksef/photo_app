@@ -46,6 +46,7 @@ Rails.application.routes.draw do
 	resources :tmp_articles, controller: :site_items, type: "TmpArticle", except: [:index, :show, :edit]
 	resources :tmp_galleries, controller: :site_items, type: "TmpGallery", except: [:index, :show, :edit]
 	resources :tmp_cards, controller: :site_items, type: "TmpCard", except: [:index, :show, :edit]
+	resources :tmp_splashes, controller: :site_items, type: "TmpSplash", except: [:index, :show, :edit]
 
 
 	#Site

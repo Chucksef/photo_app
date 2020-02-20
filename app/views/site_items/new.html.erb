@@ -18,5 +18,7 @@
             <%= render partial: '/tmp_galleries/form', locals: { item: @item } %>
         <% when "TmpCard" %>
             <%= render partial: '/tmp_cards/form', locals: { item: @item } %>
+        <% when "TmpSplash" %>
+            <%= render partial: '/tmp_splashes/form', locals: { item: @item }%>
     <% end %>
 </div>
