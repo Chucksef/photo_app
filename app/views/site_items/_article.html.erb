@@ -14,7 +14,7 @@
         <%= f.text_area :body, class: "form-control" %>
     </div>
 
-        <%= f.input_field :_destroy, as: :hidden %>
-        <%= link_to 'Delete', '#', class: 'remove_record btn btn-sm btn-block btn-danger' %>
+        <%= f.input_field :_destroy, as: :hidden unless @item.type == "TmpSplash"%>
+        <%= link_to 'Delete', '#', class: 'remove_record btn btn-sm btn-block btn-danger' unless @item.type == "TmpSplash" %>
     <hr>
 </section>
