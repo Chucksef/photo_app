@@ -1,10 +1,11 @@
 # Dynamic Portfoio 1.0
-Project: Dynamic Portfolio 1.0
-Author: Chuck Crouse
-Build Date: 02/20/2019
-Build Version: v1.0.1
-Host: Heroku
-Framework: Ruby on Rails
+    Project: Dynamic Portfolio 1.0
+    Author: Chuck Crouse
+    Build Date: 02/20/2020
+    Build Version: v1.0.1
+    Host: Heroku
+    Framework: Ruby on Rails
+
 
 ## Purpose
 Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own content and show off the cool projects I've built over the last several years. The thing that sets it apart from is that I built it to accept new content dynamically via an admin interface invisible to normal site visitors.
@@ -21,6 +22,7 @@ Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own co
  * Add and Delete Page Content on the Fly, Including Adding Images and Article Blocks to Most Page Types
  * Images Securely Stored on Amazon S3
  * Sign Up/Sign In Functionality Complete with "Remember Me" Option
+ * Sign-Up Page Hidden, but Accessible from <a href="https://www.chucksef.com/signup">/signup</a>
  * Confirmation Email System
  * Forgot Password Functionality
  * Modern Security/Authentication to Prevent Normal Users from Editing Pages or Other Users' Info
@@ -43,6 +45,6 @@ Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own co
     * Headings
     * Separators
     * Embedded Videos
+ * Removed all user-facing access to signup page, 
  * Current Non-Admin User Profiles are Useless. Future User Features:
     * Personalized Galleries (Allow For Commercial Photography Use)
-    * ...Others I'll Think of Later
