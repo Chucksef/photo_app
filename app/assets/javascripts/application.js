@@ -14,7 +14,7 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-//= require self
+//= require_self
 
 
 //Test for loading application.js
