@@ -13,8 +13,8 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require self
 //= require_tree .
+//= require self
 
 
 //Test for loading application.js
