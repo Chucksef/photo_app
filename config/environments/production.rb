@@ -24,9 +24,9 @@ Rails.application.configure do
 
   
   # Fix for failing uglifier line below
-  config.assets.initialize_on_precompile = false
+  # config.assets.initialize_on_precompile = false # THIS LINE WAS SUPPOSED TO FIX BELOW...
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier # CANNOT DEPLOY WITH UGLIFIE ENABLED
+  # config.assets.js_compressor = :uglifier # CANNOT DEPLOY WITH UGLIFIE ENABLED
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
