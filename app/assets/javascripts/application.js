@@ -15,9 +15,11 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).on('turbolinks:load', function() {
+$( document ).on('turbolinks:load', function() {
+    console.log("Turbolinks has loaded.")
+})
 
-    console.log("test test test")
+$(document).on('turbolinks:load', function() {
 
     $('form').on('click', '.remove_record', function(event) {
         $(this).prev('input[type=hidden]').val('1');
