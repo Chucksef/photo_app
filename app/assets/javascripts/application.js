@@ -15,10 +15,12 @@
 //= require turbolinks
 //= require_tree .
 
+//Test for loading application.js
 console.log("application.js loaded")
 
 $(document).on('turbolinks:load', function() {
 
+    //test for if this application.js stuff runs on turbolinks:load event
     console.log("turbolinks:load ready")
 
     $('form').on('click', '.remove_record', function(event) {
