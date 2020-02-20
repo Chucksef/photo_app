@@ -18,14 +18,7 @@
 //= require_tree .
 //= require_self
 
-
-//Test for loading application.js
-console.log("application.js loaded")
-
 $(document).on('turbolinks:load', function() {
-
-    //test for if this application.js stuff runs on turbolinks:load event
-    console.log("turbolinks:load ready")
 
     $('form').on('click', '.remove_record', function(event) {
         $(this).prev('input[type=hidden]').val('1');
