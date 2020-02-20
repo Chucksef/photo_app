@@ -14,6 +14,7 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery-3.3.1.slim.min.js
+//= require bootstrap.min.js
 //= require_tree .
 //= require_self
 
