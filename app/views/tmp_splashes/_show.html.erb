@@ -7,6 +7,6 @@
     <%= content_tag(:h2, art.title, class: "heading text-center") %>
     <% paragraphs = art.body.split("\n") %>
     <% paragraphs.each do |paragraph| %>
-        <%= content_tag(:p, paragraph, class: "" ) %>
+        <%= content_tag(:p, paragraph, class: "text-center" ) %>
     <% end %>
 </div>
