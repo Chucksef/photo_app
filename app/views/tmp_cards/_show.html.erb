@@ -1,16 +1,16 @@
 <% # ITEM TEMPLATE %>
 
-<div class="card_container" >
+<div class="card-container" >
 
     <% item.articles.all.each do |art| %>
-        <div class="card col-sm-4 col-xs-12">
-            <%= image_tag(art.image, alt: art.image.filename, class: "img-card") if art.image.attached? %>
+        <section class="card col-sm-4 col-xs-12">
+            <%= image_tag(art.image, alt: art.image.filename, class: "card") if art.image.attached? %>
             <%= content_tag(:h4, art.title, class: "heading text-center") %>
             <hr>
             <% paragraphs = art.body.split("\n") %>
             <% paragraphs.each do |paragraph| %>
                 <%= content_tag(:p, paragraph, class: "article" ) %>
             <% end %>
-        </div>
+        </section>
     <% end %>
 </div>
