@@ -8,7 +8,7 @@
 
 
 ## Purpose
-Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own content and show off the cool projects I've built over the last several years. The thing that sets it apart from is that I built it to accept new content dynamically via an admin interface invisible to normal site visitors.
+Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own content and show off the cool projects I've built over the last several years. The thing that sets it apart from other basic portfolio sites is that I built it to accept new content dynamically via an admin interface invisible to normal site visitors.
 
 ## Features
  * Entire Website Stored in a Database for Easy Editing
