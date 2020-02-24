@@ -253,6 +253,18 @@ td > a.btn {
 
 /* HEADER */
 
+@media only screen and (max-height: 767px) {
+  .header-logo {
+    height: 50px;
+  }
+  
+  #navbar {
+    position: relative;
+    left: 15px;
+  }
+} 
+
+
 #logo {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
