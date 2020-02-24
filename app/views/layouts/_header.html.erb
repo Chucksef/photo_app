@@ -10,7 +10,7 @@
     </div>
 
     <% # SITE NAV SECTION OF NAVBAR %>
-    <nav class="navbar-collapse collapse">
+    <nav id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
             <% SiteItem.order(order: :asc).all.each do |item| %>
                 <%= render partial: 'layouts/nav_item', locals: { item: item }%>
