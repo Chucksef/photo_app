@@ -8,7 +8,7 @@ class SiteItemsController < ApplicationController
 	end
 
 	def show
-		@item = SiteItem.find(params[:id])
+		@item = SiteItem.friendly.find(params[:id])
 	end
 
 	def new
@@ -32,13 +32,13 @@ class SiteItemsController < ApplicationController
 	end
 
 	def edit
-		@item = SiteItem.find(params[:id])
+		@item = SiteItem.friendly.find(params[:id])
 		
 		@groups = TmpGroup.order(order: :asc).all
 	end
 
 	def update
-		@item = SiteItem.find(params[:id])
+		@item = SiteItem.friendly.find(params[:id])
 
 		if @item.update(item_params)
 			flash[:success] = "#{params[:type].to_s[3..-1]} Successfully Updated"
@@ -49,7 +49,7 @@ class SiteItemsController < ApplicationController
 	end
 
 	def destroy
-		@item = SiteItem.find(params[:id])
+		@item = SiteItem.friendly.find(params[:id])
 		
 		if SiteItem.all.count > 1
 
@@ -71,14 +71,14 @@ class SiteItemsController < ApplicationController
 	end
 
 	def increment
-		@item = SiteItem.find(params[:id])
+		@item = SiteItem.friendly.find(params[:id])
 		SiteItem.find_by(order: @item.order+1).update_attribute(:order, @item.order) # set order of swapped site_item to @item.order
 		@item.update_attribute(:order, @item.order+1) #increment item's order value
 		redirect_to site_items_path
 	end
 
 	def decrement
-		@item = SiteItem.find(params[:id])
+		@item = SiteItem.friendly.find(params[:id])
 		SiteItem.find_by(order: @item.order-1).update_attribute(:order, @item.order) # set order of swapped site-item to @item.order
 		@item.update_attribute(:order, @item.order-1) #decrements item's order value
 		redirect_to site_items_path

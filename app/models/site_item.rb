@@ -1,9 +1,12 @@
 class SiteItem < ApplicationRecord
+    extend FriendlyId
+    friendly_id :name, use: :slugged
 
     belongs_to :site
     has_many :articles, dependent: :destroy
     accepts_nested_attributes_for :articles, allow_destroy: true, reject_if: proc { |att| att['title'].blank?}
     
+
     scope :tmp_groups, -> { where(type: "TmpGroup") }
     scope :tmp_articles, -> { where(type: "TmpArticle") }
     scope :tmp_galleries, -> { where(type: "TmpGallery") }
