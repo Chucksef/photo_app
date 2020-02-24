@@ -170,7 +170,6 @@ div.card-container {
 }
 
 div.card-image-container {
-  padding-top: 100%;
   position: relative;
   margin-bottom: 10px;
 }
@@ -181,10 +180,39 @@ section.card {
   text-align: justify;
   border: solid white 2px;
   padding: 10px;
-  flex: 0 0 33.33%;
 
   hr {
     border-color: darkgray;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  section.card {
+    flex: 0 0 100%;
+  }
+
+  div.card-image-container {
+    padding-top: 66.667%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  section.card {
+    flex: 0 0 50%;
+  }
+
+  div.card-image-container {
+    padding-top: 100%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  section.card {
+    flex: 0 0 33.333%;
+  }
+
+  div.card-image-container {
+    padding-top: 100%;
   }
 }
 
