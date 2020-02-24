@@ -11,6 +11,8 @@ gem 'bootstrap-sass', '3.3.7'
 gem 'puma', '~> 3.11'
 # Use simple form for building forms
 gem 'simple_form'
+# Use friendlyID for pretty urls
+gem 'friendly_id', '~> 5.3'
 # User Bcrypt for password hashing
 gem 'bcrypt', '3.1.12'
 # Use SCSS for stylesheets
