@@ -1,0 +1,32 @@
+<% provide(:title, "#{@item.name}") unless @item.name.downcase == "home" %>
+
+<% unless @item.type == "TmpSplash" %>
+    <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+        <div class="page-header">
+            <% if @item.order == 1 %>
+                <%= content_tag(:h1, Site.first.name, class: "title") %>
+                <%= content_tag(:h3, @item.subtitle, class: "subtitle") %>
+            <% else %>
+                <%= content_tag(:h1, @item.name, class: "title") %>
+                <%= content_tag(:h3, @item.subtitle, class: "subtitle") %>
+            <% end %>
+            <% if user_admin? %>
+                <%= link_to "<<< Index", pages_path, class: "btn-md btn btn-default" %>
+                <%= link_to "Edit Page", edit_page_path(@item), class: "btn-md btn btn-default" %>
+            <% end %>
+        </div>
+
+        <% case @item.type%>
+            <% when "TmpGroup" %>
+                <%= render partial: '/tmp_groups/show', locals: { item: @item } %>
+            <% when "TmpArticle" %>
+                <%= render partial: '/tmp_articles/show', locals: { item: @item } %>
+            <% when "TmpGallery" %>
+                <%= render partial: '/tmp_galleries/show', locals: { item: @item } %>
+            <% when "TmpCard" %>
+                <%= render partial: '/tmp_cards/show', locals: { item: @item } %>
+        <% end %>
+    </div>
+<% end %>
+
+<%= render partial: '/tmp_splashes/show', locals: { item: @item } if @item.type == "TmpSplash" %>

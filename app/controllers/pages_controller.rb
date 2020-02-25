@@ -11,6 +11,9 @@ class PagesController < ApplicationController
 		@item = Page.friendly.find(params[:id])
 	end
 
+	def root
+	end
+
 	def new
 		@item = @site.send(set_type.pluralize).new
 		@item.articles.build unless @item.type == "TmpCard"
