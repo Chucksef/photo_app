@@ -9,9 +9,6 @@
 
         <% image_count = item.images.count%>
         <% if image_count > 0%>
-            <% 10.times {puts "..."}%>
-            <% puts "Images in Gallery: #{ image_count }" %>
-
             <%= render partial: '/tmp_galleries/table', locals: { item: item } %>
         <% end %>
 
