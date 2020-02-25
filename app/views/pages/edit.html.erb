@@ -7,6 +7,8 @@
 <div class="col-sm-8 col-sm-offset-2 col-xs-12">
     <div class="page-header">
         <h1>Edit <%= item_type %> Page</h1>
+        <%= link_to("<<< Index", pages_path, class: "btn btn-default btn-small") %>
+        <%= link_to("View Page", page_path(@item.id), class: "btn btn-default btn-small") %>
     </div>
 
     <% case @item.type%>
