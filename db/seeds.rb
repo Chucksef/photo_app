@@ -37,38 +37,46 @@ User.create!(	name:  "Charlee Crouse",
 					activated_at: Time.zone.now)
 end
 
-Site.create!(	name: "Pacifica Portraiture"
+Site.create!(		name: "Pacifica Portraiture"
 )
 
-TmpArticle.new(	name: "Home",
-				subtitle: "Truth in Photography",
-				description: "Example Home Page",
-				order: 1,
-				site_id: 1,
-				visible: true
-).save(validate: false)
+TmpArticle.create!(	name: "Our Mission",
+					subtitle: "Truth in Photography",
+					description: "Simple Article Page",
+					order: 2,
+					site_id: 1,
+					visible: true,
+					slug: "our-mission"
+)
 
 
 TmpCard.create!(	name: "Our Services",
-	description: "Example Services Page",
-	order: 2,
-	site_id: 1,
-	visible: true
+					description: "Description of Services Offered",
+					order: 3,
+					site_id: 1,
+					visible: true
 )
 
 TmpGroup.create!(	name: "Galleries",
-	order: 3,
-	site_id: 1,
-	visible: true,
-	description: "Example Group"
+					order: 4,
+					site_id: 1,
+					visible: true,
+					description: "Simple Group to Hold Galleries"
 )
 
 TmpGallery.create!(	name: "Food",
-	order: 4,
-	site_id: 1,
-	tmp_group_id: 3,
-	visible: true,
-	description: "Example Gallery Page"
+					order: 5,
+					site_id: 1,
+					tmp_group_id: 3,
+					visible: true,
+					description: "Example Gallery Page"
+)
+
+TmpSplash.create!(	name: "Home",
+					order: 1,
+					site_id: 1,
+					visible: true,
+					description: "Simple Splash Page"
 )
 
 Article.create!(	title: "Truth in Photography",
@@ -89,4 +97,9 @@ Article.create!(	title: "Wedding Photography",
 Article.create!(	title: "Product Photography",
 					body: "Our talented photographers will take your business to the next level. With shots like these, your orders are bound to go through the roof!",
 					page_id: 2
+)
+
+Article.create!(	title: "Welcome to Pacifica",
+					body: "Welcome to Pacifica Portraiture. Your home town stop for unbelievable portraits no matter where you live in Northern California.\r\nWhether you're a Gourmet Chef, Real Estate Mogul, TV News Personality, or Awesome Mom, we've got you covered!",
+					page_id: 5
 )
