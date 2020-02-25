@@ -13,6 +13,8 @@ gem 'puma', '~> 3.11'
 gem 'simple_form'
 # Use friendlyID for pretty urls
 gem 'friendly_id', '~> 5.3'
+# Use inline_svg to display svgs nicely
+gem 'inline_svg'
 # User Bcrypt for password hashing
 gem 'bcrypt', '3.1.12'
 # Use SCSS for stylesheets
