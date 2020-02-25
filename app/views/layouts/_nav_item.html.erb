@@ -1,5 +1,5 @@
 <% if item.type != "TmpGroup" && !item.tmp_group_id %>
-    <%= content_tag(:li, link_to(item.name, page_path(item))) if item.visible %>
+    <%= content_tag(:li, link_to(item.name, page_path(item))) if item.visible && item.order != 1 %>
 <% elsif item.tmp_group_id %>
     <%# THIS ELSIF IS NECESSARY TO CONTROL FOR EDGE CASES %>
 <% else %>
