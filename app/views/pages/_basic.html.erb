@@ -18,7 +18,7 @@
 </div>
 <div class="form-group custom-select">
     <label>Group</label>
-    <%= collection_select(:tmp_article, :tmp_group_id, TmpGroup.all, :id, :name, include_blank: " - NONE", class: "form-control", selected: item.tmp_group_id) %>
+    <%= collection_select("tmp_#{item.type.downcase[3..-1]}", :tmp_group_id, TmpGroup.all, :id, :name, include_blank: " - NONE", class: "form-control", selected: item.tmp_group_id) %>
 </div>
 <div class="form-group">
     <%= f.label "Slug (letters, numbers, and dashes only)" %>
