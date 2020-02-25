@@ -42,7 +42,8 @@ class PagesController < ApplicationController
 
 		if @item.update(item_params)
 			flash[:success] = "#{params[:type].to_s[3..-1]} Successfully Updated"
-			redirect_to page_path(params[:id])
+			updated_item = Page.friendly.find(@item.slug)
+			redirect_to page_path(updated_item)
 		else
 			render :edit
 		end
@@ -124,6 +125,6 @@ class PagesController < ApplicationController
 		end
 
 		def item_params
-			params.require(set_type.to_sym).permit(	:type, :name, :subtitle, :visible, :description, :order, :site_id, :tmp_group_id, images: [], articles_attributes: [:id, :title, :body, :page_id, :created_at, :updated_at, :_destroy, :image])
+			params.require(set_type.to_sym).permit(	:slug, :type, :name, :subtitle, :visible, :description, :order, :site_id, :tmp_group_id, images: [], articles_attributes: [:id, :title, :body, :page_id, :created_at, :updated_at, :_destroy, :image])
 		end
 end
