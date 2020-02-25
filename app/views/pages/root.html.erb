@@ -1,4 +1,4 @@
-<% provide(:title, "#{@item.name}") unless @item.name.downcase == "home" %>
+<% provide(:title, "#{@item.name}") unless @item.name == "Home" %>
 
 <% unless @item.type == "TmpSplash" %>
     <div class="col-sm-8 col-sm-offset-2 col-xs-12">
