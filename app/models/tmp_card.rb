@@ -1,3 +1,3 @@
-class TmpCard < Page
+class TmpCard < Template
     
 end

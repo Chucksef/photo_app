@@ -1,14 +1,14 @@
-class SiteItemsController < ApplicationController
+class PagesController < ApplicationController
 	before_action :check_admin, except: [:show]
 	before_action :get_site
 	# before_action :complete_new_item only: [:new]
 
 	def index
-		@items = SiteItem.order(order: :asc).all
+		@items = Page.order(order: :asc).all
 	end
 
 	def show
-		@item = SiteItem.friendly.find(params[:id])
+		@item = Page.friendly.find(params[:id])
 	end
 
 	def new
@@ -20,11 +20,11 @@ class SiteItemsController < ApplicationController
 	def create
 		@item = @site.send(set_type.pluralize).new(item_params)
 
-		@item.order = SiteItem.order(order: :asc).last.order + 1
+		@item.order = Page.order(order: :asc).last.order + 1
 		@item.site_id = 1
 
 		if @item.save
-			redirect_to site_items_path
+			redirect_to pages_path
 			flash[:success] = "#{params[:type].to_s[3..-1]} Successfully Created"
 		else
 			render :new
@@ -32,34 +32,34 @@ class SiteItemsController < ApplicationController
 	end
 
 	def edit
-		@item = SiteItem.friendly.find(params[:id])
+		@item = Page.friendly.find(params[:id])
 		
 		@groups = TmpGroup.order(order: :asc).all
 	end
 
 	def update
-		@item = SiteItem.friendly.find(params[:id])
+		@item = Page.friendly.find(params[:id])
 
 		if @item.update(item_params)
 			flash[:success] = "#{params[:type].to_s[3..-1]} Successfully Updated"
-			redirect_to site_item_path(params[:id])
+			redirect_to page_path(params[:id])
 		else
 			render :edit
 		end
 	end
 
 	def destroy
-		@item = SiteItem.friendly.find(params[:id])
+		@item = Page.friendly.find(params[:id])
 		
-		if SiteItem.all.count > 1
+		if Page.all.count > 1
 
 			destroy_all_images(@item)
 			flash[:success] = "Deleted #{@item.name} Successfully"
 			@item.destroy
-			redirect_to site_items_path
+			redirect_to pages_path
 		else
 			flash[:danger] = "Website must always have at least 1 page. Add a new page before trying again."
-			redirect_to site_items_path
+			redirect_to pages_path
 		end
 
 	end
@@ -67,21 +67,21 @@ class SiteItemsController < ApplicationController
 	def delete_image_attachment
 		@image = ActiveStorage::Blob.find_signed(params[:id])
         @image.attachments.first.purge
-		redirect_to edit_site_item_path(params[:format])
+		redirect_to edit_page_path(params[:format])
 	end
 
 	def increment
-		@item = SiteItem.friendly.find(params[:id])
-		SiteItem.find_by(order: @item.order+1).update_attribute(:order, @item.order) # set order of swapped site_item to @item.order
+		@item = Page.friendly.find(params[:id])
+		Page.find_by(order: @item.order+1).update_attribute(:order, @item.order) # set order of swapped page to @item.order
 		@item.update_attribute(:order, @item.order+1) #increment item's order value
-		redirect_to site_items_path
+		redirect_to pages_path
 	end
 
 	def decrement
-		@item = SiteItem.friendly.find(params[:id])
-		SiteItem.find_by(order: @item.order-1).update_attribute(:order, @item.order) # set order of swapped site-item to @item.order
+		@item = Page.friendly.find(params[:id])
+		Page.find_by(order: @item.order-1).update_attribute(:order, @item.order) # set order of swapped site-item to @item.order
 		@item.update_attribute(:order, @item.order-1) #decrements item's order value
-		redirect_to site_items_path
+		redirect_to pages_path
 	end
 
 
@@ -124,6 +124,6 @@ class SiteItemsController < ApplicationController
 		end
 
 		def item_params
-			params.require(set_type.to_sym).permit(	:type, :name, :subtitle, :visible, :description, :order, :site_id, :tmp_group_id, images: [], articles_attributes: [:id, :title, :body, :site_item_id, :created_at, :updated_at, :_destroy, :image])
+			params.require(set_type.to_sym).permit(	:type, :name, :subtitle, :visible, :description, :order, :site_id, :tmp_group_id, images: [], articles_attributes: [:id, :title, :body, :page_id, :created_at, :updated_at, :_destroy, :image])
 		end
 end

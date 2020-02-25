@@ -1,6 +1,6 @@
-class CreateSiteItems < ActiveRecord::Migration[5.2]
+class CreatePages < ActiveRecord::Migration[5.2]
 	def change
-		create_table :site_items do |t|
+		create_table :pages do |t|
 			# foreign keys
 			t.integer :group_id
 			
@@ -31,6 +31,6 @@ class CreateSiteItems < ActiveRecord::Migration[5.2]
 			t.string :heading_6						#					
 
 		end
-		add_index :site_items, [:type, :group_id]
+		add_index :pages, [:type, :group_id]
 	end
 end

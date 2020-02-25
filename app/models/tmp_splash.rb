@@ -1,4 +1,4 @@
-class TmpSplash < Page
+class TmpSplash < Template
 
     validates :articles, length: { is: 1 }
     

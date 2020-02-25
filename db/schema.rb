@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_02_24_225412) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "site_item_id"
+    t.integer "page_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2020_02_24_225412) do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
-  create_table "site_items", force: :cascade do |t|
+  create_table "pages", force: :cascade do |t|
     t.string "name"
     t.string "subtitle"
     t.text "description"
@@ -64,9 +64,9 @@ ActiveRecord::Schema.define(version: 2020_02_24_225412) do
     t.integer "site_id"
     t.integer "tmp_group_id"
     t.string "slug"
-    t.index ["slug"], name: "index_site_items_on_slug", unique: true
-    t.index ["tmp_group_id"], name: "index_site_items_on_tmp_group_id"
-    t.index ["type"], name: "index_site_items_on_type_and_group_id"
+    t.index ["slug"], name: "index_pages_on_slug", unique: true
+    t.index ["tmp_group_id"], name: "index_pages_on_tmp_group_id"
+    t.index ["type"], name: "index_pages_on_type_and_group_id"
   end
 
   create_table "sites", force: :cascade do |t|

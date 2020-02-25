@@ -12,7 +12,7 @@
     <% # SITE NAV SECTION OF NAVBAR %>
     <nav id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-            <% SiteItem.order(order: :asc).all.each do |item| %>
+            <% Page.order(order: :asc).all.each do |item| %>
                 <%= render partial: 'layouts/nav_item', locals: { item: item }%>
             <% end %>
         </ul>
@@ -26,7 +26,7 @@
                         Admin <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><%= link_to "Manage Pages", site_items_path %>
+                        <li><%= link_to "Manage Pages", pages_path %>
                         <li class="divider"></li>
                         <li><%= link_to "Users", users_path %></li>
                         <li class="divider"></li>

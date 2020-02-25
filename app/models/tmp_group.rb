@@ -1,4 +1,4 @@
-class TmpGroup < SiteItem
-    has_many :site_items
+class TmpGroup < Page
+    has_many :pages
     
 end

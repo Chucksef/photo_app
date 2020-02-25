@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   	get 'sites/edit'
   	get 'sites/update'
-	get 'site_items/index'
-	get 'site_items/new'
-	get 'site_items/show'
-	get 'site_items/edit'
+	get 'pages/index'
+	get 'pages/new'
+	get 'pages/show'
+	get 'pages/edit'
 	get 'password_resets/new'
 	get 'password_resets/edit'
 
@@ -32,21 +32,21 @@ Rails.application.routes.draw do
 	resources :password_resets, only: [:new, :create, :edit, :update]
 
 	
-	#SiteItems
-	resources :site_items, only: [:index, :show, :edit] do
+	#Pages
+	resources :pages, only: [:index, :show, :edit] do
 		member do
 			delete :delete_image_attachment
 		end
 	end
 	
-	patch '/site_items/:id/increment', to: "site_items#increment", as: 'increment_site_items'
-	patch '/site_items/:id/decrement', to: "site_items#decrement", as: 'decrement_site_items'
+	patch '/pages/:id/increment', to: "pages#increment", as: 'increment_pages'
+	patch '/pages/:id/decrement', to: "pages#decrement", as: 'decrement_pages'
 
-	resources :tmp_groups, controller: :site_items, type: "TmpGroup", except: [:index, :show, :edit]
-	resources :tmp_articles, controller: :site_items, type: "TmpArticle", except: [:index, :show, :edit]
-	resources :tmp_galleries, controller: :site_items, type: "TmpGallery", except: [:index, :show, :edit]
-	resources :tmp_cards, controller: :site_items, type: "TmpCard", except: [:index, :show, :edit]
-	resources :tmp_splashes, controller: :site_items, type: "TmpSplash", except: [:index, :show, :edit]
+	resources :tmp_groups, controller: :pages, type: "TmpGroup", except: [:index, :show, :edit]
+	resources :tmp_articles, controller: :pages, type: "TmpArticle", except: [:index, :show, :edit]
+	resources :tmp_galleries, controller: :pages, type: "TmpGallery", except: [:index, :show, :edit]
+	resources :tmp_cards, controller: :pages, type: "TmpCard", except: [:index, :show, :edit]
+	resources :tmp_splashes, controller: :pages, type: "TmpSplash", except: [:index, :show, :edit]
 
 
 	#Site

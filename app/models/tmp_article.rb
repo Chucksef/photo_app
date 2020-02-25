@@ -1,3 +1,3 @@
-class TmpArticle < Page
+class TmpArticle < Template
 
 end

@@ -11,8 +11,8 @@
                 <%= content_tag(:h3, @item.subtitle, class: "subtitle") %>
             <% end %>
             <% if user_admin? %>
-                <%= link_to "<<< Index", site_items_path, class: "btn-md btn btn-primary" %>
-                <%= link_to "Edit Page", edit_site_item_path(@item), class: "btn-md btn btn-warning" %>
+                <%= link_to "<<< Index", pages_path, class: "btn-md btn btn-primary" %>
+                <%= link_to "Edit Page", edit_page_path(@item), class: "btn-md btn btn-warning" %>
             <% end %>
         </div>
 

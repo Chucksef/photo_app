@@ -7,7 +7,7 @@
     <% item.images.each do |image| %>
         <tr>
             <td class="text-center"><%= link_to( image_tag(image, alt: image.filename, class: "table"), image, target: "_blank") %></td>
-            <td><%= link_to "Delete", delete_image_attachment_site_item_path(image.signed_id, item.id), method: :delete, data: { confirm: 'Are you sure? THIS CANNOT BE UNDONE!' }, class: "btn btn-block btn-sml btn-danger" %></td>
+            <td><%= link_to "Delete", delete_image_attachment_page_path(image.signed_id, item.id), method: :delete, data: { confirm: 'Are you sure? THIS CANNOT BE UNDONE!' }, class: "btn btn-block btn-sml btn-danger" %></td>
         </tr>
     <% end %>
 </table>
