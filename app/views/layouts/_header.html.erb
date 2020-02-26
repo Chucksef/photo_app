@@ -16,7 +16,7 @@
     <nav id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
             <% Page.order(order: :asc).all.each do |item| %>
-                <%= render partial: 'layouts/nav_item', locals: { item: item }%>
+                <%= render partial: 'layouts/nav_item', locals: { item: item, color: site.primary_color }%>
             <% end %>
         </ul>
 
@@ -42,7 +42,8 @@
             <% if logged_in? %>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Account <b class="caret"></b>
+                    Account 
+                    <%= content_tag(:b, "", class:"caret", style: "color: #{site.primary_color}" ) %>
                     </a>
                     <ul class="dropdown-menu">
                         <li><p><%= current_user.name %></p></li>
