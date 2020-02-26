@@ -7,8 +7,8 @@
         <%= content_tag(:span,"", class: "icon-bar", style: "background-color: #{site.primary_color} !important") %>
         <%= content_tag(:span,"", class: "icon-bar", style: "background-color: #{site.primary_color} !important") %>
         </button>
-        <%= image_tag(site.logo, class: "img-logo") if site.logo.attached? %>
-        <%= link_to "#{site.name}", root_path, class: "navbar-brand", id: "logo", style: "color: #{site.primary_color}" %>
+        <%=  %>
+        <%= link_to image_tag(site.logo, class: "img-logo") +"#{site.name}", root_path, class: "navbar-brand", id: "logo", style: "color: #{site.primary_color}" %>
     </div>
 
     <% # SITE NAV SECTION OF NAVBAR %>

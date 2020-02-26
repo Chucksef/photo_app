@@ -485,9 +485,12 @@ img.table {
 }
 
 img.img-logo {
-  float: left;
-  height: 2.25em;
-  margin: .6em -5px 0 15px;
+  display: inline;
+  height: 150%;
+  position: relative;
+  top: -5px;
+  margin: 0 10px 0 0;
+  vertical-align: top;
 }
 
 
