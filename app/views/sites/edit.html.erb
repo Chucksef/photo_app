@@ -21,6 +21,10 @@
             <%= f.label "Navbar Color"%>
             <%= f.color_field :navbar_color, class: "form-control" %>
         </div>
+        <div class="form-group">
+            <%= f.label :logo %>
+            <%= f.file_field :logo, multiple: false, direct_upload: true, class: "form-control" %>
+        </div>
 
         <%= f.submit "Update Site", class: "btn btn-block btn-primary" %>
 
