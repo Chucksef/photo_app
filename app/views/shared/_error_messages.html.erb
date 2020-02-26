@@ -22,3 +22,15 @@
 		</ul>
 	</div>
 <% end if @user%>
+<% if @site.errors.any? %>
+	<div id="error_explanation">
+		<div class="alert alert-danger">
+			The form contains <%= pluralize(@site.errors.count, "error") %>.
+		</div>
+		<ul>
+			<% @site.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end if @site%>

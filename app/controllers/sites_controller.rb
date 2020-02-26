@@ -9,8 +9,8 @@ class SitesController < ApplicationController
 		@site = Site.first
 
 		if @site.update(site_params)
-			flash[:success] = "Successfuly Changed Site Name!"
-			redirect_to root_path
+			flash[:success] = "Successfuly Updated Site!"
+			render :edit
 		else
 			render :edit
 		end

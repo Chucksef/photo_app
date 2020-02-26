@@ -10,5 +10,6 @@ class Site < ApplicationRecord
 
     validates :name,                presence: true,
                                     length: {maximum: 50}
-    validates :primary_color,       format: {with: /\A#[a-f0-9]{6}\z/, message: "Color must take the format: #000000" }
+    validates :primary_color,       format: {with: /\A#[a-f0-9]{6}\z/, message: "Primary Color must take the hex format: #000000" }
+    validates :navbar_color,       format: {with: /\A#[a-f0-9]{6}\z/, message: "Navbar Color must take the hex format: #000000" }
 end
