@@ -1,4 +1,6 @@
 class Site < ApplicationRecord
+    has_one_attached :logo
+
     has_many :pages
     has_many :tmp_articles, class_name: "TmpArticle"
     has_many :tmp_galleries, class_name: "TmpGallery"
