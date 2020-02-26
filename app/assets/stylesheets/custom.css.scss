@@ -252,6 +252,10 @@ button.navbar-toggle {
   position: absolute;
   right: 0px;
 
+  span.icon-bar {
+    background-color: $primary-color !important;
+  }
+
 }
 
 
@@ -261,7 +265,7 @@ button.navbar-toggle {
 
 /* HEADER */
 
-@media only screen and (max-height: 767px) {
+@media only screen and (max-width: 767px) {
   .header-logo {
     height: 50px;
     position:relative;
