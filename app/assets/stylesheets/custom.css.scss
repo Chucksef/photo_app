@@ -88,11 +88,24 @@ div.page-header {
   text-align: center;
 }
 
+ul.dropdown-menu li.divider {
+  margin: 5px 0;
+  width: 96%;
+  opacity: .5;
+}
+
 
 @media only screen and (min-width: 768px){
   article.row {
     display: flex;
     margin-bottom: 15px;
+  }
+
+  ul.dropdown-menu li.divider {
+
+    position: relative;
+    width: 96%;
+    left: 2.5%;
   }
   
   .row .no-float {
