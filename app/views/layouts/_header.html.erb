@@ -1,5 +1,5 @@
 <% site = Site.first %>
-<header class="navbar navbar-fixed-top navbar-inverse container-fluid">
+<%= raw("<header class=\"navbar navbar-fixed-top navbar-inverse container-fluid\" style=\"background-color: #{site.navbar_color}\">") %>
     <div class="header-logo">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
@@ -58,4 +58,4 @@
             <% end %>
         </ul>
     </nav>
-</header>
+<%= raw("</header>") %>
