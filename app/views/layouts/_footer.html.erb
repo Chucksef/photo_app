@@ -1,4 +1,4 @@
 <% site = Site.first %>
 <%= raw("<footer class=\"text-center footer navbar-inverse\" style=\"background-color: #{site.navbar_color}\">") %>
-    <p>Built and Maintained by Chuck Crouse | <a href='http://www.chucksef.com'>chucksef.com</a></p>
+    <p>Built and Maintained by Chuck Crouse | <%= link_to("chucksef.com", "https://www.chucksef.com", style: "color: #{site.primary_color}" ) %></p>
 <%= raw("</footer>") %>
