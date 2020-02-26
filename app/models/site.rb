@@ -8,6 +8,7 @@ class Site < ApplicationRecord
     has_many :tmp_groups, class_name: "TmpGroup"
     has_many :tmp_splashes, class_name: "TmpSplash"
 
-    validates :name,    presence: true,
-                        length: {maximum: 50}
+    validates :name,                presence: true,
+                                    length: {maximum: 50}
+    validates :primary_color,       format: {with: /\A#[a-f0-9]{6}\z/, message: "Color must take the format: #000000" }
 end
