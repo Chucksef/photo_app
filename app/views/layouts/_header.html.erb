@@ -3,9 +3,9 @@
     <div class="header-logo">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <%= content_tag(:span,"", class: "icon-bar", style: "background-color: #{site.primary_color} !important") %>
+        <%= content_tag(:span,"", class: "icon-bar", style: "background-color: #{site.primary_color} !important") %>
+        <%= content_tag(:span,"", class: "icon-bar", style: "background-color: #{site.primary_color} !important") %>
         </button>
         <%= inline_svg_tag("logo.svg", class: "img-logo", style: "fill: #{site.primary_color}") %>
         <%= link_to "#{site.name}", root_path, class: "navbar-brand", id: "logo", style: "color: #{site.primary_color}" %>
