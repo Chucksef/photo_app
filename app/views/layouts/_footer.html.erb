@@ -1,3 +1,4 @@
-<footer class="text-center footer navbar-inverse">
+<% site = Site.first %>
+<%= raw("<footer class=\"text-center footer navbar-inverse\" style=\"background-color: #{site.navbar_color}\">") %>
     <p>Built and Maintained by Chuck Crouse | <a href='http://www.chucksef.com'>chucksef.com</a></p>
-</footer>
+<%= raw("</footer>") %>
