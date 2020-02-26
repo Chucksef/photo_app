@@ -18,7 +18,7 @@ class SitesController < ApplicationController
 
 	private
 		def site_params
-			params.require(:site).permit(:name, :primary_color, :navbar_color)
+			params.require(:site).permit(:name, :primary_color, :navbar_color, :logo)
 		end
 
 		def allow_user
