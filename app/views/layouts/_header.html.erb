@@ -9,7 +9,7 @@
         </button>
         <%=  %>
         <%= link_to image_tag(site.logo, class: "img-logo") +"#{site.name}", root_path, class: "navbar-brand", id: "logo", style: "color: #{site.primary_color}" if site.logo.attached? %>
-        <%= link_to image_tag( "#{site.name}", root_path, class: "navbar-brand", id: "logo", style: "color: #{site.primary_color}" unless site.logo.attached? %>
+        <%= link_to "#{site.name}", root_path, class: "navbar-brand", id: "logo", style: "color: #{site.primary_color}" unless site.logo.attached? %>
     </div>
 
     <% # SITE NAV SECTION OF NAVBAR %>
