@@ -9,7 +9,7 @@ class SitesController < ApplicationController
 		@site = Site.first
 
 		if @site.update(site_params)
-			flash[:success] = "Successfuly Updated Site!"
+			flash.now[:success] = "Successfuly Updated Site!"
 			render :edit
 		else
 			render :edit
