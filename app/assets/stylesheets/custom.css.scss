@@ -92,10 +92,9 @@ ul.dropdown-menu li.divider {
   }
 
   ul.dropdown-menu li.divider {
-
     position: relative;
-    width: 95%;
-    left: 2.5%;
+    width: 90%;
+    left: 5%;
   }
   
   .row .no-float {
@@ -293,8 +292,7 @@ button.navbar-toggle {
   margin-top: -1px;
 }
 
-.dropdown-menu > li > a {
-  color: white;
+.dropdown-menu > li > a:hover {
   opacity: 50%;
 }
 

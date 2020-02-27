@@ -31,9 +31,9 @@
                     </a>
                     <%= raw("<ul class=\"dropdown-menu\" style=\"background-color: #{site.navbar_color}\">")%>
                         <li><%= link_to "Manage Pages", pages_path, style: "color: #{site.primary_color}" %>
-                        <%= content_tag(:li, "", class: "divider", style: "background-color: #{site.primary_color}") %>
+                        <%= content_tag(:li, "", class: "divider") %>
                         <li><%= link_to "Users", users_path, style: "color: #{site.primary_color}" %></li>
-                        <%= content_tag(:li, "", class: "divider", style: "background-color: #{site.primary_color}") %>
+                        <%= content_tag(:li, "", class: "divider") %>
                         <li><%= link_to "Site Options", options_path, style: "color: #{site.primary_color}" %>
                     </ul>
                 </li>
@@ -48,7 +48,7 @@
                     </a>
                     <%= raw("<ul class=\"dropdown-menu\" style=\"background-color: #{site.navbar_color}\">")%>
                         <li><%= link_to "Edit Account", edit_user_path(current_user), style: "color: #{site.primary_color}" %></li>
-                        <%= content_tag(:li, "", class: "divider", style: "background-color: #{site.primary_color}") %>
+                        <%= content_tag(:li, "", class: "divider") %>
                         <li>
                             <%= link_to "Log out", logout_path, method: :delete, style: "color: #{site.primary_color}" %>
                         </li>
