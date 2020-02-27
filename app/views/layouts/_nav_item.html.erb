@@ -7,7 +7,7 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= "#{item.name} " %><%= content_tag(:b, "", class:"caret", style: "color: #{color}" ) %></a>
         <%= raw("<ul class=\"dropdown-menu\" style=\"background-color: #{bg_color}\">")%>
             <% item.pages.order(order: :asc).each do |sub| %>
-                <%= content_tag(:li, link_to(sub.name, page_path(sub))) if sub.visible %>
+                <%= content_tag(:li, link_to(sub.name, page_path(sub), style: "color: #{color}")) if sub.visible %>
             <% end %>
         </ul>
     </li>
