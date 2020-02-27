@@ -11,7 +11,6 @@ $light-gray:        #ddd;
 $medium-gray:       #aaa;
 $dark-gray:         #686868;
 $very-dark-gray:    #333;
-$primary-color: rgb(100, 172, 255);
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -251,12 +250,7 @@ td > a.btn {
 }
 
 button.navbar-toggle {
-  position: absolute;
-  right: 0px;
-
-  span.icon-bar {
-    background-color: $primary-color !important;
-  }
+  margin-right: 0;
 
 }
 
@@ -283,7 +277,11 @@ button.navbar-toggle {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
   font-weight: 200;
-  color: $primary-color;
+  padding-left: 0;
+}
+
+.nav > li > a {
+  padding: 10px 8px;
 }
 
 .navbar-nav > li > .dropdown-menu {
@@ -293,6 +291,10 @@ button.navbar-toggle {
   padding-bottom: 5px;
 }
 @media only screen and (min-width: 768px) {
+  nav ul.navbar-nav {
+    margin: 7.5px -5px;
+  }
+
   .navbar-nav > li > .dropdown-menu > li:last-child::after {
     background-color: #090909;
     height: 10px;
