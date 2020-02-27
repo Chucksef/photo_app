@@ -292,14 +292,22 @@ button.navbar-toggle {
   margin-top: -1px;
   padding-bottom: 5px;
 }
-
-.navbar-nav > li > .dropdown-menu > li:last-child::after {
-  content: "";
-  background-color: black;
+@media only screen and (min-width: 768px) {
+  .navbar-nav > li > .dropdown-menu > li:last-child::after {
+    background-color: black;
+    height: 10px;
+    width: 100%;
+    content: "";
+    position: absolute;
+    margin-top: 5px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
 }
 
 .dropdown-menu > li > a:hover {
-  opacity: 50%;
+  background-color: rgba(128,128,128, .5);
+  color: white !important;
 }
 
 header.navbar-inverse {
@@ -307,16 +315,6 @@ header.navbar-inverse {
   max-height: none;
 }
 
-.navbar-nav > li > .dropdown-menu > li:last-child::after {
-  background-color: black;
-  height: 10px;
-  width: 100%;
-  content: "";
-  position: absolute;
-  margin-top: 5px;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-}
 
 
 
