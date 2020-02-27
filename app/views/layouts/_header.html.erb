@@ -29,7 +29,7 @@
                         Admin 
                         <%= content_tag(:b, "", class:"caret", style: "color: #{site.primary_color}" ) %>
                     </a>
-                    <ul class="dropdown-menu">
+                    <%= raw("<ul class=\"dropdown-menu\" style=\"background-color: #{site.navbar_color}\">")%>
                         <li><%= link_to "Manage Pages", pages_path %>
                         <%= content_tag(:li, "", class: "divider", style: "background-color: #{site.primary_color}") %>
                         <li><%= link_to "Users", users_path %></li>
@@ -46,7 +46,7 @@
                     Account 
                     <%= content_tag(:b, "", class:"caret", style: "color: #{site.primary_color}" ) %>
                     </a>
-                    <ul class="dropdown-menu">
+                    <%= raw("<ul class=\"dropdown-menu\" style=\"background-color: #{site.navbar_color}\">")%>
                         <li><%= link_to "Edit Account", edit_user_path(current_user) %></li>
                         <%= content_tag(:li, "", class: "divider", style: "background-color: #{site.primary_color}") %>
                         <li>
