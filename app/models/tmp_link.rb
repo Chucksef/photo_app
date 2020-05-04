@@ -1,0 +1,2 @@
+class TmpLink < ApplicationRecord
+end
