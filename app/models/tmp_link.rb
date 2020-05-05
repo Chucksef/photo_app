@@ -1,3 +1,3 @@
-class TmpLink < Page
+class TmpLink < Template
     
 end

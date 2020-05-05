@@ -1,4 +1,6 @@
-<% if item.type != "TmpGroup" && !item.tmp_group_id %>
+<% if item.type == "TmpLink" && !item.tmp_group_id %>
+    <%= content_tag(:li, link_to(item.name, item.description, :target => "_blank")) if item.visible && item.order != 1 %>
+<% elsif item.type != "TmpGroup" && !item.tmp_group_id %>
     <%= content_tag(:li, link_to(item.name, page_path(item))) if item.visible && item.order != 1 %>
 <% elsif item.tmp_group_id %>
     <%# THIS ELSIF IS NECESSARY TO CONTROL FOR EDGE CASES %>
@@ -7,7 +9,8 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= "#{item.name} " %><%= content_tag(:b, "", class:"caret", style: "color: #{color}" ) %></a>
         <%= raw("<ul class=\"dropdown-menu\" style=\"background-color: #{bg_color}\">")%>
             <% item.pages.order(order: :asc).each do |sub| %>
-                <%= content_tag(:li, link_to(sub.name, page_path(sub), style: "color: #{color}")) if sub.visible %>
+                <%= content_tag(:li, link_to(sub.name, page_path(sub), style: "color: #{color}")) if sub.visible && sub.type != "TmpLink" %>
+                <%= content_tag(:li, link_to(sub.name, sub.description, :target => "_blank", style: "color: #{color}")) if sub.visible && sub.type == "TmpLink" %>
             <% end %>
         </ul>
     </li>
