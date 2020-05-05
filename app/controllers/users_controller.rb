@@ -47,7 +47,7 @@ class UsersController < ApplicationController
 
 		if @user.update(user_params)
 			flash[:success] = "Updated #{@user.name}!"
-			redirect_to @user
+			redirect_to(root_url)
 		else
 			render :edit
 		end
