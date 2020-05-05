@@ -4,5 +4,4 @@ class RoutesController < ApplicationController
 		@item = Page.order(order: :asc).first
         render "pages/root"
     end
-
 end

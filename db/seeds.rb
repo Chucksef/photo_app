@@ -12,8 +12,8 @@ pw ||= "password"
 
 User.create!(	name:  "Chuck Crouse",
 				email: "chucksef@gmail.com",
-				password:              pw,
-				password_confirmation: pw,
+				password:              "password",
+				password_confirmation: "password",
 				admin: true,
 				activated: true,
 				activated_at: Time.zone.now)
@@ -37,7 +37,9 @@ User.create!(	name:  "Charlee Crouse",
 					activated_at: Time.zone.now)
 end
 
-Site.create!(		name: "Pacifica Portraiture"
+Site.create!(		name: "Pacifica Portraiture",
+					primary_color: "#000000",
+					navbar_color: "#000000"
 )
 
 TmpArticle.create!(	name: "Our Mission",
