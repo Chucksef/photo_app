@@ -47,7 +47,7 @@ Rails.application.routes.draw do
 	resources :tmp_galleries, controller: :pages, type: "TmpGallery", except: [:index, :show, :edit]
 	resources :tmp_cards, controller: :pages, type: "TmpCard", except: [:index, :show, :edit]
 	resources :tmp_splashes, controller: :pages, type: "TmpSplash", except: [:index, :show, :edit]
-
+	resources :tmp_links, controller: :pages, type: "TmpLink", except: [:index, :show, :edit]
 
 	#Site
 	get '/options', to: "sites#edit"

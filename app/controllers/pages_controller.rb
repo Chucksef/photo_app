@@ -124,6 +124,8 @@ class PagesController < ApplicationController
 				"tmp_card"
 			when "TmpSplash"
 				"tmp_splash"
+			when "TmpLink"
+				"tmp_link"
 			end
 		end
 

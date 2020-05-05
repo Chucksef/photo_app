@@ -25,6 +25,8 @@
                 <%= render partial: '/tmp_galleries/show', locals: { item: @item } %>
             <% when "TmpCard" %>
                 <%= render partial: '/tmp_cards/show', locals: { item: @item } %>
+            <% when "TmpLink" %>
+                <%= render partial: '/tmp_links/show', locals: { item: @item } %>
         <% end %>
     </div>
 <% end %>

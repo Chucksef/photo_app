@@ -7,6 +7,7 @@ class Site < ApplicationRecord
     has_many :tmp_cards, class_name: "TmpCard"
     has_many :tmp_groups, class_name: "TmpGroup"
     has_many :tmp_splashes, class_name: "TmpSplash"
+    has_many :tmp_links, class_name: "TmpLink"
 
     validates :name,                presence: true,
                                     length: {maximum: 50}

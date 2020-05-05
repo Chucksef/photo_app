@@ -1,0 +1,3 @@
+class TmpLink < Page
+    
+end
