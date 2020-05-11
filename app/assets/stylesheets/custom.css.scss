@@ -483,7 +483,7 @@ img.gallery {
 }
 
 img.thumb {
-  width: 3em;
+  width: 3em; 
   height: 3em;
   object-fit: cover;
 }
@@ -494,13 +494,37 @@ img.table {
   margin: 0 auto;
 }
 
-img.img-logo {
+@keyframes blink {
+  0% {
+    fill: transparent;
+  }
+  49% {
+    fill: transparent;
+  }
+  50% {
+    fill: inherit;
+  }
+  100% {
+    fill: inherit;
+  }
+
+}
+
+svg.img-logo {
   display: inline;
-  height: 150%;
+  height: 125%;
   position: relative;
-  top: -5px;
+  top: -2px;
   margin: 0 10px 0 0;
   vertical-align: top;
+
+  .st0, .st1 {
+    fill: inherit;
+  }
+
+  .st0 {
+    animation: blink 1s infinite;
+  }
 }
 
 
