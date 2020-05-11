@@ -205,6 +205,15 @@ section.card {
   div.card-image-container {
     padding-top: 100%;
   }
+
+  .nav > li > a {
+    padding: 10px calc(0.89686vw - 0.88788px);
+    font-size: calc(0.89686vw + 5.11212px);
+  }
+
+  .navbar.navbar-fixed-top.navbar-inverse.container-fluid {
+    height: calc(2.24215vw + 32.78029px);
+  }
 }
 
 @media only screen and (min-width: 992px) {
