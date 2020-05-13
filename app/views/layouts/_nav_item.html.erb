@@ -4,7 +4,7 @@
     <%= content_tag(:li, link_to(item.name, page_path(item))) if item.visible && item.order != 1 %>
 <% elsif item.tmp_group_id %>
     <%# THIS ELSIF IS NECESSARY TO CONTROL FOR EDGE CASES %>
-<% else %>
+<% elsif item.visible %>
     <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= "#{item.name} " %><%= content_tag(:b, "", class:"caret", style: "color: #{color}" ) %></a>
         <%= raw("<ul class=\"dropdown-menu\" style=\"background-color: #{bg_color}\">")%>
