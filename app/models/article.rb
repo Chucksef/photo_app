@@ -4,7 +4,7 @@ class Article < ApplicationRecord
 	belongs_to :page, optional: true
 
 	validates :title,			presence: true,
-								length: {maximum: 50}
+								length: {maximum: 100}
 	validates :body,			presence: true,
-								length: {maximum: 750}
+								length: {maximum: 2000}
 end
