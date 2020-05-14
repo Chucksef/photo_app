@@ -207,13 +207,18 @@ section.card {
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1920px) {
   section.card {
     flex: 0 0 33.333%;
   }
 
   div.card-image-container {
     padding-top: 100%;
+  }
+
+  .col-md-8 {
+    width: calc(32.10991vw + 643.46973px);
+    margin-left: calc(33.94224vw - 336.70701px);
   }
 }
 
@@ -476,7 +481,7 @@ h3.section-heading {
 img.article {
   width: 100%;
   margin-bottom: 15px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 @media only screen and (max-width: 767px){
