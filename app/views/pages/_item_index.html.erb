@@ -1,6 +1,7 @@
 <tr>
     <td>
-        <%= link_to item.name, page_path(item) %></td>
+        <%= "&nbsp;└─".html_safe if item.tmp_group_id %>
+        <%= link_to "#{item.name}", page_path(item) %></td>
     <td class="text-center"><%= item.type[3..-1] %></td>
     <td class="text-center"><%= item.order %></td>
     <td>

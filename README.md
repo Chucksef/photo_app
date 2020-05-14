@@ -11,7 +11,7 @@
 Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own content and show off the cool projects I've built over the last several years. The thing that sets it apart from other basic portfolio sites is that I built it to accept new content dynamically via an admin interface invisible to normal site visitors.
 
 ## Features
- * Entire Website Stored in a Database for Easy Editing
+ * Entire Website Stored as a Database for Easy Editing
  * No Need to Ever Re-Code Individual Pages When Adding Content
  * Page Templates available:
     * Splash/Landing Page
@@ -25,26 +25,25 @@ Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own co
  * Sign-Up Page Hidden, but Accessible from <a href="https://www.chucksef.com/signup">/signup</a>
  * Confirmation Email System
  * Forgot Password Functionality
- * Modern Security/Authentication to Prevent Normal Users from Editing Pages or Other Users' Info
+ * Modern Security/Authentication
 
  ## Future Plans
- * Replace Current Generic Photography Content with Personalized Content
  * Processesing of Uploaded Images for quicker loading from S3
- * Add More Page Templates:
-    * About
+ * Add More Content Types:
     * List
     * Contact
- * Allow Admin to Customize Appearance of Website:
-    * Change Color Scheme
-    * Select Site Font
-    * Add JPG or PNG logo
-    * Change Style of Nav Bar (Left, Centered, Large, Mini)
-    * Custom Path/Url for Each Page_Item in URL Bar
- * Allow Admin to Add More Content Types to Pages
+    * More Image/Text variations
+    * Image alone
     * Links
     * Headings
     * Separators
     * Embedded Videos
- * Removed all user-facing access to signup page, 
- * Current Non-Admin User Profiles are Useless. Future User Features:
-    * Personalized Galleries (Allow For Commercial Photography Use)
+ * Allow Admin to Customize Appearance of Website:
+    * Add PNG or SVG logo
+    * Change Style of Nav Bar (Left, Centered, Large, Mini)
+
+## TODO
+ * Implement Dark Mode
+ * Integrate Inline-SVG-S3 gem
+ * v-center lis in header
+ * JS splash page
