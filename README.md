@@ -45,5 +45,4 @@ Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own co
 ## TODO
  * Implement Dark Mode
  * Integrate Inline-SVG-S3 gem
- * v-center lis in header
  * JS splash page

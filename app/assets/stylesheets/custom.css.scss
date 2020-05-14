@@ -363,6 +363,15 @@ div.table {
   margin-bottom: 0px;
 }
 
+.table > tbody > tr > td {
+  vertical-align: middle;
+}
+
+.table > tbody > tr > td > p {
+  display: inline;
+  color: rgba(0,0,0,.33);
+}
+
 
 
 
