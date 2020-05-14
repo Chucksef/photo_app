@@ -63,6 +63,7 @@ body {
 hr {
   margin-top: 0px;
   margin-bottom: 15px;
+  border-color: #ccc;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -75,6 +76,7 @@ div.page-header {
   margin-top: 2em;
   margin-bottom: 15px;
   text-align: center;
+  border-color: #ccc;
 }
 
 ul.dropdown-menu li.divider {
@@ -466,7 +468,8 @@ select {
 }
 
 textarea.form-control {
-  height: 120px;
+  min-height: 250px;
+  resize: vertical;
 }
 
 h3.section-heading {
