@@ -3,10 +3,10 @@
 <% item.articles.all.each_with_index do |art, idx| %>
     <article class="row">
         <% if idx.even? %>
-            <div class="col-sm-8 col-xs-12 no-float">
+            <div class="col-sm-8 col-xs-12 no-float article-image">
                 <%= image_tag(art.image, alt: art.image.filename, class: "article") if art.image.attached? %>
             </div>
-            <div class="col-sm-4 col-xs-12 no-float">
+            <div class="col-sm-4 col-xs-12 no-float article-content">
                 <%= content_tag(:h4, art.title, class: "heading text-center") %>
                 <hr>
                 <% paragraphs = art.body.split("\n") %>
@@ -15,7 +15,7 @@
                 <% end %>
             </div>
         <% else %>
-            <div class="col-sm-4 col-xs-12 no-float">
+            <div class="col-sm-4 col-xs-12 no-float article-content">
                 <%= content_tag(:h4, art.title, class: "heading text-center") %>
                 <hr>
                 <% paragraphs = art.body.split("\n") %>
@@ -23,7 +23,7 @@
                     <%= content_tag(:p, paragraph, class: "article text-justify" ) %>
                 <% end %>
             </div>
-            <div class="col-sm-8 col-xs-12 no-float">
+            <div class="col-sm-8 col-xs-12 no-float article-image">
                 <%= image_tag(art.image, alt: art.image.filename, class: "article") if art.image.attached? %>
             </div>
         <% end %>

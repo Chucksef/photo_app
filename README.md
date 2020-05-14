@@ -43,7 +43,6 @@ Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own co
     * Change Style of Nav Bar (Left, Centered, Large, Mini)
 
 ## TODO
- * Images resize too large on 1080px + window sizes
  * Eliminate L-R article stacking on mobile layout
  * Re-style textareas to be vertically resizable only and have a min height
  * Deleting a Group should un-group all of its members

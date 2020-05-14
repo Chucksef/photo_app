@@ -87,7 +87,7 @@ ul.dropdown-menu li.divider {
 @media only screen and (min-width: 768px){
   article.row {
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 2em;
   }
 
   ul.dropdown-menu li.divider {
@@ -490,23 +490,32 @@ img.article {
   width: 100%;
   max-height: 35em;
   }
+
+  article.row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+
+    .article-content {
+      order: 0;
+    }
+  
+    .article-image {
+      order: 1;
+      margin-top: 1em;
+    }
+  }
 }
 
 @media only screen and (min-width: 768px){
   img.article {
     max-height: 100%;
-    max-width: 100%;
+    max-width: calc(100% - 32px);
     width: auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-}
-
-@media only screen and (max-width: 991px){
-  img.article {
-    
   }
 }
 
