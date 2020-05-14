@@ -43,8 +43,6 @@ Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own co
     * Change Style of Nav Bar (Left, Centered, Large, Mini)
 
 ## TODO
- * @media breakpoint from 991px -> Full should slowly reduce the amount of side gutter space until there is none at 990px (or wherever)
- * Images on Article Pages should always display fully
  * Re-style textareas to be vertically resizable only and have a min height
  * Deleting a Group should un-group all of its members
  * Deleting any page should re-order the remaining pages
