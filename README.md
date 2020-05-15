@@ -47,9 +47,6 @@ Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own co
    * Change Style of Nav Bar (Left, Centered, Large, Mini)
 
 ## TODO
-* Build ordering system for articles
-   * Simple as adding a field for a number value to each article
-   * Sort_by on db reads
 * Hamburger menu dropdown has no background anymore
 * Deleting a Group should un-group all of its members
 * Deleting any page should re-order the remaining pages
