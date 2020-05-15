@@ -130,6 +130,6 @@ class PagesController < ApplicationController
 		end
 
 		def item_params
-			params.require(set_type.to_sym).permit(	:slug, :type, :name, :subtitle, :visible, :description, :order, :site_id, :tmp_group_id, images: [], articles_attributes: [:id, :title, :body, :page_id, :created_at, :updated_at, :_destroy, :image])
+			params.require(set_type.to_sym).permit(	:slug, :type, :name, :subtitle, :visible, :description, :order, :site_id, :tmp_group_id, images: [], articles_attributes: [:order, :id, :title, :body, :page_id, :created_at, :updated_at, :_destroy, :image])
 		end
 end
