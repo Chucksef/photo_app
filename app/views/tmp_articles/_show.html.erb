@@ -1,6 +1,6 @@
 <%# ARTICLE TEMPLATE%>
 
-<% item.articles.all.each_with_index do |art, idx| %>
+<% item.articles.order(order: :asc).all.each_with_index do |art, idx| %>
     <article class="row">
         <% if idx.even? %>
             <div class="col-sm-8 col-xs-12 no-float article-image">

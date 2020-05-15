@@ -24,10 +24,7 @@ module ApplicationHelper
 			link_text = link.match(/(?<=\[).*(?=\])/)							# get the link text
 			link_url = link.match(/(?<=\().*(?=\))/) 							# get the url
 			a_tag = "<a href='#{link_url}' target='_blank'>#{link_text}</a>"	# build a new anchor tag
-			newtext = newtext.sub(link, a_tag) 										# replace the initial string with the anchor tag
-			
-			puts "found link: #{link}\nlink_text: #{link_text}\nlink_url: #{link_url}\na_tag: #{a_tag}\n\n\n\n"
-
+			newtext = newtext.sub(link, a_tag) 									# replace the initial string with the anchor tag
 		end
 		newtext
 	end

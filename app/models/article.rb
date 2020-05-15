@@ -7,4 +7,5 @@ class Article < ApplicationRecord
 								length: {maximum: 100}
 	validates :body,			presence: true,
 								length: {maximum: 2000}
+	validates :order, 			presence: true
 end

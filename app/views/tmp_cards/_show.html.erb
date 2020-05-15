@@ -2,7 +2,7 @@
 
 <div class="card-container" >
 
-    <% item.articles.all.each do |art| %>
+    <% item.articles.order(order: :asc).all.each do |art| %>
         <section class="card">
             <div class="card-image-container">
                 <%= image_tag(art.image, alt: art.image.filename, class: "card") if art.image.attached? %>
