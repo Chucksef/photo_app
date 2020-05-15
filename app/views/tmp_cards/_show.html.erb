@@ -11,7 +11,8 @@
             <hr>
             <% paragraphs = art.body.split("\n") %>
             <% paragraphs.each do |paragraph| %>
-                <%= content_tag(:p, paragraph, class: "article" ) %>
+                <% newpar = parse_markup(paragraph) %>
+                <%= content_tag(:p, raw(newpar), class: "article" ) %>
             <% end %>
         </section>
     <% end %>

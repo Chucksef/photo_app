@@ -11,7 +11,8 @@
                 <hr>
                 <% paragraphs = art.body.split("\n") %>
                 <% paragraphs.each do |paragraph| %>
-                    <%= content_tag(:p, paragraph, class: "article text-justify" ) %>
+                    <% newpar = parse_markup(paragraph) %>
+                    <%= content_tag(:p, raw(newpar), class: "article text-justify" ) %>
                 <% end %>
             </div>
         <% else %>
@@ -20,7 +21,8 @@
                 <hr>
                 <% paragraphs = art.body.split("\n") %>
                 <% paragraphs.each do |paragraph| %>
-                    <%= content_tag(:p, paragraph, class: "article text-justify" ) %>
+                    <% newpar = parse_markup(paragraph) %>
+                    <%= content_tag(:p, raw(newpar), class: "article text-justify" ) %>
                 <% end %>
             </div>
             <div class="col-sm-8 col-xs-12 no-float article-image">

@@ -43,6 +43,7 @@ Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own co
     * Change Style of Nav Bar (Left, Centered, Large, Mini)
 
 ## TODO
+ * Create system to link in articles
  * Deleting a Group should un-group all of its members
  * Deleting any page should re-order the remaining pages
  * Implement Dark Mode
