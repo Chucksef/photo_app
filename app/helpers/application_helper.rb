@@ -20,7 +20,7 @@ module ApplicationHelper
 	def parse_markup(text)
 		# scan for links in [link](url) format
 		newtext = text
-		text.scan(/\[.*\]\(http[s]?:\/\/.+[.].+[.].+\)/) do |link|
+		text.scan(/\[[A-z0-9 -]*\]\(http[s]?:\/\/[a-zA-Z0-9?$\-_.+!*',,;\/?:@=&]*[.]?[a-zA-Z0-9?$\-_.+!*',,;\/?:@=&]+[.][a-zA-Z0-9?$\-_.+!*',,;\/?:@=&]+\)/) do |link|
 			link_text = link.match(/(?<=\[).*(?=\])/)							# get the link text
 			link_url = link.match(/(?<=\().*(?=\))/) 							# get the url
 			a_tag = "<a href='#{link_url}' target='_blank'>#{link_text}</a>"	# build a new anchor tag
