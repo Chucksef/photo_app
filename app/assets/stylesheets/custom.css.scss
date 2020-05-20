@@ -276,7 +276,9 @@ button.navbar-toggle {
   
   #navbar {
     position: relative;
-    left: 15px;
+    background: #222;
+    border: none;
+    border-bottom: 3px solid greenyellow; 
   }
 } 
 
