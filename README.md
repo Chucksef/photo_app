@@ -29,10 +29,6 @@ Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own co
 
  ## Future Plans
 * Processesing of Uploaded Images for quicker loading from S3
-* Add Minimal (<a href="https://www.reddit.com/wiki/markdown">Markdown</a>) System
-   * Links
-   * Bold
-   * Italics
 * Add More Content Types:
    * List
    * Contact
@@ -47,7 +43,6 @@ Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own co
    * Change Style of Nav Bar (Left, Centered, Large, Mini)
 
 ## TODO
-* Create inline 'tagging' system
 * Deleting a Group should un-group all of its members
 * Deleting any page should re-order the remaining pages
 * Implement Dark Mode
