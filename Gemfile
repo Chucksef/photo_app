@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 # Use Bootstrap SASS to convert LESS CSS to SASS
 gem 'bootstrap-sass', '3.3.7'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 # Use simple form for building forms
 gem 'simple_form'
 # Use friendlyID for pretty urls
