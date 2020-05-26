@@ -47,9 +47,7 @@ Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own co
    * Change Style of Nav Bar (Left, Centered, Large, Mini)
 
 ## TODO
-* Replace article image max-width with simple "100%"
 * Create inline 'tagging' system
-* Mobile Cards styling cuts images off
 * Deleting a Group should un-group all of its members
 * Deleting any page should re-order the remaining pages
 * Implement Dark Mode
