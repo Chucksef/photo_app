@@ -42,6 +42,13 @@ module ApplicationHelper
 
 	def parse_bold(text)
 
+		# scan for bolded text markdown *[bolded text here]* format
+		text.scan(/[*][ -)+-~¡-ƿ]+[*]/) do |bold|
+			bold_text = bold[1..-2]													# get the bold text
+			bold_tag = "<b>#{bold_text}</b>"										# build a new anchor tag
+			text = text.sub(bold, bold_tag) 										# replace the initial string with the anchor tag
+		end
+
 		# return text
 		text
 	end
