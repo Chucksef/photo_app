@@ -18,15 +18,35 @@ module ApplicationHelper
 	end
 
 	def parse_markup(text)
+
+		text = parse_bold(text)
+		text = parse_links(text)
+
+		# return text
+		text
+	end
+
+	def parse_links(text)
+
 		# scan for links in [link](url) format
-		newtext = text
 		text.scan(/\[[A-z0-9 \-?!,.()'@#&+*\/]*\]\(http[s]?:\/\/[a-zA-Z0-9?$\-_.+!*',,;\/?:@=&]*[.]?[a-zA-Z0-9?$\-_.+!*',,;\/?:@=&]+[.][a-zA-Z0-9?$\-_.+!*',,;\/?:@=&]+\)/) do |link|
 			link_text = link.match(/(?<=\[).*(?=\])/)							# get the link text
 			link_url = link.match(/(?<=\().*(?=\))/) 							# get the url
 			a_tag = "<a href='#{link_url}' target='_blank'>#{link_text}</a>"	# build a new anchor tag
-			newtext = newtext.sub(link, a_tag) 									# replace the initial string with the anchor tag
+			text = text.sub(link, a_tag) 									# replace the initial string with the anchor tag
 		end
-		newtext
+
+		# return text
+		text
 	end
 
+	def parse_bold(text)
+
+		# return text
+		text
+	end
+
+	def parse_tags(text)
+		text
+	end
 end
