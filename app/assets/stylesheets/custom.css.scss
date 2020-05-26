@@ -30,6 +30,14 @@ $very-dark-gray:    #333;
   @include box_sizing;
 }
 
+.tag {
+  font-style: normal;
+  font-weight: normal;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin: 0 1px;
+}
+
 
 
 
