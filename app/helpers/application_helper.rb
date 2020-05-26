@@ -21,6 +21,7 @@ module ApplicationHelper
 
 		text = parse_bold(text)
 		text = parse_links(text)
+		text = parse_tags(text)
 
 		# return text
 		text
@@ -33,7 +34,7 @@ module ApplicationHelper
 			link_text = link.match(/(?<=\[).*(?=\])/)							# get the link text
 			link_url = link.match(/(?<=\().*(?=\))/) 							# get the url
 			a_tag = "<a href='#{link_url}' target='_blank'>#{link_text}</a>"	# build a new anchor tag
-			text = text.sub(link, a_tag) 									# replace the initial string with the anchor tag
+			text = text.sub(link, a_tag) 										# replace the initial string with the anchor tag
 		end
 
 		# return text
@@ -44,9 +45,9 @@ module ApplicationHelper
 
 		# scan for bolded text markdown *[bolded text here]* format
 		text.scan(/[*][ -)+-~¡-ƿ]+[*]/) do |bold|
-			bold_text = bold[1..-2]													# get the bold text
-			bold_tag = "<b>#{bold_text}</b>"										# build a new anchor tag
-			text = text.sub(bold, bold_tag) 										# replace the initial string with the anchor tag
+			bold_text = bold[1..-2]											# get the bold text
+			bold_tag = "<b>#{bold_text}</b>"								# build a new b tag
+			text = text.sub(bold, bold_tag) 								# replace the initial string with the anchor tag
 		end
 
 		# return text
@@ -54,6 +55,18 @@ module ApplicationHelper
 	end
 
 	def parse_tags(text)
+		site = Site.first;
+		color1 = site.primary_color
+		color2 = site.navbar_color
+
+		# scan for tagged text markdown ^[tagged text here]^ format
+		text.scan(/[~][ -}¡-ƿ]+[~]/) do |tag|
+			tag_text = tag[1..-2]																				# get the tag text
+			tag_tag = "<em class='tag' style='background: #{color2}bb; color: #{color1}'>#{tag_text}</em>"		# build a new em tag
+			text = text.sub(tag, tag_tag) 																		# replace the initial string with the anchor tag
+		end
+
+		# return text
 		text
 	end
 end
