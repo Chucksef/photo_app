@@ -41,6 +41,10 @@ Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own co
 
 ## TODO
 * Custom JS on splash page
+   * Run func on page load
+   * Check for splash page
+   * Create elem
+
 * Deleting a Group should un-group all of its members
 * Deleting any page should re-order the remaining pages
 * Implement Dark Mode
