@@ -38,13 +38,10 @@ Dynamic Portfolio 1.0 is my own personal portfolio. I built it to host my own co
    * Headings
    * Separators
    * Embedded Videos
-* Allow Admin to Customize Appearance of Website:
-   * Add PNG or SVG logo
-   * Change Style of Nav Bar (Left, Centered, Large, Mini)
 
 ## TODO
+* Custom JS on splash page
 * Deleting a Group should un-group all of its members
 * Deleting any page should re-order the remaining pages
 * Implement Dark Mode
 * Integrate Inline-SVG-S3 gem
-* Custom JS splash page
