@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 110.9 198.8" style="enable-background:new 0 0 110.9 198.8;" xml:space="preserve">
+	<style type="text/css">
+		.st0{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
+		.st1{fill:#6AD49F;stroke:#193326;stroke-width:3;stroke-miterlimit:10;}
+		.st2{fill:none;stroke:#95E5BD;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+		.st3{fill:none;stroke:#95E5BD;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st4{stroke:#193326;stroke-width:2;stroke-miterlimit:10;}
+		.st5{fill:#FFFFFF;}
+		.st6{fill:#36805B;stroke:#193326;stroke-width:3;stroke-miterlimit:10;}
+		.st7{fill:none;stroke:#193326;stroke-width:3;stroke-miterlimit:10;}
+		.st8{fill:none;stroke:#6AD49F;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st9{stroke:#193326;stroke-width:3;stroke-miterlimit:10;}
+		.st10{fill:none;stroke:#6AD49F;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+		.st11{fill:#47CC8A;stroke:#193326;stroke-width:2.4803;stroke-miterlimit:10;}
+		.st12{fill:none;stroke:#193326;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+		.st13{fill:#95E5BD;stroke:#193326;stroke-width:3;stroke-miterlimit:10;}
+		.st14{fill:#95E5BD;stroke:#193326;stroke-width:2;stroke-miterlimit:10;}
+		.st15{fill:none;stroke:#193326;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st16{fill:#44AB78;stroke:#193326;stroke-width:3;stroke-miterlimit:10;}
+		.st17{fill:#6AD49F;stroke:#193326;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st18{fill:none;stroke:#36805B;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+		.st19{fill:#49F254;}
+		.st20{fill:#36805B;}
+	</style>
+	<g id="Mobile">
+		<path id="Sticker" class="st5" d="M16.6,196.8c-8,0-14.6-7.2-14.6-16v-164C2,8.6,8.5,2,16.6,2h77.7c8,0,14.6,6.6,14.6,14.8v164
+			c0,8.8-6.5,16-14.6,16H16.6z"/>
+		<g id="Bottom">
+			<path id="Bottom_Bezel" class="st6" d="M98.9,165.8v15c0,3.3-2.1,5.9-4.6,5.9H16.6c-2.5,0-4.6-2.7-4.6-5.9v-15H98.9z"/>
+			<path id="OVERLAY_5_" class="st7 svg-overlay" d="M98.9,165.8v15c0,3.3-2.1,5.9-4.6,5.9H16.6c-2.5,0-4.6-2.7-4.6-5.9v-15H98.9z"/>
+			<line class="st8" x1="46.9" y1="176.3" x2="64" y2="176.3"/>
+		</g>
+		<g id="Screen_1_">
+			<rect x="12" y="22.3" class="st9" width="86.9" height="143.6"/>
+			<rect id="OVERLAY" x="12" y="22.2" class="st7 svg-overlay" width="86.9" height="143.6"/>
+		</g>
+		<g id="Top">
+			<path id="Top_Bezel" class="st6" d="M98.9,16.8v5.4H12v-5.4c0-2.6,2-4.8,4.6-4.8h77.7C96.8,12,98.9,14.1,98.9,16.8z"/>
+			<path id="OVERLAY_4_" class="st7 svg-overlay" d="M98.9,16.8v5.4H12v-5.4c0-2.6,2-4.8,4.6-4.8h77.7C96.8,12,98.9,14.1,98.9,16.8z"/>
+			<line id="Speaker" class="st10" x1="41.1" y1="17.1" x2="69.8" y2="17.1"/>
+		</g>
+	</g>
+</svg>
