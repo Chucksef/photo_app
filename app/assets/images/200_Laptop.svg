@@ -1,43 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 204.1 144" style="enable-background:new 0 0 204.1 144;" xml:space="preserve">
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 204.1 144" style="enable-background:new 0 0 204.1 144;" xml:space="preserve">
 	<style type="text/css">
-		.st0{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
-		.st1{fill:#6AB0D4;stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
-		.st2{fill:none;stroke:#91D2F2;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
-		.st3{fill:none;stroke:#91D2F2;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-		.st4{stroke:#192A33;stroke-width:2;stroke-miterlimit:10;}
-		.st5{fill:#FFFFFF;}
-		.st6{fill:#366780;stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
-		.st7{fill:none;stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
-		.st8{fill:none;stroke:#6AB0D4;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-		.st9{stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
-		.st10{fill:none;stroke:#6AB0D4;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
-		.st11{fill:#47A0CC;stroke:#192A33;stroke-width:2.4803;stroke-miterlimit:10;}
-		.st12{fill:none;stroke:#192A33;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
-		.st13{fill:#91D2F2;stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
-		.st14{fill:#91D2F2;stroke:#192A33;stroke-width:2;stroke-miterlimit:10;}
-		.st15{fill:none;stroke:#192A33;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-		.st16{fill:#47A0CC;stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
-		.st17{fill:#91D2F2;stroke:#192A33;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-		.st18{fill:none;stroke:#366780;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
-		.st19{fill:#49F254;}
-		.st20{fill:#366780;}
+		.st0b{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
+		.st1b{fill:#6AB0D4;stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
+		.st2b{fill:none;stroke:#95CBE5;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+		.st3b{fill:none;stroke:#95CBE5;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st4b{stroke:#192A33;stroke-width:2;stroke-miterlimit:10;}
+		.st5b{fill:url(#Overlay_1_);stroke:#192A33;stroke-width:2;stroke-miterlimit:10;}
+		.st6b{fill:#FFFFFF;}
+		.st7b{fill:#366780;stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
+		.st8b{fill:url(#OVERLAY_2_);stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
+		.st9b{fill:none;stroke:#6AB0D4;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st10b{stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
+		.st11b{fill:url(#OVERLAY_6_);stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
+		.st12b{fill:url(#OVERLAY_7_);stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
+		.st13b{fill:none;stroke:#6AB0D4;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+		.st14b{fill:#47A0CC;stroke:#192A33;stroke-width:2.4803;stroke-miterlimit:10;}
+		.st15b{fill:url(#OVERLAY_8_);stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
+		.st16b{fill:none;stroke:#192A33;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+		.st17b{fill:url(#OVERLAY_12_);stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
+		.st18b{fill:#95CBE5;stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
+		.st19b{fill:#95CBE5;stroke:#192A33;stroke-width:2;stroke-miterlimit:10;}
+		.st20b{fill:none;stroke:#192A33;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st21b{fill:#47A0CC;stroke:#192A33;stroke-width:3;stroke-miterlimit:10;}
+		.st22b{fill:#95CBE5;stroke:#192A33;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st23b{fill:url(#OVERLAY_13_);stroke:#192A33;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st24b{fill:none;stroke:#366780;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+		.st25b{fill:#49F254;}
+		.st26b{fill:#366780;}
+		.st27b{fill:url(#OVERLAY_14_);stroke:#192A33;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st28b{fill:url(#OVERLAY_15_);stroke:#192A33;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
 	</style>
 	<g id="Laptop">
-		<path class="st0" d="M18.2,142c-5.3,0-10.4-2.4-13.4-6.8c-4.2-6.2-3.5-14.3,1.4-19.6l17.3-18.8c0,0,0,0,0-0.1V17.8
+		<path class="st0b" d="M18.2,142c-5.3,0-10.4-2.4-13.4-6.8c-4.2-6.2-3.5-14.3,1.4-19.6l17.3-18.8c0,0,0,0,0-0.1V17.8
 			C23.5,9.1,30.6,2,39.4,2h128.8c8.8,0,15.9,7.1,15.9,15.9v79.3c0,0,0,0,0,0.1l14.9,19.4c3.7,4.9,4.3,11.3,1.6,16.7
 			c-2.7,5.4-8.5,8.7-14.6,8.7H18.2z"/>
-		<path id="Base" class="st1" d="M173.9,100.6H33.6c0,0,0,0-0.1,0l-19.8,21.6c-3.5,3.8-0.8,9.8,4.3,9.8h168.2c4.9,0,7.6-5.6,4.6-9.4
+		<path id="Base" class="st1b" d="M173.9,100.6H33.6c0,0,0,0-0.1,0l-19.8,21.6c-3.5,3.8-0.8,9.8,4.3,9.8h168.2c4.9,0,7.6-5.6,4.6-9.4
 			L173.9,100.6C174,100.6,174,100.6,173.9,100.6z"/>
-		<line id="Keyboard_1_" class="st2" x1="36.5" y1="111.1" x2="167.7" y2="111.1"/>
-		<line id="Mouse_1_" class="st3" x1="80.4" y1="121.6" x2="123.7" y2="121.6"/>
-		<path id="Top_1_" class="st1" d="M174,100.6H33.5V17.8c0-3.2,2.6-5.8,5.8-5.8h128.9c3.2,0,5.8,2.6,5.8,5.8V100.6z"/>
+		<line id="Keyboard_1_" class="st2b" x1="36.5" y1="111.1" x2="167.7" y2="111.1"/>
+		<line id="Mouse_1_" class="st3b" x1="80.4" y1="121.6" x2="123.7" y2="121.6"/>
+		<path id="Top_1_" class="st1b" d="M174,100.6H33.5V17.8c0-3.2,2.6-5.8,5.8-5.8h128.9c3.2,0,5.8,2.6,5.8,5.8V100.6z"/>
 		<g id="Screen_4_">
-			<path id="Screen_2_" class="st4" d="M40.5,92.5V20.1c0-0.6,0.5-1.1,1.1-1.1h124.3c0.6,0,1.1,0.5,1.1,1.1v72.5
+			<path id="Screen_2_" class="st4b" d="M40.5,92.5V20.1c0-0.6,0.5-1.1,1.1-1.1h124.3c0.6,0,1.1,0.5,1.1,1.1v72.5
 				c0,0.6-0.5,1.1-1.1,1.1H41.6C41,93.6,40.5,93.1,40.5,92.5z"/>
-			<path id="Overlay" class="st4 svg-overlay" d="M40.5,92.5V20.1c0-0.6,0.5-1.1,1.1-1.1h124.3c0.6,0,1.1,0.5,1.1,1.1v72.5c0,0.6-0.5,1.1-1.1,1.1
+			<linearGradient id="Overlay_1_" gradientUnits="userSpaceOnUse" x1="53.8068" y1="6.3595" x2="153.7064" y2="106.2591">
+				<stop  offset="0.499" style="stop-color:#FFFFFF;stop-opacity:0.2"/>
+				<stop  offset="0.5" style="stop-color:#000000;stop-opacity:0"/>
+			</linearGradient>
+			<path id="Overlay" class="st5b" d="M40.5,92.5V20.1c0-0.6,0.5-1.1,1.1-1.1h124.3c0.6,0,1.1,0.5,1.1,1.1v72.5c0,0.6-0.5,1.1-1.1,1.1
 				H41.6C41,93.6,40.5,93.1,40.5,92.5z"/>
 		</g>
 	</g>

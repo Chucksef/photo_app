@@ -1,75 +1,99 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 146.1 206.5" style="enable-background:new 0 0 146.1 206.5;" xml:space="preserve">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 146.1 206.5" style="enable-background:new 0 0 146.1 206.5;" xml:space="preserve">
 	<style type="text/css">
-		.st0{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
-		.st1{fill:#6A84D4;stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
-		.st2{fill:none;stroke:#95A9E5;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
-		.st3{fill:none;stroke:#95A9E5;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-		.st4{stroke:#192033;stroke-width:2;stroke-miterlimit:10;}
-		.st5{fill:#FFFFFF;}
-		.st6{fill:#364880;stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
-		.st7{fill:none;stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
-		.st8{fill:none;stroke:#6A84D4;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-		.st9{stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
-		.st10{fill:none;stroke:#6A84D4;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
-		.st11{fill:#4769CC;stroke:#192033;stroke-width:2.4803;stroke-miterlimit:10;}
-		.st12{fill:none;stroke:#192033;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
-		.st13{fill:#95A9E5;stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
-		.st14{fill:#95A9E5;stroke:#192033;stroke-width:2;stroke-miterlimit:10;}
-		.st15{fill:none;stroke:#192033;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-		.st16{fill:#4769CC;stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
-		.st17{fill:#95A9E5;stroke:#192033;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-		.st18{fill:none;stroke:#364880;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
-		.st19{fill:#49F254;}
-		.st20{fill:#364880;}
+		.st0c{fill:#FFFFFF;stroke:#FFFFFF;stroke-miterlimit:10;}
+		.st1c{fill:#6A84D4;stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
+		.st2c{fill:none;stroke:#95A9E5;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+		.st3c{fill:none;stroke:#95A9E5;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st4c{stroke:#192033;stroke-width:2;stroke-miterlimit:10;}
+		.st5c{fill:url(#Overlay_1_);stroke:#192033;stroke-width:2;stroke-miterlimit:10;}
+		.st6c{fill:#FFFFFF;}
+		.st7c{fill:#364880;stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
+		.st8c{fill:url(#OVERLAY_2_);stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
+		.st9c{fill:none;stroke:#6A84D4;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st10c{stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
+		.st11c{fill:url(#OVERLAY_6_);stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
+		.st12c{fill:url(#OVERLAY_7_);stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
+		.st13c{fill:none;stroke:#6A84D4;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+		.st14c{fill:#4769CC;stroke:#192033;stroke-width:2.4803;stroke-miterlimit:10;}
+		.st15c{fill:url(#OVERLAY_8_);stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
+		.st16c{fill:none;stroke:#192033;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+		.st17c{fill:url(#OVERLAY_12_);stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
+		.st18c{fill:#95A9E5;stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
+		.st19c{fill:#95A9E5;stroke:#192033;stroke-width:2;stroke-miterlimit:10;}
+		.st20c{fill:none;stroke:#192033;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st21c{fill:#4769CC;stroke:#192033;stroke-width:3;stroke-miterlimit:10;}
+		.st22c{fill:#95A9E5;stroke:#192033;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st23c{fill:url(#OVERLAY_13_);stroke:#192033;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st24c{fill:none;stroke:#364880;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+		.st25c{fill:#49F254;}
+		.st26c{fill:#364880;}
+		.st27c{fill:url(#OVERLAY_14_);stroke:#192033;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+		.st28c{fill:url(#OVERLAY_15_);stroke:#192033;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
 	</style>
 	<g id="Server_1_">
-		<path class="st5" d="M125.9,205.9c-6.8,0.6-12.6-4.7-12.6-11.4c0,0,0,0,0,0c-2.7-4.7-15.9-7.1-27-5.9c-5.6,0.6-10.1,2.2-10.1,2.2
+		<path class="st6c" d="M125.9,205.9c-6.8,0.6-12.6-4.7-12.6-11.4c0,0,0,0,0,0c-2.7-4.7-15.9-7.1-27-5.9c-5.6,0.6-10.1,2.2-10.1,2.2
 			c-1.9,2.5-4.9,3.9-7.9,3.9c-1,0-2-0.1-3-0.5c-0.9-0.3-1.7-0.7-2.4-1.1l-0.8,1c-1.9,2.5-4.9,3.9-7.9,3.9c-1.3,0-2.6-0.3-3.9-0.8
 			c-3.6-1.5-5.9-5.1-6.1-9l-0.1-1.5l-32.1,0c-6.3,0-11.5-5.2-11.5-11.5c0-6.3,5.1-11.4,11.4-11.5C6,160.2,2,153.8,2,146.5v-23.3
 			c0-5.3,2.1-10.1,5.5-13.7C4.1,106,2,101.1,2,95.9V72.5c0-5.3,2.1-10.1,5.5-13.7C4.1,55.3,2,50.5,2,45.2V21.9C2,10.9,10.9,2,21.9,2
 			h76c11,0,19.9,8.9,19.9,19.9v0.3c10.4,1.4,18.5,10.4,18.5,21.2V159c5.1,3.6,8.4,9.6,8.4,16.2c0,6.7-3.2,12.6-8.4,16.3v2.7
 			C136.3,200.1,131.8,205.4,125.9,205.9z"/>
 		<g id="Wires_1_">
-			<path class="st15" d="M124.8,175.2V43.4c0-5.5-4.4-9.9-9.9-9.9h-55"/>
-			<path class="st15" d="M124.8,194.5V94.1c0-5.5-4.4-9.9-9.9-9.9h-55"/>
-			<path class="st15" d="M124.8,175.2v-30.5c0-5.5-4.4-9.9-9.9-9.9h-55"/>
-			<polyline class="st15" points="12,175.2 49.9,175.2 54.1,169.8 54.8,183.9 68.2,166.6 68.9,180.6 73.1,175.2 124.8,175.2 		"/>
-			<circle class="st16" cx="124.8" cy="175.2" r="9.9"/>
+			<path class="st20c" d="M124.8,175.2V43.4c0-5.5-4.4-9.9-9.9-9.9h-55"/>
+			<path class="st20c" d="M124.8,194.5V94.1c0-5.5-4.4-9.9-9.9-9.9h-55"/>
+			<path class="st20c" d="M124.8,175.2v-30.5c0-5.5-4.4-9.9-9.9-9.9h-55"/>
+			<polyline class="st20c" points="12,175.2 49.9,175.2 54.1,169.8 54.8,183.9 68.2,166.6 68.9,180.6 73.1,175.2 124.8,175.2 		"/>
+			<circle class="st21c" cx="124.8" cy="175.2" r="9.9"/>
 		</g>
 		<g id="Server_3_1_">
-			<path class="st17" d="M97.9,156.4h-76c-5.5,0-9.9-4.4-9.9-9.9v-23.3c0-5.5,4.4-9.9,9.9-9.9h76c5.5,0,9.9,4.4,9.9,9.9v23.3
+			<path class="st22c" d="M97.9,156.4h-76c-5.5,0-9.9-4.4-9.9-9.9v-23.3c0-5.5,4.4-9.9,9.9-9.9h76c5.5,0,9.9,4.4,9.9,9.9v23.3
 				C107.8,152,103.3,156.4,97.9,156.4z"/>
-			<path id="OVERLAY_11_" class="st15 svg-overlay" d="M97.9,156.4h-76c-5.5,0-9.9-4.4-9.9-9.9v-23.3c0-5.5,4.4-9.9,9.9-9.9h76
-				c5.5,0,9.9,4.4,9.9,9.9v23.3C107.8,152,103.3,156.4,97.9,156.4z"/>
-			<line class="st18" x1="45" y1="139" x2="21.3" y2="139"/>
-			<line class="st18" x1="45" y1="131.3" x2="21.3" y2="131.3"/>
-			<line class="st18" x1="45" y1="123.6" x2="21.3" y2="123.6"/>
-			<circle class="st19" cx="98.3" cy="142" r="1.8"/>
-			<circle class="st20" cx="98.3" cy="147.4" r="1.8"/>
+			<linearGradient id="OVERLAY_2_" gradientUnits="userSpaceOnUse" x1="28.0665" y1="103.0537" x2="91.687" y2="166.6742">
+				<stop  offset="0.499" style="stop-color:#FFFFFF;stop-opacity:0.2"/>
+				<stop  offset="0.5" style="stop-color:#000000;stop-opacity:0"/>
+			</linearGradient>
+			
+				<path id="OVERLAY_11_" style="fill:url(#OVERLAY_2_);stroke:#192033;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;" d="
+				M97.9,156.4h-76c-5.5,0-9.9-4.4-9.9-9.9v-23.3c0-5.5,4.4-9.9,9.9-9.9h76c5.5,0,9.9,4.4,9.9,9.9v23.3
+				C107.8,152,103.3,156.4,97.9,156.4z"/>
+			<line class="st24c" x1="45" y1="139" x2="21.3" y2="139"/>
+			<line class="st24c" x1="45" y1="131.3" x2="21.3" y2="131.3"/>
+			<line class="st24c" x1="45" y1="123.6" x2="21.3" y2="123.6"/>
+			<circle class="st25c" cx="98.3" cy="142" r="1.8"/>
+			<circle class="st26c" cx="98.3" cy="147.4" r="1.8"/>
 		</g>
 		<g id="Server_2_1_">
-			<path class="st17" d="M97.9,105.7h-76c-5.5,0-9.9-4.4-9.9-9.9V72.5c0-5.5,4.4-9.9,9.9-9.9h76c5.5,0,9.9,4.4,9.9,9.9v23.3
+			<path class="st22c" d="M97.9,105.7h-76c-5.5,0-9.9-4.4-9.9-9.9V72.5c0-5.5,4.4-9.9,9.9-9.9h76c5.5,0,9.9,4.4,9.9,9.9v23.3
 				C107.8,101.3,103.3,105.7,97.9,105.7z"/>
-			<path id="OVERLAY_10_" class="st15 svg-overlay" d="M97.9,105.7h-76c-5.5,0-9.9-4.4-9.9-9.9V72.5c0-5.5,4.4-9.9,9.9-9.9h76
-				c5.5,0,9.9,4.4,9.9,9.9v23.3C107.8,101.3,103.3,105.7,97.9,105.7z"/>
-			<line class="st18" x1="45" y1="88.3" x2="21.3" y2="88.3"/>
-			<line class="st18" x1="45" y1="80.6" x2="21.3" y2="80.6"/>
-			<line class="st18" x1="45" y1="72.9" x2="21.3" y2="72.9"/>
-			<circle class="st19" cx="98.3" cy="91.4" r="1.8"/>
-			<circle class="st20" cx="98.3" cy="96.7" r="1.8"/>
+			<linearGradient id="OVERLAY_6_" gradientUnits="userSpaceOnUse" x1="28.0665" y1="52.386" x2="91.687" y2="116.0065">
+				<stop  offset="0.499" style="stop-color:#FFFFFF;stop-opacity:0.2"/>
+				<stop  offset="0.5" style="stop-color:#000000;stop-opacity:0"/>
+			</linearGradient>
+			
+				<path id="OVERLAY_10_" style="fill:url(#OVERLAY_6_);stroke:#192033;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;" d="
+				M97.9,105.7h-76c-5.5,0-9.9-4.4-9.9-9.9V72.5c0-5.5,4.4-9.9,9.9-9.9h76c5.5,0,9.9,4.4,9.9,9.9v23.3
+				C107.8,101.3,103.3,105.7,97.9,105.7z"/>
+			<line class="st24c" x1="45" y1="88.3" x2="21.3" y2="88.3"/>
+			<line class="st24c" x1="45" y1="80.6" x2="21.3" y2="80.6"/>
+			<line class="st24c" x1="45" y1="72.9" x2="21.3" y2="72.9"/>
+			<circle class="st25c" cx="98.3" cy="91.4" r="1.8"/>
+			<circle class="st26c" cx="98.3" cy="96.7" r="1.8"/>
 		</g>
 		<g id="Server_1_1_">
-			<path class="st17" d="M97.9,55.1h-76c-5.5,0-9.9-4.4-9.9-9.9V21.9c0-5.5,4.4-9.9,9.9-9.9h76c5.5,0,9.9,4.4,9.9,9.9v23.3
+			<path class="st22c" d="M97.9,55.1h-76c-5.5,0-9.9-4.4-9.9-9.9V21.9c0-5.5,4.4-9.9,9.9-9.9h76c5.5,0,9.9,4.4,9.9,9.9v23.3
 				C107.8,50.6,103.3,55.1,97.9,55.1z"/>
-			<path id="OVERLAY_9_" class="st15 svg-overlay" d="M97.9,55.1h-76c-5.5,0-9.9-4.4-9.9-9.9V21.9c0-5.5,4.4-9.9,9.9-9.9h76
-				c5.5,0,9.9,4.4,9.9,9.9v23.3C107.8,50.6,103.3,55.1,97.9,55.1z"/>
-			<line class="st18" x1="45" y1="37.7" x2="21.3" y2="37.7"/>
-			<line class="st18" x1="45" y1="30" x2="21.3" y2="30"/>
-			<line class="st18" x1="45" y1="22.2" x2="21.3" y2="22.2"/>
-			<circle class="st19" cx="98.3" cy="40.7" r="1.8"/>
-			<circle class="st20" cx="98.3" cy="46.1" r="1.8"/>
+			<linearGradient id="OVERLAY_7_" gradientUnits="userSpaceOnUse" x1="28.0665" y1="1.7183" x2="91.687" y2="65.3388">
+				<stop  offset="0.499" style="stop-color:#FFFFFF;stop-opacity:0.2"/>
+				<stop  offset="0.5" style="stop-color:#000000;stop-opacity:0"/>
+			</linearGradient>
+			
+				<path id="OVERLAY_9_" style="fill:url(#OVERLAY_7_);stroke:#192033;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;" d="
+				M97.9,55.1h-76c-5.5,0-9.9-4.4-9.9-9.9V21.9c0-5.5,4.4-9.9,9.9-9.9h76c5.5,0,9.9,4.4,9.9,9.9v23.3
+				C107.8,50.6,103.3,55.1,97.9,55.1z"/>
+			<line class="st24c" x1="45" y1="37.7" x2="21.3" y2="37.7"/>
+			<line class="st24c" x1="45" y1="30" x2="21.3" y2="30"/>
+			<line class="st24c" x1="45" y1="22.2" x2="21.3" y2="22.2"/>
+			<circle class="st25c" cx="98.3" cy="40.7" r="1.8"/>
+			<circle class="st26c" cx="98.3" cy="46.1" r="1.8"/>
 		</g>
 	</g>
 </svg>
