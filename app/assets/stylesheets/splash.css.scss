@@ -1,5 +1,14 @@
 // ALL STYLES FOR SPLASH PAGE GO HERE
 
+@keyframes hover {
+    0% {
+        transform: translate(-50%, -47.5%);
+    }
+    100% {
+        transform: translate(-50%, -52.5%);
+    }
+}
+
 #svg-top, #svg-bottom {
     top: 0px;
     left: 0px;
@@ -60,26 +69,31 @@
         #svg-laptop {
             height: calc(105% * calc(149 / 496));
             left: 0;
+            animation: hover 1.25s infinite alternate ease-in-out;
         }
 
         #svg-mobile {
             height: calc(105% * calc(206 / 496));
             left: 23%;
+            animation: hover 1s infinite alternate ease-in-out;
         }
 
         #svg-chuck {
             height: 105%;
             left: 50%;
+            animation: hover 2s infinite alternate ease-in-out;
         }
 
         #svg-desktop {
             height: calc(105% * calc(179 / 496));
             left: 77.5%;
+            animation: hover 1.15s infinite alternate ease-in-out;
         }
 
         #svg-server {
             height: calc(105% * calc(215 / 496));
             left: 100%;
+            animation: hover 1.05s infinite alternate ease-in-out;
         }
     }
 }
