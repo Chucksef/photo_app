@@ -1,3 +1,107 @@
-.svg-sticker {
-    width: 19%;
+// ALL STYLES FOR SPLASH PAGE GO HERE
+
+#page_container {
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 }
+
+#page_container div {
+    width: 100%;
+}
+
+#svg-top, #svg-bottom {
+    top: 0px;
+    left: 0px;
+    flex: .5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#svg-top {
+    h1 {
+        font-size: 4em;
+        letter-spacing: 10px;
+    }
+
+    h2 {
+        color: white;
+        font-size: 2em;
+        letter-spacing: 5px;
+    }
+}
+
+#svg-center {
+    position: relative;
+    flex: 1;
+    top: 0px;
+    left: 0px;
+
+    .accent-line {
+        position: absolute;
+        height: 1px;
+        width: 100%;
+    }
+
+    #top-line {
+        top: 4px;
+    }
+
+    #bottom-line {
+        bottom: 4px;
+    }
+
+    #svg-container {
+        position: relative;
+        left: 10%;
+        width: 80%;
+        height: 100%;
+    
+        .svg-sticker {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #svg-laptop {
+            height: calc(105% * calc(149 / 496));
+        }
+
+        #svg-mobile {
+            height: calc(105% * calc(206 / 496));
+        }
+
+        #svg-chuck {
+            height: 105%;
+            top: -2.5%;
+        }
+
+        #svg-desktop {
+            height: calc(105% * calc(179 / 496));
+        }
+
+        #svg-server {
+            height: calc(105% * calc(215 / 496));
+        }
+    }
+}
+
+#svg-bottom {
+    a {
+        font-size: 2.5em;
+        letter-spacing: 6px;
+        padding: 5px 50px;
+        border-radius: 50px;
+        background-color: rgba(0,0,0,.1);
+    }
+}
+
+
+
