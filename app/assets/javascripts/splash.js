@@ -600,5 +600,13 @@ function landingPage() {
 
         // Position and animation determined by CSS
         canvas.insertAdjacentHTML("beforeend", framework);
+        canvas.style.top = "50px";
+        canvas.style.left = "0";
+        canvas.style.width = "100%";
+        canvas.style.height = "calc(100% - 80px)";
+        canvas.style.position = "absolute";
+        canvas.style.display = "flex";
+        canvas.style.flexDirection = "column";
+        canvas.style.padding = "0";
     }
 }
