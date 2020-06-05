@@ -592,12 +592,6 @@ function landingPage() {
     <div id="svg-bottom">
         <a style="color: ${primaryColor};" class="button" href="http://www.chucksef.com/pages/intro">learn more \></a>
     </div>
-
-    <div id="top-line" class="accent-line" style="background-color: ${primaryColor};">
-    </div>
-
-    <div id="bottom-line" class="accent-line" style="background-color: ${primaryColor};">
-    </div>
         `;
         
         // Remove default elements
